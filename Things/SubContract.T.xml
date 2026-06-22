@@ -62,7 +62,7 @@
                      isPrivate="false"
                      name="getAuditTrail">
                         <ResultType
-                         aspect.dataShape="OTIS.AuditTrail.DS"
+                         aspect.dataShape="AuditTrail.DS"
                          baseType="INFOTABLE"
                          description=""
                          name="result"
@@ -79,7 +79,7 @@
                      isPrivate="false"
                      name="getCatalogData">
                         <ResultType
-                         aspect.dataShape="OTIS.SubContractorCatalog.DS"
+                         aspect.dataShape="SubContractorCatalog.DS"
                          baseType="INFOTABLE"
                          description=""
                          name="result"
@@ -96,7 +96,7 @@
                      isPrivate="false"
                      name="getComplianceStatusDistribution">
                         <ResultType
-                         aspect.dataShape="OTIS.ComplianceStatusDistribution.DS"
+                         aspect.dataShape="ComplianceStatusDistribution.DS"
                          baseType="INFOTABLE"
                          description=""
                          name="result"
@@ -130,7 +130,7 @@
                      isPrivate="false"
                      name="getCountryDataDropdown">
                         <ResultType
-                         aspect.dataShape="OTIS.CountryDataTable.DS"
+                         aspect.dataShape="CountryDataTable.DS"
                          baseType="INFOTABLE"
                          description=""
                          name="result"
@@ -270,6 +270,29 @@
                      isLocalOnly="false"
                      isOpen="false"
                      isPrivate="false"
+                     name="GetLiveGeoDashboardKPIs">
+                        <ResultType
+                         aspect.dataShape="LiveGeoDashboardKPIS.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="CountryName"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
                      name="getMenu">
                         <ResultType
                          aspect.dataShape="OTIS.SubcontractMenu.DS"
@@ -290,6 +313,23 @@
                      name="getPricingMatrix">
                         <ResultType
                          aspect.dataShape="PricingMatrix.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getPriorityDropdown">
+                        <ResultType
+                         aspect.dataShape="PriorityDropdown.DS"
                          baseType="INFOTABLE"
                          description=""
                          name="result"
@@ -527,7 +567,7 @@
                                         }
                                         catch (e) 
                                         {
-                                        	logger.error("Service: GetAuditTrail, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        	logger.error("Service: getApplications, Exception: " + e.message + ", Line Number: " + e.lineNumber);
                                         }
                                         ]]>
                                         </code>
@@ -562,7 +602,7 @@
                                         <![CDATA[
                                         let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
                                         	infoTableName: "InfoTable",
-                                        	dataShapeName: "OTIS.AuditTrail.DS"
+                                        	dataShapeName: "AuditTrail.DS"
                                            });
                                         try 
                                         {
@@ -636,7 +676,7 @@
                                         <![CDATA[
                                         let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
                                         		infoTableName: "InfoTable",
-                                        		dataShapeName: "OTIS.SubContractorCatalog.DS"
+                                        		dataShapeName: "SubContractorCatalog.DS"
                                         	});
                                         try 
                                         {
@@ -758,7 +798,7 @@
                                         <![CDATA[
                                         let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
                                                 infoTableName: "InfoTable",
-                                                dataShapeName: "OTIS.ComplianceStatusDistribution.DS"
+                                                dataShapeName: "ComplianceStatusDistribution.DS"
                                             });
                                         
                                         try 
@@ -816,7 +856,7 @@
                                         <![CDATA[
                                         let  result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
                                                 infoTableName: "InfoTable",
-                                                dataShapeName: "OTIS.CountryData.DS"
+                                                dataShapeName: "CountryData.DS"
                                             });
                                         
                                         try 
@@ -863,7 +903,7 @@
                                         <![CDATA[
                                         let  result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
                                                 infoTableName: "InfoTable",
-                                                dataShapeName: "OTIS.CountryDataTable.DS"
+                                                dataShapeName: "CountryDataTable.DS"
                                             });
                                         
                                         try 
@@ -1401,6 +1441,91 @@
                     <ServiceImplementation
                      description=""
                      handlerName="Script"
+                     name="GetLiveGeoDashboardKPIs">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "LiveGeoDashboardKPIS.DS"
+                                        });
+                                        try {
+                                        
+                                        	if (CountryName == "France") {
+                                        
+                                        		result.AddRow({
+                                        			SubContractorsOnMap: 5,
+                                        			TotalCapacity: 395,
+                                        			AvgWorkload: "54%",
+                                        			CompliantSites: "3/5"
+                                        		});
+                                        
+                                        	} else if (CountryName == "Germany") {
+                                        
+                                        		result.AddRow({
+                                        			SubContractorsOnMap: 5,
+                                        			TotalCapacity: 395,
+                                        			AvgWorkload: "54%",
+                                        			CompliantSites: "3/5"
+                                        		});
+                                        
+                                        	} else if (CountryName == "Austria") {
+                                        
+                                        		result.AddRow({
+                                        			SubContractorsOnMap: 5,
+                                        			TotalCapacity: 395,
+                                        			AvgWorkload: "54%",
+                                        			CompliantSites: "3/5"
+                                        		});
+                                        
+                                        	} else if (CountryName == "Spain") {
+                                        
+                                        		result.AddRow({
+                                        			SubContractorsOnMap: 5,
+                                        			TotalCapacity: 395,
+                                        			AvgWorkload: "54%",
+                                        			CompliantSites: "3/5"
+                                        		});
+                                        
+                                        	} else {
+                                        
+                                        		result.AddRow({
+                                        			SubContractorsOnMap: 5,
+                                        			TotalCapacity: 395,
+                                        			AvgWorkload: "54%",
+                                        			CompliantSites: "3/5"
+                                        		});
+                                        	}
+                                        } catch (e) {
+                                        	logger.error("Service: getLiveGeoDashboardKPIs, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
                      name="getMenu">
                         <ConfigurationTables>
                             <ConfigurationTable
@@ -1434,69 +1559,74 @@
                                         		MenuOrder: 1,
                                         		MashupName: "ExecutiveDashboard.MU"
                                         	});
+                                          result.AddRow({
+                                        		MenuName: "ThingWorx Geo Map",
+                                        		MenuOrder: 2,
+                                        		MashupName: "LiveGeoDashboard.MU"
+                                        	});
                                         	result.AddRow({
                                         		MenuName: "Subcontractor Catalog",
-                                        		MenuOrder: 2,
+                                        		MenuOrder: 3,
                                         		MashupName: "SubContractCatalog.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Subcontractor Management",
-                                        		MenuOrder: 3,
+                                        		MenuOrder: 4,
                                         		MashupName: "SubContractManagement.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Pricing Matrix",
-                                        		MenuOrder: 4,
+                                        		MenuOrder: 5,
                                         		MashupName: "PricingMatrix.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Discount Matrix",
-                                        		MenuOrder: 5,
+                                        		MenuOrder: 6,
                                         		MashupName: "DiscountMatrix.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Night Shift Surcharge",
-                                        		MenuOrder: 6,
+                                        		MenuOrder: 7,
                                         		MashupName: "NightShiftSurcharge.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Job Creation",
-                                        		MenuOrder: 7,
+                                        		MenuOrder: 8,
                                         		MashupName: "JobCreation.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Job Board",
-                                        		MenuOrder: 8,
+                                        		MenuOrder: 9,
                                         		MashupName: "JobBoard.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Bids & Awarding",
-                                        		MenuOrder: 9,
+                                        		MenuOrder: 10,
                                         		MashupName: "BidsAwarding.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "TCO Calculator",
-                                        		MenuOrder: 10,
+                                        		MenuOrder: 11,
                                         		MashupName: "TCOCalculator.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Supplier Portal",
-                                        		MenuOrder: 11,
+                                        		MenuOrder: 12,
                                         		MashupName: "SupplierPortal.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Governance & Audit",
-                                        		MenuOrder: 12,
+                                        		MenuOrder: 13,
                                         		MashupName: "GovernanceAudit.MU"
                                         	});
                                         } 
@@ -1600,6 +1730,59 @@
                                         catch (e) 
                                         {
                                             logger.error( "Service: GetPricingMatrix, Exception: " +e.message +", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getPriorityDropdown">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "PriorityDropdown.DS"
+                                            });
+                                        
+                                        try {
+                                            result.AddRow({
+                                                Priority: "Low"
+                                            });
+                                        
+                                            result.AddRow({
+                                                Priority: "Medium"
+                                            });
+                                        
+                                            result.AddRow({
+                                                Priority: "High"
+                                            });
+                                          }
+                                        catch (e) 
+                                        {
+                                        	logger.error("Service: getPriorityDropdown, Exception: " + e.message + ", Line Number: " + e.lineNumber);
                                         }
                                         ]]>
                                         </code>
