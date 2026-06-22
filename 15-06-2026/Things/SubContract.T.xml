@@ -1,0 +1,2153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="10"
+ minorVersion="1"
+ universal="password">
+    <Things>
+        <Thing
+         description="CurrencyDropdown.DS"
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="SubContract.T"
+         projectName="SubContract"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getAuditTrail">
+                        <ResultType
+                         aspect.dataShape="OTIS.AuditTrail.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getCatalogData">
+                        <ResultType
+                         aspect.dataShape="OTIS.SubContractorCatalog.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getComplianceStatusDistribution">
+                        <ResultType
+                         aspect.dataShape="OTIS.ComplianceStatusDistribution.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetCountryData">
+                        <ResultType
+                         aspect.dataShape="CountryData.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getCountryDataDropdown">
+                        <ResultType
+                         aspect.dataShape="OTIS.CountryDataTable.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getCurrencyDropdown">
+                        <ResultType
+                         aspect.dataShape="CurrencyDropdown.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDiscountMatrix">
+                        <ResultType
+                         aspect.dataShape="DiscountMatrix.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDiscountTypeDropdown">
+                        <ResultType
+                         aspect.dataShape="OTIS.DiscountTypeDropdown.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getExecutiveDashboardKPIs">
+                        <ResultType
+                         aspect.dataShape="ExecutiveDashboardKPIs.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="CountryName"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getGovernanceAuditLog">
+                        <ResultType
+                         aspect.dataShape="GovernanceAuditLog.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getJobStatusDropdown">
+                        <ResultType
+                         aspect.dataShape="OTIS.JobStatusDropdown.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getJobStatusFunnel">
+                        <ResultType
+                         aspect.dataShape="OTIS.JobStatusFunnel.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getMenu">
+                        <ResultType
+                         aspect.dataShape="OTIS.SubcontractMenu.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getPricingMatrix">
+                        <ResultType
+                         aspect.dataShape="PricingMatrix.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getProjectDropdown">
+                        <ResultType
+                         aspect.dataShape="OTIS.ProjectDropdown.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getRoleDS">
+                        <ResultType
+                         aspect.dataShape="OTIS.RoleDS.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getServiceName">
+                        <ResultType
+                         aspect.dataShape="OTIS.ServicesDropdown.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getServices">
+                        <ResultType
+                         aspect.dataShape="OTIS.Services.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSubcontractor">
+                        <ResultType
+                         aspect.dataShape="SubcontractorDropdown.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSubcontractorDropdown">
+                        <ResultType
+                         aspect.dataShape="OTIS.SubcontractorDropdown.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSubcontractorsByCountry">
+                        <ResultType
+                         aspect.dataShape="OTIS.SubcontractorsByCountry.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSubcontractorsByService">
+                        <ResultType
+                         aspect.dataShape="OTIS.SubcontractorsByService.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getTCOTrendByMonth">
+                        <ResultType
+                         aspect.dataShape="OTIS.TCOTrendByMonth.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getWorkloadUtilizationBySupplier">
+                        <ResultType
+                         aspect.dataShape="OTIS.WorkloadUtilizationBySupplier.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getAuditTrail">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "OTIS.AuditTrail.DS"
+                                           });
+                                        try 
+                                        {
+                                        	result.AddRow({
+                                        		Timestamp: new Date("2026-06-07T14:23:00Z"),
+                                        		User: "admin1@otis.com",
+                                        		Role: "SCM Admin",
+                                        		Action: "Published Price Matrix",
+                                        		Entity: "PriceMatrix:pm-001",
+                                        		Previous: "Draft",
+                                        		New: "Published",
+                                        		Status: "Success"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Timestamp: new Date("2026-06-06T10:11:00Z"),
+                                        		User: "pm1@otis.com",
+                                        		Role: "Project Manager",
+                                        		Action: "Created Job",
+                                        		Entity: "Job:job-002",
+                                        		Previous: "-",
+                                        		New: "Draft",
+                                        		Status: "Success"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Timestamp: new Date("2026-06-05T09:30:00Z"),
+                                        		User: "finance@otis.com",
+                                        		Role: "Finance Controller",
+                                        		Action: "Approved Discount Matrix",
+                                        		Entity: "DiscountMatrix:dm-001",
+                                        		Previous: "Pending Approval",
+                                        		New: "Published",
+                                        		Status: "Success"
+                                        	});
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error("Service: GetAuditTrail, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getCatalogData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "OTIS.SubContractorCatalog.DS"
+                                        	});
+                                        try 
+                                        {
+                                        	result.AddRow({
+                                        		SubContractor: "XYZ Installation",
+                                        		CreatedBy: "SCM Admin1",
+                                        		Country: "France",
+                                        		Province: "Île-de-France",
+                                        		PrimaryService: "Installation",
+                                        		Services: "Installation, Maintenance",
+                                        		ActiveTill: new Date("2027-12-31"),
+                                        		ContactName: "Jean Dupont",
+                                        		ContactEmail: "jean@xyz-install.fr",
+                                        		Status: "Active",
+                                        		Compliance: "Compliant",
+                                        		Workload: 68,
+                                        		Rating: "4.6"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		SubContractor: "ABC Cleaner",
+                                        		CreatedBy: "SCM Admin2",
+                                        		Country: "Germany",
+                                        		Province: "Bavaria",
+                                        		PrimaryService: "Finishing",
+                                        		Services: "Finishing, Cleaning, Painting",
+                                        		ActiveTill: new Date("2026-09-30"),
+                                        		ContactName: "Anna Muller",
+                                        		ContactEmail: "anna@abc-clean.de",
+                                        		Status: "Active",
+                                        		Compliance: "At Risk",
+                                        		Workload: 82,
+                                        		Rating: "4.2"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		SubContractor: "PQR Winding",
+                                        		CreatedBy: "SCM Admin1",
+                                        		Country: "Spain",
+                                        		Province: "Madrid",
+                                        		PrimaryService: "Winding",
+                                        		Services: "Winding, Maintenance, Safety Audit",
+                                        		ActiveTill: new Date("2028-03-15"),
+                                        		ContactName: "Carlos Garcia",
+                                        		ContactEmail: "carlos@pqr-wind.es",
+                                        		Status: "Active",
+                                        		Compliance: "Compliant",
+                                        		Workload: 45,
+                                        		Rating: "4.8"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		SubContractor: "Alpine Elevators GmbH",
+                                        		CreatedBy: "SCM Admin2",
+                                        		Country: "Austria",
+                                        		Province: "Vienna",
+                                        		PrimaryService: "Installation",
+                                        		Services: "Installation, Maintenance, Safety Audit",
+                                        		ActiveTill: new Date("2027-06-30"),
+                                        		ContactName: "Markus Bauer",
+                                        		ContactEmail: "markus@alpine-elev.at",
+                                        		Status: "Active",
+                                        		Compliance: "Compliant",
+                                        		Workload: 55,
+                                        		Rating: "4.7"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		SubContractor: "Iberica Safety SL",
+                                        		CreatedBy: "SCM Admin1",
+                                        		Country: "Spain",
+                                        		Province: "Catalonia",
+                                        		PrimaryService: "Safety Audit",
+                                        		Services: "Safety Audit, Maintenance",
+                                        		ActiveTill: new Date("2026-12-31"),
+                                        		ContactName: "Maria Lopez",
+                                        		ContactEmail: "maria@iberica-safety.es",
+                                        		Status: "Pending",
+                                        		Compliance: "Non-Compliant",
+                                        		Workload: 20,
+                                        		Rating: "3.9"
+                                        	});
+                                        
+                                          }
+                                        catch (e)
+                                        {
+                                          logger.error("Service: getCatalogData, Exception: " +e.message +", Line Number: " + e.lineNumber );
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getComplianceStatusDistribution">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "OTIS.ComplianceStatusDistribution.DS"
+                                            });
+                                        
+                                        try 
+                                        {
+                                            result.AddRow({
+                                                ComplianceStatus: "Compliant",
+                                                Count: 3
+                                            });
+                                        
+                                            result.AddRow({
+                                                ComplianceStatus: "At Risk",
+                                                Count: 1
+                                            });
+                                        
+                                            result.AddRow({
+                                                ComplianceStatus: "Non-Compliant",
+                                                Count: 1
+                                            });
+                                        
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: getComplianceStatusDistribution, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetCountryData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let  result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "OTIS.CountryData.DS"
+                                            });
+                                        
+                                        try 
+                                        {
+                                            result.AddRow({ Country: "France" });
+                                            result.AddRow({ Country: "Germany" });
+                                            result.AddRow({ Country: "Austria" });
+                                            result.AddRow({ Country: "Spain" });
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: GetCountryData, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getCountryDataDropdown">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let  result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "OTIS.CountryDataTable.DS"
+                                            });
+                                        
+                                        try 
+                                        {
+                                            result.AddRow({ Country: "All Countries" });
+                                            result.AddRow({ Country: "France" });
+                                            result.AddRow({ Country: "Germany" });
+                                            result.AddRow({ Country: "Austria" });
+                                            result.AddRow({ Country: "Spain" });
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: GetCountryDataDropdown, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getCurrencyDropdown">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "CurrencyDropdown.DS"
+                                            });
+                                        
+                                        try {
+                                          result.AddRow({
+                                                Currency: "EUR"
+                                            });
+                                        
+                                            result.AddRow({
+                                                Currency: "USD"
+                                            });
+                                        
+                                            result.AddRow({
+                                                Currency: "GBP"
+                                            });
+                                        
+                                        } 
+                                        catch (e) 
+                                        {
+                                            logger.error("Service: GetCurrencyDropdown, Exception: " +e.message +", Line Number: " + e.lineNumber
+                                                        );
+                                        
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDiscountMatrix">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "DiscountMatrix.DS"
+                                            });
+                                        
+                                        try {
+                                          result.AddRow({
+                                                StopsBand: "Up to 2",
+                                                Capacity200: 4,
+                                                Capacity1000: 7,
+                                                Capacity1600: 10,
+                                                Capacity2000_3000: 12
+                                            });
+                                        
+                                            result.AddRow({
+                                                StopsBand: "Up to 3",
+                                                Capacity200: 5,
+                                                Capacity1000: 6,
+                                                Capacity1600: 8,
+                                                Capacity2000_3000: 10
+                                            });
+                                        
+                                            result.AddRow({
+                                                StopsBand: "Up to 4",
+                                                Capacity200: 4,
+                                                Capacity1000: 5,
+                                                Capacity1600: 7,
+                                                Capacity2000_3000: 9
+                                            });
+                                        
+                                            result.AddRow({
+                                                StopsBand: "Up to 5",
+                                                Capacity200: 3,
+                                                Capacity1000: 4,
+                                                Capacity1600: 6,
+                                                Capacity2000_3000: 8
+                                            });
+                                        
+                                            result.AddRow({
+                                                StopsBand: "6 to 30",
+                                                Capacity200: 2,
+                                                Capacity1000: 3,
+                                                Capacity1600: 4,
+                                                Capacity2000_3000: 5
+                                            });
+                                        
+                                            result.AddRow({
+                                                StopsBand: "31 to 45",
+                                                Capacity200: 1,
+                                                Capacity1000: 2,
+                                                Capacity1600: 3,
+                                                Capacity2000_3000: 4
+                                            });
+                                        
+                                            result.AddRow({
+                                                StopsBand: "46 to 65",
+                                                Capacity200: 1,
+                                                Capacity1000: 2,
+                                                Capacity1600: 3,
+                                                Capacity2000_3000: 4
+                                            });
+                                        
+                                        } 
+                                        catch (e) 
+                                        {
+                                            logger.error( "Service: DiscountMatrix, Exception: " +e.message +", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDiscountTypeDropdown">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "OTIS.DiscountTypeDropdown.DS"
+                                        	});
+                                        try 
+                                        {
+                                        	result.AddRow({
+                                        		DiscountType: "Fixed amount"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		DiscountType: "Percentage"
+                                        	});
+                                        }
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: DiscountTypeDropdown, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getExecutiveDashboardKPIs">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ExecutiveDashboardKPIs.DS"
+                                        });
+                                        try {
+                                        
+                                        	if (CountryName == "France") {
+                                        
+                                        		result.AddRow({
+                                        			TotalSubcontractors: 8,
+                                        			OpenBids: 6,
+                                        			CountriesCovered: 1,
+                                        			ServicesCovered: 5,
+                                        			PublishedJobs: 4,
+                                        			AwardedJobs: 2,
+                                        			AverageTCO: "€112.4k",
+                                        			ComplianceRisk: 3,
+                                                    ActiveSubcontractors: 7,
+                                        			ExpiringContracts: 2
+                                        		});
+                                        
+                                        	} else if (CountryName == "Germany") {
+                                        
+                                        		result.AddRow({
+                                        			TotalSubcontractors: 12,
+                                        			OpenBids: 9,
+                                        			CountriesCovered: 1,
+                                        			ServicesCovered: 6,
+                                        			PublishedJobs: 5,
+                                        			AwardedJobs: 4,
+                                        			AverageTCO: "€138.7k",
+                                        			ComplianceRisk: 1,
+                                                    ActiveSubcontractors: 10,
+                                        			ExpiringContracts: 5
+                                        		});
+                                        
+                                        	} else if (CountryName == "Austria") {
+                                        
+                                        		result.AddRow({
+                                        			TotalSubcontractors: 4,
+                                        			OpenBids: 3,
+                                        			CountriesCovered: 1,
+                                        			ServicesCovered: 3,
+                                        			PublishedJobs: 2,
+                                        			AwardedJobs: 1,
+                                        			AverageTCO: "€76.2k",
+                                        			ComplianceRisk: 2,
+                                                    ActiveSubcontractors: 3,
+                                        			ExpiringContracts: 1
+                                        		});
+                                        
+                                        	} else if (CountryName == "Spain") {
+                                        
+                                        		result.AddRow({
+                                        			TotalSubcontractors: 15,
+                                        			OpenBids: 11,
+                                        			CountriesCovered: 1,
+                                        			ServicesCovered: 7,
+                                        			PublishedJobs: 6,
+                                        			AwardedJobs: 5,
+                                        			AverageTCO: "€154.9k",
+                                        			ComplianceRisk: 4,
+                                                    ActiveSubcontractors: 12,
+                                        			ExpiringContracts: 6
+                                        		});
+                                        
+                                        	} else {
+                                        
+                                        		result.AddRow({
+                                        			TotalSubcontractors: 39,
+                                        			OpenBids: 29,
+                                        			CountriesCovered: 4,
+                                        			ServicesCovered: 7,
+                                        			PublishedJobs: 17,
+                                        			AwardedJobs: 12,
+                                        			AverageTCO: "€120.6k",
+                                        			ComplianceRisk: 10,
+                                                    ActiveSubcontractors: 32,
+                                        			ExpiringContracts: 14
+                                        		});
+                                        	}
+                                        } catch (e) {
+                                        	logger.error("Service: getWorkloadUtilizationBySupplier, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getGovernanceAuditLog">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "GovernanceAuditLog.DS"
+                                            });
+                                        try {
+                                            result.AddRow({
+                                                Timestamp: new Date("2026-06-07T14:23:00Z"),
+                                                User: "admin1@otis.com",
+                                                Action: "Published Price Matrix",
+                                                Entity: "PriceMatrix:pm-001",
+                                                Status: "Success"
+                                            });
+                                        
+                                            result.AddRow({
+                                                Timestamp: new Date("2026-06-06T10:11:00Z"),
+                                                User: "pm1@otis.com",
+                                                Action: "Created Job",
+                                                Entity: "Job:job-002",
+                                                Status: "Success"
+                                            });
+                                        
+                                            result.AddRow({
+                                                Timestamp: new Date("2026-06-05T09:30:00Z"),
+                                                User: "finance@otis.com",
+                                                Action: "Approved Discount Matrix",
+                                                Entity: "DiscountMatrix:dm-001",
+                                                Status: "Success"
+                                            });
+                                        
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service:GovernanceAuditLog: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getJobStatusDropdown">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "OTIS.JobStatusDropdown.DS"
+                                        	});
+                                        try 
+                                        {
+                                        	result.AddRow({
+                                        		JobStatus: "All"
+                                        	});
+                                        	result.AddRow({
+                                        		JobStatus: "Draft"
+                                        	});
+                                        	result.AddRow({
+                                        		JobStatus: "Published"
+                                        	});
+                                        	result.AddRow({
+                                        		JobStatus: "Applied"
+                                        	});
+                                        	result.AddRow({
+                                        		JobStatus: "Under Review"
+                                        	});
+                                        	result.AddRow({
+                                        		JobStatus: "Awarded"
+                                        	});
+                                        	result.AddRow({
+                                        		JobStatus: "Closed"
+                                        	});
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: getJobStatusDropdown, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getJobStatusFunnel">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "OTIS.JobStatusFunnel.DS"
+                                        	});
+                                        
+                                        try 
+                                        {
+                                        	result.AddRow({
+                                        		JobStatus: "Draft",
+                                        		Count: 5
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		JobStatus: "Published",
+                                        		Count: 8
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		JobStatus: "Applied",
+                                        		Count: 14
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		JobStatus: "Under Review",
+                                        		Count: 6
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		JobStatus: "Awarded",
+                                        		Count: 3
+                                        	});
+                                        }
+                                          catch (e) 
+                                        {
+                                        	logger.error( "Service: getJobStatusDropdown, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getMenu">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "OTIS.SubcontractMenu.DS"
+                                        	});
+                                        
+                                        try
+                                        {
+                                        	result.AddRow({
+                                        		MenuName: "Executive Dashboard",
+                                        		MenuOrder: 1,
+                                        		MashupName: "ExecutiveDashboard.MU"
+                                        	});
+                                        	result.AddRow({
+                                        		MenuName: "Subcontractor Catalog",
+                                        		MenuOrder: 2,
+                                        		MashupName: "SubContractCatalog.MU"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		MenuName: "Subcontractor Management",
+                                        		MenuOrder: 3,
+                                        		MashupName: "SubContractManagement.MU"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		MenuName: "Pricing Matrix",
+                                        		MenuOrder: 4,
+                                        		MashupName: "PricingMatrix.MU"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		MenuName: "Discount Matrix",
+                                        		MenuOrder: 5,
+                                        		MashupName: "DiscountMatrix.MU"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		MenuName: "Night Shift Surcharge",
+                                        		MenuOrder: 6,
+                                        		MashupName: "NightShiftSurcharge.MU"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		MenuName: "Job Creation",
+                                        		MenuOrder: 7,
+                                        		MashupName: "JobCreation.MU"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		MenuName: "Job Board",
+                                        		MenuOrder: 8,
+                                        		MashupName: "JobBoard.MU"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		MenuName: "Bids & Awarding",
+                                        		MenuOrder: 9,
+                                        		MashupName: "BidsAwarding.MU"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		MenuName: "TCO Calculator",
+                                        		MenuOrder: 10,
+                                        		MashupName: "TCOCalculator.MU"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		MenuName: "Supplier Portal",
+                                        		MenuOrder: 11,
+                                        		MashupName: "SupplierPortal.MU"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		MenuName: "Governance & Audit",
+                                        		MenuOrder: 12,
+                                        		MashupName: "GovernanceAudit.MU"
+                                        	});
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: getMenu, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getPricingMatrix">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "PricingMatrix.DS"
+                                            });
+                                        
+                                        try {
+                                          result.AddRow({
+                                                StopsBand: "Up to 2",
+                                                Capacity200: 8250,
+                                                Capacity1000: 9065,
+                                                Capacity1600: 9840,
+                                                Capacity2000_3000: 11500
+                                            });
+                                        
+                                            result.AddRow({
+                                                StopsBand: "Up to 3",
+                                                Capacity200: 8775,
+                                                Capacity1000: 9825,
+                                                Capacity1600: 10600,
+                                                Capacity2000_3000: 13025
+                                            });
+                                        
+                                            result.AddRow({
+                                                StopsBand: "Up to 4",
+                                                Capacity200: 9295,
+                                                Capacity1000: 10300,
+                                                Capacity1600: 11360,
+                                                Capacity2000_3000: 14450
+                                            });
+                                        
+                                            result.AddRow({
+                                                StopsBand: "Up to 5",
+                                                Capacity200: 10295,
+                                                Capacity1000: 11345,
+                                                Capacity1600: 12120,
+                                                Capacity2000_3000: 14925
+                                            });
+                                        
+                                            result.AddRow({
+                                                StopsBand: "6 to 30",
+                                                Capacity200: 1940,
+                                                Capacity1000: 1980,
+                                                Capacity1600: 2080,
+                                                Capacity2000_3000: 2510
+                                            });
+                                        
+                                            result.AddRow({
+                                                StopsBand: "31 to 45",
+                                                Capacity200: 1990,
+                                                Capacity1000: 2090,
+                                                Capacity1600: 2195,
+                                                Capacity2000_3000: 2595
+                                            });
+                                        
+                                            result.AddRow({
+                                                StopsBand: "46 to 65",
+                                                Capacity200: 2090,
+                                                Capacity1000: 2140,
+                                                Capacity1600: 2235,
+                                                Capacity2000_3000: 2690
+                                            });
+                                        } 
+                                        catch (e) 
+                                        {
+                                            logger.error( "Service: GetPricingMatrix, Exception: " +e.message +", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getProjectDropdown">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result= Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "OTIS.ProjectDropdown.DS"
+                                        	});
+                                        
+                                        try {
+                                        	result.AddRow({
+                                        		ProjectName: "PRJ-2026-001 · La Défense Tower Modernization"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		ProjectName: "PRJ-2026-002 · Munich Residential Complex"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		ProjectName: "PRJ-2026-003 · Madrid Airport Terminal 5"
+                                        	});
+                                        }
+                                          catch (e) 
+                                        {
+                                        	logger.error( "Service: getProjectDropdown, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getRoleDS">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "OTIS.RoleDS.DS"
+                                        	});
+                                        try 
+                                        {
+                                        	result.AddRow({
+                                        		RoleName: "SCM Admin"
+                                        	});
+                                        	result.AddRow({
+                                        		RoleName: "Project Manager"
+                                        	});
+                                        	result.AddRow({
+                                        		RoleName: "Subcontractor"
+                                        	});
+                                        	result.AddRow({
+                                        		RoleName: "Finance Controller"
+                                        	});
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: getRoleDS, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getServiceName">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "OTIS.ServicesDropdown.DS"
+                                        	});
+                                        
+                                        try {
+                                            result.AddRow({
+                                        		ServiceName: "Installation"
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Maintenance"
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Cleaning"
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Painting"
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Winding"
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Finishing"
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Safety Audit"
+                                        	});
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: getServiceName, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getServices">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "OTIS.Services.DS"
+                                        	});
+                                        try {
+                                        	result.AddRow({
+                                        		ServiceName: "All Services"
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Installation"
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Painting"
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Safety Audit"
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Finishing"
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Winding"
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Cleaning"
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Maintenance"
+                                        	});
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: getServices, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSubcontractor">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "SubcontractorDropdown.DS"
+                                        	});
+                                        try {
+                                        	result.AddRow({
+                                        		Subcontractor: "XYZ Installation"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Subcontractor: "ABC Cleaner"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Subcontractor: "PQR Winding"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Subcontractor: "Alpine Elevators GmbH"
+                                        	});
+                                        	result.AddRow({
+                                        		Subcontractor: "Iberica Safety SL"
+                                        	});
+                                        }
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: SubcontractorDropdown, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSubcontractorDropdown">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "SubcontractorDropdown.DS"
+                                        });
+                                        try {
+                                        	result.AddRow({
+                                        		Subcontractor: "XYZ Installation"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Subcontractor: "ABC Cleaner"
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Subcontractor: "PQR Winding"
+                                        	});
+                                        	
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: SubcontractorDropdown, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSubcontractorsByCountry">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "OTIS.SubcontractorsByCountry.DS"
+                                        	});
+                                        try {
+                                        	result.AddRow({
+                                        		Country: "France",
+                                        		Count: 1
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Country: "Germany",
+                                        		Count: 1
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Country: "Austria",
+                                        		Count: 1
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Country: "Spain",
+                                        		Count: 2
+                                        	});
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: getSubcontractorsByCountry, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSubcontractorsByService">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "OTIS.SubcontractorsByService.DS"
+                                        	});
+                                        
+                                        try {
+                                        	result.AddRow({
+                                        		ServiceName: "Installation",
+                                        		Count: 2
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Painting",
+                                        		Count: 1
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Safety Audit",
+                                        		Count: 3
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Finishing",
+                                        		Count: 1
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Winding",
+                                        		Count: 1
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Cleaning",
+                                        		Count: 1
+                                        	});
+                                        	result.AddRow({
+                                        		ServiceName: "Maintenance",
+                                        		Count: 4
+                                        	});
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: getSubcontractorsByService, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getTCOTrendByMonth">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "OTIS.TCOTrendByMonth.DS"
+                                        	});
+                                        
+                                        try {
+                                        	result.AddRow({
+                                        		Month: "Jan",
+                                        		TCOValue: 82000
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Month: "Feb",
+                                        		TCOValue: 89000
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Month: "Mar",
+                                        		TCOValue: 92000
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Month: "Apr",
+                                        		TCOValue: 95000
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Month: "May",
+                                        		TCOValue: 98000
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Month: "Jun",
+                                        		TCOValue: 101000
+                                        	});
+                                        } catch (e) {
+                                        	logger.error("Service: getTCOTrendByMonth, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getWorkloadUtilizationBySupplier">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "OTIS.WorkloadUtilizationBySupplier.DS"
+                                        	});
+                                        try {
+                                        
+                                        	result.AddRow({
+                                        		Supplier: "XYZ",
+                                        		Utilization: 68
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Supplier: "ABC",
+                                        		Utilization: 82
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Supplier: "PQR",
+                                        		Utilization: 45
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Supplier: "Alpine",
+                                        		Utilization: 55
+                                        	});
+                                        
+                                        	result.AddRow({
+                                        		Supplier: "Iberica",
+                                        		Utilization: 20
+                                        	});
+                                        
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: getWorkloadUtilizationBySupplier, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>
