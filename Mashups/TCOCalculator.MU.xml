@@ -712,10 +712,7 @@
                           "$" : {
                             "$" : {
                               "background" : "#ffffff",
-                              "border-color" : "rgba(192,192,192,1)",
                               "border-radius" : "initial",
-                              "border-style" : "solid",
-                              "border-width" : "1px",
                               "padding-bottom" : "",
                               "padding-left" : "",
                               "padding-right" : "",
@@ -729,9 +726,6 @@
                         "parts" : {
                           "$" : {
                             "$" : {
-                              "border-color" : "rgba(192,192,192,1)",
-                              "border-style" : "solid",
-                              "border-width" : "1px",
                               "padding-bottom" : "",
                               "padding-left" : "",
                               "padding-right" : "",
@@ -745,9 +739,6 @@
                         "parts" : {
                           "$" : {
                             "$" : {
-                              "border-color" : "rgba(192,192,192,1)",
-                              "border-style" : "solid",
-                              "border-width" : "1px",
                               "padding-bottom" : "",
                               "padding-left" : "",
                               "padding-right" : "",
@@ -780,10 +771,7 @@
                           "$" : {
                             "$" : {
                               "background" : "#ffffff",
-                              "border-color" : "rgba(192,192,192,1)",
                               "border-radius" : "initial",
-                              "border-style" : "solid",
-                              "border-width" : "1px",
                               "padding-bottom" : "",
                               "padding-left" : "",
                               "padding-right" : "",
@@ -2814,6 +2802,46 @@
                           "text-box" : {
                             "$" : {
                               "border-color" : "#c0c0c0",
+                              "border-radius" : "6px"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-textfield"
+                      },
+                      "ptcstextfield-162" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "border-radius" : "6px"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-textfield"
+                      },
+                      "ptcstextfield-166" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "border-radius" : "6px"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-textfield"
+                      },
+                      "ptcstextfield-167" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "border-radius" : "6px"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-textfield"
+                      },
+                      "ptcstextfield-168" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
                               "border-radius" : "6px"
                             }
                           }
