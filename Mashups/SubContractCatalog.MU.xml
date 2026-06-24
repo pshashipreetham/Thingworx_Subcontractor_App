@@ -342,6 +342,295 @@
                 "TargetArea" : "UI",
                 "TargetId" : "ptcsgrid-43",
                 "TargetSection" : ""
+              }, {
+                "Id" : "8253461e-8bfc-49ba-9793-8589752a3d97",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SelectedText",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "SelectedCountry",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcsdropdown-35",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "getCatalogData",
+                "TargetSection" : "Things_SubContract.T"
+              }, {
+                "Id" : "e820b824-7a5c-4fcc-9762-5eca2c3145d8",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SelectedText",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "SelectedService",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcsdropdown-36",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "getCatalogData",
+                "TargetSection" : "Things_SubContract.T"
+              }, {
+                "Id" : "91aa02f9-90fc-407e-bd11-9ed4b42bea5a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "SearchText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcstextfield-23",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "getCatalogData",
+                "TargetSection" : "Things_SubContract.T"
+              }, {
+                "Id" : "ed4d9779-a5e3-4987-a600-ba935ed9881a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Country",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Country",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getCatalogData",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-44",
+                "TargetSection" : ""
+              }, {
+                "Id" : "31d57836-f5e8-44c5-8a22-3da0fca51f98",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ActiveTill",
+                  "SourcePropertyBaseType" : "DATETIME",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "ActiveTill",
+                  "TargetPropertyBaseType" : "DATETIME",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getCatalogData",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-44",
+                "TargetSection" : ""
+              }, {
+                "Id" : "b35065ad-8597-4571-a399-f6c80af1e0ef",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Compliance",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Compliance",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getCatalogData",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-44",
+                "TargetSection" : ""
+              }, {
+                "Id" : "4a8eb280-27c5-41c3-8c63-9fcd7e2e101a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ContactEmail",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Contact",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getCatalogData",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-44",
+                "TargetSection" : ""
+              }, {
+                "Id" : "7a3130da-ddd1-4cb2-b7db-5880367477a6",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Workload",
+                  "SourcePropertyBaseType" : "INTEGER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Workload",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getCatalogData",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-44",
+                "TargetSection" : ""
+              }, {
+                "Id" : "656f452d-b87f-4797-baf7-8453ded852dc",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SubContractor",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Subcontractor",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getCatalogData",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-44",
+                "TargetSection" : ""
+              }, {
+                "Id" : "ca8af443-c507-4c0e-a883-40754ce1a6cc",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Status",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Status",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getCatalogData",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-44",
+                "TargetSection" : ""
+              }, {
+                "Id" : "8d2fe8b1-1f99-4bfc-89b5-148364905080",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Services",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Services",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getCatalogData",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-44",
+                "TargetSection" : ""
+              }, {
+                "Id" : "624d7ab8-167d-43f2-92ce-d15773677171",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Rating",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Rating",
+                  "TargetPropertyBaseType" : "INTEGER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getCatalogData",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-44",
+                "TargetSection" : ""
+              }, {
+                "Id" : "dc2c13c5-5317-4fa5-b217-b4000f681b7d",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Province",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Province",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getCatalogData",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-44",
+                "TargetSection" : ""
+              }, {
+                "Id" : "bf2edce0-60fc-4a0f-98f2-c2bfd5adf81d",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "PrimaryService",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "PrimaryService",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getCatalogData",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-44",
+                "TargetSection" : ""
+              }, {
+                "Id" : "a4fb0d19-99e8-4751-a311-84f7b3b7f1ec",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "CreatedBy",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "CreatedBy",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getCatalogData",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-44",
+                "TargetSection" : ""
+              }, {
+                "Id" : "f27db635-b1a1-415a-bac9-08e7894a17b0",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ContactName",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "ContactName",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getCatalogData",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-44",
+                "TargetSection" : ""
+              }, {
+                "Id" : "d4a6bdc4-fee0-4170-8839-320c9cfd5172",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ContactEmail",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "ContactEmail",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getCatalogData",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-44",
+                "TargetSection" : ""
               } ],
               "DesignTimePermissions" : { },
               "Events" : [ {
@@ -384,6 +673,56 @@
                 "EventTriggerId" : "mashup-root",
                 "EventTriggerSection" : "",
                 "Id" : "418e47b6-ec85-484a-9924-88376f5ba238"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_SubContract.T",
+                "EventHandlerService" : "getCatalogData",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "SelectedTextChanged",
+                "EventTriggerId" : "ptcsdropdown-13",
+                "EventTriggerSection" : "",
+                "Id" : "8f2ed81a-99ef-4a41-8a22-94244d09d5e9"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_SubContract.T",
+                "EventHandlerService" : "getCatalogData",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "SelectedItemsChanged",
+                "EventTriggerId" : "ptcsdropdown-36",
+                "EventTriggerSection" : "",
+                "Id" : "b56ecede-e186-44e9-9c0b-ef7c2881f55e"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_SubContract.T",
+                "EventHandlerService" : "getCatalogData",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "SelectedTextChanged",
+                "EventTriggerId" : "ptcsdropdown-35",
+                "EventTriggerSection" : "",
+                "Id" : "be7bd98c-cd20-4b34-9f2d-1209b1d14762"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "navigationfunction-44",
+                "EventHandlerService" : "Navigate",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "ptcsbutton-39",
+                "EventTriggerSection" : "",
+                "Id" : "e696718e-307d-4d7c-99f5-cdb5048e75ad"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_SubContract.T",
+                "EventHandlerService" : "getCatalogData",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "WindowClosed",
+                "EventTriggerId" : "navigationfunction-44",
+                "EventTriggerSection" : "",
+                "Id" : "7c63cb29-29df-44a2-9b65-ff4a7388c45e"
               } ],
               "Reminders" : [ ],
               "RunTimePermissions" : { },
@@ -1216,7 +1555,7 @@
                   "Z-index" : 10,
                   "__TypeDisplayName" : "Mashup",
                   "_baseVersion" : "10.1.0-b47",
-                  "id_index" : 43,
+                  "id_index" : 44,
                   "secureExpressionsOnly" : true,
                   "supportsAutoResize" : true
                 },
@@ -1352,9 +1691,9 @@
                         "flex-basis" : "auto",
                         "flex-direction" : "row",
                         "flex-grow" : 1,
-                        "flex-max-height" : "73px",
+                        "flex-max-height" : "76px",
                         "flex-max-width" : "",
-                        "flex-min-height" : "73px",
+                        "flex-min-height" : "76px",
                         "flex-min-width" : "",
                         "flex-shrink" : 1,
                         "flex-size" : "fixed",
@@ -2052,9 +2391,9 @@
                           "flex-direction" : "row",
                           "flex-grow" : 1,
                           "flex-max-height" : "",
-                          "flex-max-width" : "620px",
+                          "flex-max-width" : "232px",
                           "flex-min-height" : "",
-                          "flex-min-width" : "620px",
+                          "flex-min-width" : "232px",
                           "flex-shrink" : 0,
                           "flex-size" : "fixed",
                           "flex-wrap" : "nowrap",
@@ -2625,7 +2964,7 @@
                               "cellHorizontalAlignment" : "center",
                               "columnMinimumWidth" : 75,
                               "delayed" : false,
-                              "editable" : false,
+                              "editable" : true,
                               "excludeFromRowEdit" : false,
                               "expressionValidator" : "validator2",
                               "headerHorizontalAlignment" : "center",
@@ -2668,7 +3007,7 @@
                               "cellHorizontalAlignment" : "center",
                               "columnMinimumWidth" : 75,
                               "delayed" : false,
-                              "editable" : false,
+                              "editable" : true,
                               "excludeFromRowEdit" : false,
                               "expressionValidator" : "validator2",
                               "headerHorizontalAlignment" : "center",
@@ -2754,7 +3093,7 @@
                               "cellHorizontalAlignment" : "center",
                               "columnMinimumWidth" : 75,
                               "delayed" : false,
-                              "editable" : false,
+                              "editable" : true,
                               "excludeFromRowEdit" : false,
                               "expressionValidator" : "validator2",
                               "headerHorizontalAlignment" : "center",
@@ -2797,7 +3136,7 @@
                               "cellHorizontalAlignment" : "center",
                               "columnMinimumWidth" : 75,
                               "delayed" : false,
-                              "editable" : false,
+                              "editable" : true,
                               "excludeFromRowEdit" : false,
                               "expressionValidator" : "validator2",
                               "headerHorizontalAlignment" : "center",
@@ -2840,7 +3179,7 @@
                               "cellHorizontalAlignment" : "center",
                               "columnMinimumWidth" : 75,
                               "delayed" : false,
-                              "editable" : false,
+                              "editable" : true,
                               "excludeFromRowEdit" : false,
                               "expressionValidator" : "validator2",
                               "headerHorizontalAlignment" : "center",
@@ -2883,7 +3222,7 @@
                               "cellHorizontalAlignment" : "center",
                               "columnMinimumWidth" : 75,
                               "delayed" : false,
-                              "editable" : false,
+                              "editable" : true,
                               "excludeFromRowEdit" : false,
                               "expressionValidator" : "validator2",
                               "headerHorizontalAlignment" : "center",
@@ -2926,7 +3265,7 @@
                               "cellHorizontalAlignment" : "center",
                               "columnMinimumWidth" : 75,
                               "delayed" : false,
-                              "editable" : false,
+                              "editable" : true,
                               "excludeFromRowEdit" : false,
                               "expressionValidator" : "validator2",
                               "headerHorizontalAlignment" : "center",
@@ -2969,7 +3308,7 @@
                               "cellHorizontalAlignment" : "center",
                               "columnMinimumWidth" : 75,
                               "delayed" : false,
-                              "editable" : false,
+                              "editable" : true,
                               "excludeFromRowEdit" : false,
                               "expressionValidator" : "validator2",
                               "headerHorizontalAlignment" : "center",
@@ -3012,7 +3351,7 @@
                               "cellHorizontalAlignment" : "center",
                               "columnMinimumWidth" : 75,
                               "delayed" : false,
-                              "editable" : false,
+                              "editable" : true,
                               "excludeFromRowEdit" : false,
                               "expressionValidator" : "validator2",
                               "headerHorizontalAlignment" : "center",
@@ -3055,7 +3394,7 @@
                               "cellHorizontalAlignment" : "center",
                               "columnMinimumWidth" : 75,
                               "delayed" : false,
-                              "editable" : false,
+                              "editable" : true,
                               "excludeFromRowEdit" : false,
                               "expressionValidator" : "validator2",
                               "headerHorizontalAlignment" : "center",
@@ -3098,7 +3437,7 @@
                               "cellHorizontalAlignment" : "center",
                               "columnMinimumWidth" : 75,
                               "delayed" : false,
-                              "editable" : false,
+                              "editable" : true,
                               "excludeFromRowEdit" : false,
                               "expressionValidator" : "validator2",
                               "headerHorizontalAlignment" : "center",
@@ -3141,7 +3480,7 @@
                               "cellHorizontalAlignment" : "center",
                               "columnMinimumWidth" : 75,
                               "delayed" : false,
-                              "editable" : false,
+                              "editable" : true,
                               "excludeFromRowEdit" : false,
                               "expressionValidator" : "validator2",
                               "headerHorizontalAlignment" : "center",
@@ -3230,7 +3569,7 @@
                           "RowEditFormTitle" : "[[EditRecord]]",
                           "RowFormat_StateParameters" : [ ],
                           "RowLazyLoading" : "disabled",
-                          "RowSelection" : "none",
+                          "RowSelection" : "single",
                           "RowsInfoLabelPosition" : "top",
                           "RowsInfoLabelType" : "label",
                           "RowsVerticalAlignment" : "top",
@@ -3327,6 +3666,341 @@
                       "Widgets" : [ ]
                     } ]
                   } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "ClickOutsideToClose" : false,
+                    "CloseButton" : true,
+                    "DisplayName" : "Popup",
+                    "Id" : "navigationfunction-44",
+                    "IncludeLegacyHeightAdjustment" : false,
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "LegacyHeightAdjustmentEnabled" : false,
+                    "Margin" : "5",
+                    "MashupParameters" : [ {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "Status",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "STRING",
+                        "description" : "",
+                        "name" : "Status",
+                        "ordinal" : 0
+                      }
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "CreatedBy",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "STRING",
+                        "description" : "",
+                        "name" : "CreatedBy",
+                        "ordinal" : 0
+                      }
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "Compliance",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "STRING",
+                        "description" : "",
+                        "name" : "Compliance",
+                        "ordinal" : 0
+                      }
+                    }, {
+                      "BaseType" : "INTEGER",
+                      "Description" : "",
+                      "ParameterName" : "Rating",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "INTEGER",
+                        "description" : "",
+                        "name" : "Rating",
+                        "ordinal" : 0
+                      }
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "Province",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "STRING",
+                        "description" : "",
+                        "name" : "Province",
+                        "ordinal" : 0
+                      }
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "PrimaryService",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "STRING",
+                        "description" : "",
+                        "name" : "PrimaryService",
+                        "ordinal" : 0
+                      }
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "Workload",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "STRING",
+                        "description" : "",
+                        "name" : "Workload",
+                        "ordinal" : 0
+                      }
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "Services",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "STRING",
+                        "description" : "",
+                        "name" : "Services",
+                        "ordinal" : 0
+                      }
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "Subcontractor",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "STRING",
+                        "description" : "",
+                        "name" : "Subcontractor",
+                        "ordinal" : 0
+                      }
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "ContactEmail",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "STRING",
+                        "description" : "",
+                        "name" : "ContactEmail",
+                        "ordinal" : 0
+                      }
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "Country",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "STRING",
+                        "description" : "",
+                        "name" : "Country",
+                        "ordinal" : 0
+                      }
+                    }, {
+                      "BaseType" : "DATETIME",
+                      "Description" : "",
+                      "ParameterName" : "ActiveTill",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "DATETIME",
+                        "description" : "",
+                        "name" : "ActiveTill",
+                        "ordinal" : 0
+                      }
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "ContactName",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "STRING",
+                        "description" : "",
+                        "name" : "ContactName",
+                        "ordinal" : 0
+                      }
+                    } ],
+                    "MissingMashupMessage" : "",
+                    "PopupHeight" : "600",
+                    "PopupScrollbar" : "auto",
+                    "PopupTitle" : "",
+                    "PopupWidth" : "650",
+                    "RedirectTo" : "mashup",
+                    "ReloadOnReplace" : false,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "TargetMashup" : "AddSubContractorPopup",
+                    "TargetWindowType" : "modal-popup",
+                    "Text" : "tw.navigationfunction-ide.properties.text.default-value",
+                    "Top" : 0,
+                    "Type" : "navigationfunction",
+                    "URL" : "",
+                    "URLTargetType" : "new",
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "navigationfunction",
+                    "_baseVersion" : "10.1.0",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "ContactEmail",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "INTEGER",
+                      "Description" : "",
+                      "ParameterName" : "Rating",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "Workload",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "Compliance",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "Status",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "ContactName",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "DATETIME",
+                      "Description" : "",
+                      "ParameterName" : "ActiveTill",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "Services",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "PrimaryService",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "Province",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "CreatedBy",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "Subcontractor",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "Country",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
                 } ]
               },
               "mashupType" : "mashup"

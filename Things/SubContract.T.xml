@@ -43,6 +43,89 @@
                      isLocalOnly="false"
                      isOpen="false"
                      isPrivate="false"
+                     name="AddSubContractor">
+                        <ResultType
+                         aspect.dataShape="SubContractorCatalog.DS"
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="DATETIME"
+                             description=""
+                             name="ActiveTill"
+                             ordinal="13"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Compliance"
+                             ordinal="11"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="ContactEmail"
+                             ordinal="9"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="ContactName"
+                             ordinal="8"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Country"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="CreatedBy"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="PrimaryService"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Province"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Rating"
+                             ordinal="13"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Services"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Status"
+                             ordinal="10"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="SubContractor"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="INTEGER"
+                             description=""
+                             name="Workload"
+                             ordinal="12"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
                      name="getApplications">
                         <ResultType
                          aspect.dataShape="Applications.DS"
@@ -84,7 +167,25 @@
                          description=""
                          name="result"
                          ordinal="0"></ResultType>
-                        <ParameterDefinitions></ParameterDefinitions>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="SearchText"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="All Countries"
+                             baseType="STRING"
+                             description=""
+                             name="SelectedCountry"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="All Services"
+                             baseType="STRING"
+                             description=""
+                             name="SelectedService"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
                     </ServiceDefinition>
                     <ServiceDefinition
                      aspect.isAsync="false"
@@ -529,6 +630,78 @@
                     <ServiceImplementation
                      description=""
                      handlerName="Script"
+                     name="AddSubContractor">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = "";
+                                        
+                                        try {
+                                            let tags = new Array();
+                                        
+                                            let values = Things["SubContractorCatalog.DT"].CreateValues();
+                                        
+                                            values.SubContractor = SubContractor;
+                                            values.CreatedBy = CreatedBy;
+                                            values.Country = Country;
+                                            values.Province = Province;
+                                            values.PrimaryService = PrimaryService;
+                                            values.Services = Services;
+                                            values.ActiveTill = ActiveTill ? new Date(ActiveTill) : null;
+                                            values.ContactName = ContactName;
+                                            values.ContactEmail = ContactEmail;
+                                            values.Status = Status;
+                                            values.Compliance = Compliance;
+                                        
+                                            if (Workload !== undefined && Workload !== null && Workload !== "") {
+                                                values.Workload = parseInt(Workload, 10);
+                                            }
+                                        
+                                            if (Rating !== undefined && Rating !== null && Rating !== "") {
+                                                values.Rating = Rating;
+                                            }
+                                        
+                                            let params = {
+                                                tags: tags,
+                                                source: me.name,
+                                                values: values
+                                            };
+                                        
+                                            Things["SubContractorCatalog.DT"].AddOrUpdateDataTableEntry(params);
+                                        
+                                            result = "Success";
+                                        
+                                        } catch (e) {
+                                            result = "Failed: " + e.message;
+                                            logger.error("Service: AddSubContractor, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
                      name="getApplications">
                         <ConfigurationTables>
                             <ConfigurationTable
@@ -675,12 +848,20 @@
                                         <code>
                                         <![CDATA[
                                         let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
-                                        		infoTableName: "InfoTable",
-                                        		dataShapeName: "SubContractorCatalog.DS"
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "SubContractorCatalog.DS"
+                                        });
+                                        
+                                        try {
+                                        
+                                        	let selectedCountryValue = SelectedCountry || "All Countries";
+                                        	let selectedServiceValue = SelectedService || "All Services";
+                                        	let searchTextValue = SearchText || "";
+                                        
+                                        	let allData = Things["SubContractorCatalog.DT"].GetDataTableEntries({
+                                        		maxItems: 500
                                         	});
-                                        try 
-                                        {
-                                        	result.AddRow({
+                                        	allData.AddRow({
                                         		SubContractor: "XYZ Installation",
                                         		CreatedBy: "SCM Admin1",
                                         		Country: "France",
@@ -696,7 +877,7 @@
                                         		Rating: "4.6"
                                         	});
                                         
-                                        	result.AddRow({
+                                        	allData.AddRow({
                                         		SubContractor: "ABC Cleaner",
                                         		CreatedBy: "SCM Admin2",
                                         		Country: "Germany",
@@ -712,7 +893,7 @@
                                         		Rating: "4.2"
                                         	});
                                         
-                                        	result.AddRow({
+                                        	allData.AddRow({
                                         		SubContractor: "PQR Winding",
                                         		CreatedBy: "SCM Admin1",
                                         		Country: "Spain",
@@ -728,7 +909,7 @@
                                         		Rating: "4.8"
                                         	});
                                         
-                                        	result.AddRow({
+                                        	allData.AddRow({
                                         		SubContractor: "Alpine Elevators GmbH",
                                         		CreatedBy: "SCM Admin2",
                                         		Country: "Austria",
@@ -744,7 +925,7 @@
                                         		Rating: "4.7"
                                         	});
                                         
-                                        	result.AddRow({
+                                        	allData.AddRow({
                                         		SubContractor: "Iberica Safety SL",
                                         		CreatedBy: "SCM Admin1",
                                         		Country: "Spain",
@@ -760,10 +941,35 @@
                                         		Rating: "3.9"
                                         	});
                                         
-                                          }
-                                        catch (e)
-                                        {
-                                          logger.error("Service: getCatalogData, Exception: " +e.message +", Line Number: " + e.lineNumber );
+                                        	for (let i = 0; i < allData.rows.length; i++) {
+                                        
+                                        		let row = allData.rows[i];
+                                        
+                                        		let countryMatch =
+                                        			selectedCountryValue === "" ||
+                                        			selectedCountryValue === "All Countries" ||
+                                        			row.Country === selectedCountryValue;
+                                        
+                                        		let serviceMatch =
+                                        			selectedServiceValue === "" ||
+                                        			selectedServiceValue === "All Services" ||
+                                        			row.Services.indexOf(selectedServiceValue) !== -1;
+                                        
+                                        		let searchMatch =
+                                        			searchTextValue === "" ||
+                                        			row.SubContractor.toLowerCase().indexOf(searchTextValue.toLowerCase()) !== -1 ||
+                                        			row.Services.toLowerCase().indexOf(searchTextValue.toLowerCase()) !== -1 ||
+                                        			row.Country.toLowerCase().indexOf(searchTextValue.toLowerCase()) !== -1 ||
+                                        			row.Province.toLowerCase().indexOf(searchTextValue.toLowerCase()) !== -1;
+                                        
+                                        		if (countryMatch && serviceMatch && searchMatch) {
+                                        			result.AddRow(row);
+                                        		}
+                                        	}
+                                        
+                                        
+                                        } catch (e) {
+                                        	logger.error("Service: getCatalogData, Exception: " + e.message + ", Line Number: " + e.lineNumber);
                                         }
                                         ]]>
                                         </code>

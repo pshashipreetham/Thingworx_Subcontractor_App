@@ -1282,7 +1282,7 @@
                         "parts" : {
                           "$" : {
                             "$" : {
-                              "background" : "#ffffff",
+                              "background" : "#061a36",
                               "border-color" : "inherit",
                               "border-radius" : "initial",
                               "border-style" : "none",
@@ -1318,9 +1318,9 @@
                         "parts" : {
                           "$" : {
                             "$" : {
-                              "background" : "#ffffff",
+                              "background" : "#061a36",
                               "border-color" : "inherit",
-                              "border-radius" : "initial",
+                              "border-radius" : "6px",
                               "border-style" : "none",
                               "border-width" : "0px",
                               "padding-bottom" : "",
@@ -1426,9 +1426,9 @@
                         "parts" : {
                           "$" : {
                             "$" : {
-                              "background" : "#ffffff",
+                              "background" : "#061a36",
                               "border-color" : "inherit",
-                              "border-radius" : "initial",
+                              "border-radius" : "6px",
                               "border-style" : "none",
                               "border-width" : "0px",
                               "padding-bottom" : "",
@@ -3340,9 +3340,9 @@
                         "flex-basis" : "auto",
                         "flex-direction" : "row",
                         "flex-grow" : 1,
-                        "flex-max-height" : "70px",
+                        "flex-max-height" : "73px",
                         "flex-max-width" : "",
-                        "flex-min-height" : "70px",
+                        "flex-min-height" : "73px",
                         "flex-min-width" : "",
                         "flex-shrink" : 1,
                         "flex-size" : "fixed",
