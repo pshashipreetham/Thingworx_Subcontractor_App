@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="10"
+ minorVersion="1"
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="PricingMatrix.T"
+         projectName="SubContract"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="AddPricingMatrixRow">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description=""
+                             name="Capacity1000"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description=""
+                             name="Capacity1600"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description=""
+                             name="Capacity200"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Capacity2000_3000"
+                             ordinal="4"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getCountryDataDropdown">
+                        <ResultType
+                         aspect.dataShape="CountryDataTable.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getCurrencyDropdown">
+                        <ResultType
+                         aspect.dataShape="CurrencyDropdown.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getPricingMatrix">
+                        <ResultType
+                         aspect.dataShape="PricingMatrix.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getRoleDS">
+                        <ResultType
+                         aspect.dataShape="OTIS.RoleDS.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="AddPricingMatrixRow">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = "";
+                                        
+                                        try {
+                                        
+                                            let nextBandNumber = 8;
+                                        
+                                            let allRows = Things["PricingMatrix.DT"].GetDataTableEntries({
+                                                maxItems: 500
+                                            });
+                                        
+                                            for (let i = 0; i < allRows.rows.length; i++) {
+                                        
+                                                let band = allRows.rows[i].StopsBand;
+                                        
+                                                if (band && band.indexOf("New band ") === 0) {
+                                        
+                                                    let num = parseInt(
+                                                        band.replace("New band ", ""),
+                                                        10
+                                                    );
+                                        
+                                                    if (!isNaN(num) && num >= nextBandNumber) {
+                                                        nextBandNumber = num + 1;
+                                                    }
+                                                }
+                                            }
+                                        
+                                            let tags = [];
+                                        
+                                            let values = Things["PricingMatrix.DT"].CreateValues();
+                                        
+                                            // Auto-generate StopsBand
+                                            values.StopsBand = "New band " + nextBandNumber;
+                                        
+                                            values.Capacity200 = Capacity200;
+                                            values.Capacity1000 = Capacity1000;
+                                            values.Capacity1600 = Capacity1600;
+                                            values.Capacity2000_3000 = Capacity2000_3000;
+                                        
+                                            Things["PricingMatrix.DT"].AddOrUpdateDataTableEntry({
+                                                tags: tags,
+                                                source: me.name,
+                                                values: values
+                                            });
+                                        
+                                            result = "Success";
+                                        
+                                        } catch (e) {
+                                        
+                                            result = "Failed: " + e.message;
+                                        
+                                            logger.error(
+                                                "Service: AddPricingMatrixRow, Exception: " +
+                                                e.message +
+                                                ", Line Number: " +
+                                                e.lineNumber
+                                            );
+                                        }
+                                        
+                                        result;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getCountryDataDropdown">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let  result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "CountryDataTable.DS"
+                                            });
+                                        
+                                        try 
+                                        {
+                                            result.AddRow({ Country: "All Countries" });
+                                            result.AddRow({ Country: "France" });
+                                            result.AddRow({ Country: "Germany" });
+                                            result.AddRow({ Country: "Austria" });
+                                            result.AddRow({ Country: "Spain" });
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: GetCountryDataDropdown, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getCurrencyDropdown">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "CurrencyDropdown.DS"
+                                            });
+                                        
+                                        try {
+                                          result.AddRow({
+                                                Currency: "EUR"
+                                            });
+                                        
+                                            result.AddRow({
+                                                Currency: "USD"
+                                            });
+                                        
+                                            result.AddRow({
+                                                Currency: "GBP"
+                                            });
+                                        
+                                        } 
+                                        catch (e) 
+                                        {
+                                            logger.error("Service: GetCurrencyDropdown, Exception: " +e.message +", Line Number: " + e.lineNumber
+                                                        );
+                                        
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getPricingMatrix">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "PricingMatrix.DS"
+                                        });
+                                        
+                                        try {
+                                        
+                                            let allData = Things["PricingMatrix.DT"].GetDataTableEntries({
+                                                maxItems: 500
+                                            });
+                                        
+                                            allData.AddRow({
+                                                StopsBand: "Up to 2",
+                                                Capacity200: 8250,
+                                                Capacity1000: 9065,
+                                                Capacity1600: 9840,
+                                                Capacity2000_3000: 11500
+                                            });
+                                        
+                                            allData.AddRow({
+                                                StopsBand: "Up to 3",
+                                                Capacity200: 8775,
+                                                Capacity1000: 9825,
+                                                Capacity1600: 10600,
+                                                Capacity2000_3000: 13025
+                                            });
+                                        
+                                            allData.AddRow({
+                                                StopsBand: "Up to 4",
+                                                Capacity200: 9295,
+                                                Capacity1000: 10300,
+                                                Capacity1600: 11360,
+                                                Capacity2000_3000: 14450
+                                            });
+                                        
+                                            allData.AddRow({
+                                                StopsBand: "Up to 5",
+                                                Capacity200: 10295,
+                                                Capacity1000: 11345,
+                                                Capacity1600: 12120,
+                                                Capacity2000_3000: 14925
+                                            });
+                                        
+                                            allData.AddRow({
+                                                StopsBand: "6 to 30",
+                                                Capacity200: 1940,
+                                                Capacity1000: 1980,
+                                                Capacity1600: 2080,
+                                                Capacity2000_3000: 2510
+                                            });
+                                        
+                                            allData.AddRow({
+                                                StopsBand: "31 to 45",
+                                                Capacity200: 1990,
+                                                Capacity1000: 2090,
+                                                Capacity1600: 2195,
+                                                Capacity2000_3000: 2595
+                                            });
+                                        
+                                            allData.AddRow({
+                                                StopsBand: "46 to 65",
+                                                Capacity200: 2090,
+                                                Capacity1000: 2140,
+                                                Capacity1600: 2235,
+                                                Capacity2000_3000: 2690
+                                            });
+                                        
+                                            for (let i = 0; i < allData.rows.length; i++) {
+                                                result.AddRow(allData.rows[i]);
+                                            }
+                                        
+                                        } catch (e) {
+                                            logger.error("Service: GetPricingMatrix, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getRoleDS">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "OTIS.RoleDS.DS"
+                                        	});
+                                        try 
+                                        {
+                                        	result.AddRow({
+                                        		RoleName: "SCM Admin"
+                                        	});
+                                        	result.AddRow({
+                                        		RoleName: "Project Manager"
+                                        	});
+                                        	result.AddRow({
+                                        		RoleName: "Subcontractor"
+                                        	});
+                                        	result.AddRow({
+                                        		RoleName: "Finance Controller"
+                                        	});
+                                        } 
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: getRoleDS, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

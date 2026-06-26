@@ -353,40 +353,6 @@
                 "TargetId" : "ptcsdropdown-14",
                 "TargetSection" : ""
               }, {
-                "Id" : "93affaaf-a708-425c-b8a2-2f46f8d50a16",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "SelectedText",
-                  "SourcePropertyBaseType" : "STRING",
-                  "SourcePropertyType" : "Property",
-                  "TargetProperty" : "CountryName",
-                  "TargetPropertyBaseType" : "STRING",
-                  "TargetPropertyType" : "Parameter"
-                } ],
-                "SourceArea" : "UI",
-                "SourceDetails" : "",
-                "SourceId" : "ptcsdropdown-13",
-                "SourceSection" : "",
-                "TargetArea" : "Data",
-                "TargetId" : "getExecutiveDashboardKPIs",
-                "TargetSection" : "Things_SubContract.T"
-              }, {
-                "Id" : "3b57573e-d1f9-4aa0-b07d-23877d2285c0",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "ActiveSubcontractors",
-                  "SourcePropertyBaseType" : "INTEGER",
-                  "SourcePropertyType" : "Field",
-                  "TargetProperty" : "LabelText",
-                  "TargetPropertyBaseType" : "STRING",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "getExecutiveDashboardKPIs",
-                "SourceSection" : "Things_SubContract.T",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcslabel-110",
-                "TargetSection" : ""
-              }, {
                 "Id" : "633fb989-5f36-4e5e-8295-47c4f52bbc10",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "",
@@ -471,6 +437,40 @@
                 "TargetArea" : "UI",
                 "TargetId" : "ptcsdropdown-172",
                 "TargetSection" : ""
+              }, {
+                "Id" : "e8ebe079-a557-40b9-aeb2-e44a6144d116",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "TotalCapacity",
+                  "SourcePropertyBaseType" : "LONG",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetLiveGeoDashboardKPIs",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-110",
+                "TargetSection" : ""
+              }, {
+                "Id" : "0ca21d9c-c85e-4d9e-b23c-b153d05d59b1",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SelectedText",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "CountryName",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcsdropdown-13",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetLiveGeoDashboardKPIs",
+                "TargetSection" : "Things_SubContract.T"
               } ],
               "DesignTimePermissions" : { },
               "Events" : [ {
@@ -566,16 +566,6 @@
               }, {
                 "EventHandlerArea" : "Data",
                 "EventHandlerId" : "Things_SubContract.T",
-                "EventHandlerService" : "getExecutiveDashboardKPIs",
-                "EventHandlerServiceMethod" : "",
-                "EventTriggerArea" : "UI",
-                "EventTriggerEvent" : "SelectedItemsChanged",
-                "EventTriggerId" : "ptcsdropdown-13",
-                "EventTriggerSection" : "",
-                "Id" : "62bba648-e59e-4509-be8e-156412dd7a26"
-              }, {
-                "EventHandlerArea" : "Data",
-                "EventHandlerId" : "Things_SubContract.T",
                 "EventHandlerService" : "getServices",
                 "EventHandlerServiceMethod" : "",
                 "EventTriggerArea" : "Mashup",
@@ -583,6 +573,26 @@
                 "EventTriggerId" : "mashup-root",
                 "EventTriggerSection" : "",
                 "Id" : "beb616c9-3f13-4d1a-b513-154c1d41c52f"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_SubContract.T",
+                "EventHandlerService" : "GetLiveGeoDashboardKPIs",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "SelectedItemsChanged",
+                "EventTriggerId" : "ptcsdropdown-171",
+                "EventTriggerSection" : "",
+                "Id" : "57623ab9-af2d-4dea-ad28-a615a18552d1"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_SubContract.T",
+                "EventHandlerService" : "GetLiveGeoDashboardKPIs",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "SelectedItemsChanged",
+                "EventTriggerId" : "ptcsdropdown-13",
+                "EventTriggerSection" : "",
+                "Id" : "86a12dc9-e015-47e9-b5d2-279219150075"
               } ],
               "Reminders" : [ ],
               "RunTimePermissions" : { },
@@ -1262,7 +1272,6 @@
                               "border-radius" : "initial",
                               "border-style" : "none",
                               "border-width" : "0px",
-                              "padding-bottom" : "5px",
                               "padding-left" : "5px",
                               "padding-right" : "5px",
                               "padding-top" : "5px"
@@ -1280,10 +1289,8 @@
                               "border-radius" : "initial",
                               "border-style" : "none",
                               "border-width" : "0px",
-                              "padding-bottom" : "5px",
                               "padding-left" : "5px",
-                              "padding-right" : "5px",
-                              "padding-top" : "5px"
+                              "padding-right" : "5px"
                             }
                           }
                         },
@@ -1354,8 +1361,7 @@
                               "border-width" : "0px",
                               "padding-bottom" : "5px",
                               "padding-left" : "5px",
-                              "padding-right" : "5px",
-                              "padding-top" : "5px"
+                              "padding-right" : "5px"
                             }
                           }
                         },
@@ -1372,8 +1378,25 @@
                               "border-width" : "0px",
                               "padding-bottom" : "5px",
                               "padding-left" : "5px",
-                              "padding-right" : "5px",
-                              "padding-top" : "5px"
+                              "padding-right" : "5px"
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-194" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#ffffff",
+                              "border-color" : "inherit",
+                              "border-radius" : "initial",
+                              "border-style" : "none",
+                              "border-width" : "0px",
+                              "padding-bottom" : "",
+                              "padding-left" : "",
+                              "padding-right" : "",
+                              "padding-top" : ""
                             }
                           }
                         },
@@ -2492,6 +2515,28 @@
                         },
                         "widget" : "ptcs-dropdown"
                       },
+                      "ptcsdropdown-171" : {
+                        "parts" : {
+                          "select-box" : {
+                            "$" : {
+                              "border-color" : "#c0c0c0",
+                              "border-radius" : "6px"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-dropdown"
+                      },
+                      "ptcsdropdown-172" : {
+                        "parts" : {
+                          "select-box" : {
+                            "$" : {
+                              "border-color" : "#c0c0c0",
+                              "border-radius" : "6px"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-dropdown"
+                      },
                       "ptcsdropdown-19" : {
                         "parts" : {
                           "select-box" : {
@@ -2722,6 +2767,16 @@
                             "$" : {
                               "font-size" : "20px",
                               "font-weight" : "600"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-label"
+                      },
+                      "ptcslabel-170" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "font-size" : "18px"
                             }
                           }
                         },
@@ -3113,7 +3168,7 @@
                   "Z-index" : 10,
                   "__TypeDisplayName" : "Mashup",
                   "_baseVersion" : "10.1.0-b47",
-                  "id_index" : 193,
+                  "id_index" : 194,
                   "secureExpressionsOnly" : true,
                   "supportsAutoResize" : true
                 },
@@ -4207,7 +4262,7 @@
                               "DisplayName" : "ptcs-label-110",
                               "HorizontalAlignment" : "center",
                               "Id" : "ptcslabel-110",
-                              "LabelText" : "4",
+                              "LabelText" : "395",
                               "LabelType" : "label",
                               "LastContainer" : false,
                               "Left" : 7,
@@ -4366,7 +4421,7 @@
                               "DisplayName" : "ptcs-label-111",
                               "HorizontalAlignment" : "center",
                               "Id" : "ptcslabel-111",
-                              "LabelText" : "4",
+                              "LabelText" : "54%",
                               "LabelType" : "label",
                               "LastContainer" : false,
                               "Left" : 7,
@@ -4523,7 +4578,7 @@
                               "DisplayName" : "ptcs-label-112",
                               "HorizontalAlignment" : "center",
                               "Id" : "ptcslabel-112",
-                              "LabelText" : "7",
+                              "LabelText" : "3/5",
                               "LabelType" : "label",
                               "LastContainer" : false,
                               "Left" : 7,
@@ -4822,13 +4877,13 @@
                             "Z-index" : 10,
                             "__TypeDisplayName" : "Responsive Container",
                             "align-content" : "flex-start",
-                            "align-items" : "flex-start",
+                            "align-items" : "flex-end",
                             "flex-basis" : "auto",
                             "flex-direction" : "row",
                             "flex-grow" : 1,
-                            "flex-max-height" : "51px",
+                            "flex-max-height" : "59px",
                             "flex-max-width" : "",
-                            "flex-min-height" : "51px",
+                            "flex-min-height" : "59px",
                             "flex-min-width" : "",
                             "flex-shrink" : 1,
                             "flex-size" : "fixed",
@@ -4876,9 +4931,9 @@
                               "flex-direction" : "row",
                               "flex-grow" : 1,
                               "flex-max-height" : "",
-                              "flex-max-width" : "198px",
+                              "flex-max-width" : "231px",
                               "flex-min-height" : "",
-                              "flex-min-width" : "198px",
+                              "flex-min-width" : "231px",
                               "flex-shrink" : 1,
                               "flex-size" : "fixed",
                               "flex-wrap" : "nowrap",
@@ -4948,7 +5003,7 @@
                               "Z-index" : 10,
                               "__TypeDisplayName" : "Responsive Container",
                               "align-content" : "flex-start",
-                              "align-items" : "flex-start",
+                              "align-items" : "center",
                               "flex-basis" : "auto",
                               "flex-direction" : "row",
                               "flex-grow" : 1,
@@ -5141,39 +5196,33 @@
                               "Area" : "UI",
                               "AutoCenterBehavior" : "last-selected",
                               "AutoZoomBehavior" : "every-data-change",
-                              "ClusterLocations" : false,
+                              "ClusterLocations" : true,
                               "ClustersAverageCenter" : false,
                               "ClustersClickToZoom" : false,
                               "ClustersMaxZoomLevel" : 20,
                               "DisplayName" : "googlemap-174",
-                              "EnableLocationSelection" : false,
+                              "EnableLocationSelection" : true,
                               "EnableMarkerSelection" : true,
-                              "EnableRegionSelection" : false,
+                              "EnableRegionSelection" : true,
                               "EndMarkerStyle" : "DefaultMapEndStyle",
                               "Height" : 200,
                               "Id" : "googlemap-174",
                               "LastContainer" : false,
                               "Left" : 101.77084350585938,
-                              "LocationField" : "location",
                               "MapSkin" : "normal",
                               "MapType" : "roadmap",
                               "Margin" : "5",
-                              "MarkerField" : "",
                               "MarkerFormatting_StateParameters" : [ ],
                               "MarkerStyle" : "DefaultMapMarkerStyle",
                               "MashupParameters" : [ ],
                               "MultiSelect" : false,
                               "PathStyle" : "DefaultMapPathStyle",
-                              "PlannedRouteLocationField" : "location",
                               "PlannedRouteStyle" : "DefaultMapRouteStyle",
                               "RegionFillOpacity" : 1,
                               "RegionFormatting_StateParameters" : [ ],
-                              "RegionLocationField" : "location",
-                              "RegionLocationsField" : "locations",
                               "RegionMultiSelect" : false,
                               "RegionStyle" : "DefaultMapRegionStyle",
                               "ResponsiveLayout" : true,
-                              "RouteLocationField" : "location",
                               "RouteStyle" : "DefaultMapRouteStyle",
                               "SelectedMarkerStyle" : "DefaultMapSelectedStyle",
                               "SelectedRegionStyle" : "DefaultMapRegionSelectedStyle",
@@ -5312,6 +5361,7 @@
                             "ExpandCollapseTabLocation" : "inside",
                             "ExpandTabIcon" : "",
                             "Expanded" : true,
+                            "HorizontalScrolling" : "no-scroll",
                             "Id" : "flexcontainer-175",
                             "LastContainer" : false,
                             "LazyLoading" : false,
@@ -5319,6 +5369,7 @@
                             "Overlay" : false,
                             "OverrideChildrenAbsolute" : false,
                             "ResponsiveLayout" : true,
+                            "Scrolling" : "no-scroll",
                             "ShowDataLoading" : true,
                             "ShowExpandCollapseTab" : false,
                             "ShowVerticalScrollbar" : false,
@@ -5335,11 +5386,11 @@
                             "flex-basis" : "auto",
                             "flex-direction" : "column",
                             "flex-grow" : 1,
-                            "flex-max-height" : "214px",
+                            "flex-max-height" : "175px",
                             "flex-max-width" : "",
-                            "flex-min-height" : "214px",
+                            "flex-min-height" : "175px",
                             "flex-min-width" : "",
-                            "flex-shrink" : 1,
+                            "flex-shrink" : 0,
                             "flex-size" : "fixed",
                             "flex-wrap" : "nowrap",
                             "iconClass" : "widgets-flexcontainer-fixed",
@@ -5534,6 +5585,7 @@
                             "ExpandCollapseTabLocation" : "inside",
                             "ExpandTabIcon" : "",
                             "Expanded" : true,
+                            "HorizontalScrolling" : "no-scroll",
                             "Id" : "flexcontainer-176",
                             "LastContainer" : false,
                             "LazyLoading" : false,
@@ -5541,6 +5593,7 @@
                             "Overlay" : false,
                             "OverrideChildrenAbsolute" : false,
                             "ResponsiveLayout" : true,
+                            "Scrolling" : "no-scroll",
                             "ShowDataLoading" : true,
                             "ShowExpandCollapseTab" : false,
                             "ShowVerticalScrollbar" : false,
@@ -5553,15 +5606,15 @@
                             "Z-index" : 10,
                             "__TypeDisplayName" : "Responsive Container",
                             "align-content" : "flex-start",
-                            "align-items" : "flex-start",
+                            "align-items" : "flex-end",
                             "flex-basis" : "auto",
                             "flex-direction" : "row",
                             "flex-grow" : 1,
-                            "flex-max-height" : "45px",
+                            "flex-max-height" : "34px",
                             "flex-max-width" : "",
-                            "flex-min-height" : "45px",
+                            "flex-min-height" : "34px",
                             "flex-min-width" : "",
-                            "flex-shrink" : 1,
+                            "flex-shrink" : 0,
                             "flex-size" : "fixed",
                             "flex-wrap" : "nowrap",
                             "iconClass" : "widgets-flexcontainer-fixed",
@@ -5928,7 +5981,7 @@
                                 "DisplayName" : "ptcs-label-190",
                                 "HorizontalAlignment" : "left",
                                 "Id" : "ptcslabel-190",
-                                "LabelText" : "68%",
+                                "LabelText" : "82%",
                                 "LabelType" : "body",
                                 "LastContainer" : false,
                                 "Left" : 20.9818115234375,
@@ -5957,7 +6010,7 @@
                                 "DisplayName" : "ptcs-label-191",
                                 "HorizontalAlignment" : "left",
                                 "Id" : "ptcslabel-191",
-                                "LabelText" : "68%",
+                                "LabelText" : "45%",
                                 "LabelType" : "body",
                                 "LastContainer" : false,
                                 "Left" : 20.9818115234375,
@@ -5986,7 +6039,7 @@
                                 "DisplayName" : "ptcs-label-192",
                                 "HorizontalAlignment" : "left",
                                 "Id" : "ptcslabel-192",
-                                "LabelText" : "68%",
+                                "LabelText" : "55%",
                                 "LabelType" : "body",
                                 "LastContainer" : false,
                                 "Left" : 20.9818115234375,
@@ -6015,7 +6068,7 @@
                                 "DisplayName" : "ptcs-label-193",
                                 "HorizontalAlignment" : "left",
                                 "Id" : "ptcslabel-193",
-                                "LabelText" : "68%",
+                                "LabelText" : "20%",
                                 "LabelType" : "body",
                                 "LastContainer" : false,
                                 "Left" : 20.9818115234375,
@@ -6039,6 +6092,54 @@
                             } ]
                           } ]
                         } ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "CollapseTabIcon" : "",
+                          "DisableLegacyCustomClassStyles" : false,
+                          "DisplayName" : "container-194",
+                          "EnableContainerUnload" : false,
+                          "EnableExpandCollapse" : false,
+                          "ExpandCollapseTabLocation" : "inside",
+                          "ExpandTabIcon" : "",
+                          "Expanded" : true,
+                          "Id" : "flexcontainer-194",
+                          "LastContainer" : false,
+                          "LazyLoading" : false,
+                          "Margin" : "",
+                          "Overlay" : false,
+                          "OverrideChildrenAbsolute" : false,
+                          "ResponsiveLayout" : true,
+                          "ShowDataLoading" : true,
+                          "ShowExpandCollapseTab" : false,
+                          "ShowVerticalScrollbar" : false,
+                          "SourceURL" : "",
+                          "Style" : "DefaultContainerStyle",
+                          "StyleProperties" : { },
+                          "Type" : "flexcontainer",
+                          "UseTheme" : true,
+                          "Visible" : true,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Responsive Container",
+                          "align-content" : "flex-start",
+                          "align-items" : "flex-start",
+                          "flex-basis" : "auto",
+                          "flex-direction" : "row",
+                          "flex-grow" : 1,
+                          "flex-max-height" : "",
+                          "flex-max-width" : "10px",
+                          "flex-min-height" : "",
+                          "flex-min-width" : "10px",
+                          "flex-shrink" : 1,
+                          "flex-size" : "fixed",
+                          "flex-wrap" : "nowrap",
+                          "iconClass" : "widgets-flexcontainer-fixed",
+                          "isLocked" : false,
+                          "justify-content" : "flex-start",
+                          "positioning" : "responsive",
+                          "userCannotRemove" : false
+                        },
+                        "Widgets" : [ ]
                       } ]
                     }, {
                       "Properties" : {

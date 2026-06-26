@@ -152,7 +152,15 @@
                     </Rows>
                 </ConfigurationTable>
             </ConfigurationTables>
-            <ParameterDefinitions></ParameterDefinitions>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.bindingDirection="BOTH"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="SelectedSubContractor"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
             <Things></Things>
             <ThingShapes></ThingShapes>
             <ThingTemplates></ThingTemplates>
@@ -238,6 +246,48 @@
                     "Parameters" : { },
                     "RefreshInterval" : 0,
                     "Target" : "getGovernanceAuditLog"
+                  }, {
+                    "APIMethod" : "post",
+                    "Caching" : {
+                      "cache" : false,
+                      "cacheKeyParams" : [ ],
+                      "cacheStrategy" : "INSTANCE",
+                      "maxResultSets" : "10"
+                    },
+                    "Characteristic" : "Services",
+                    "Id" : "23ea8f8b-606c-4fae-9bcf-5f10428d83b9",
+                    "Name" : "getSelectedSubContractorsAreaCoveredDetails",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "getSelectedSubContractorsAreaCoveredDetails"
+                  }, {
+                    "APIMethod" : "post",
+                    "Caching" : {
+                      "cache" : false,
+                      "cacheKeyParams" : [ ],
+                      "cacheStrategy" : "INSTANCE",
+                      "maxResultSets" : "10"
+                    },
+                    "Characteristic" : "Services",
+                    "Id" : "3f3b9eee-f39b-4754-b45b-01cf05c27f59",
+                    "Name" : "getSubContractorServices",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "getSubContractorServices"
+                  }, {
+                    "APIMethod" : "post",
+                    "Caching" : {
+                      "cache" : false,
+                      "cacheKeyParams" : [ ],
+                      "cacheStrategy" : "INSTANCE",
+                      "maxResultSets" : "10"
+                    },
+                    "Characteristic" : "Services",
+                    "Id" : "e2ca53d7-363d-40bd-a192-b1b7bf0973d5",
+                    "Name" : "getSubContractorCompliance",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "getSubContractorCompliance"
                   } ]
                 },
                 "UserExtensions" : {
@@ -272,23 +322,6 @@
                 "SourceSection" : "Things_SubContract.T",
                 "TargetArea" : "UI",
                 "TargetId" : "ptcsdropdown-70",
-                "TargetSection" : ""
-              }, {
-                "Id" : "38fbc27f-3c64-4b10-8269-8f254b988cad",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "SelectedText",
-                  "SourcePropertyBaseType" : "STRING",
-                  "SourcePropertyType" : "Property",
-                  "TargetProperty" : "LabelText",
-                  "TargetPropertyBaseType" : "STRING",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "UI",
-                "SourceDetails" : "",
-                "SourceId" : "ptcsdropdown-70",
-                "SourceSection" : "",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcslabel-109",
                 "TargetSection" : ""
               }, {
                 "Id" : "4e3263a2-ad33-4dad-8317-7c07a61e3e2f",
@@ -342,6 +375,499 @@
                 "TargetArea" : "UI",
                 "TargetId" : "ptcsgrid-303",
                 "TargetSection" : ""
+              }, {
+                "Id" : "46c5ddd3-d4df-4515-bf14-0f512af2171c",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SelectedCoverage1",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSelectedSubContractorsAreaCoveredDetails",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-157",
+                "TargetSection" : ""
+              }, {
+                "Id" : "0f23e3d2-26c6-4355-be89-02649ccefdaf",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SelectedCoverage2",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSelectedSubContractorsAreaCoveredDetails",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-164",
+                "TargetSection" : ""
+              }, {
+                "Id" : "9ce520d6-3728-41e8-bfa2-dcf42a405629",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SelectedText",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "SelectedSubContractor",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcsdropdown-70",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "getSelectedSubContractorsAreaCoveredDetails",
+                "TargetSection" : "Things_SubContract.T"
+              }, {
+                "Id" : "27696d79-3880-4d08-95a8-dcb6ed78cd07",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SelectedText",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "SelectedSubContractor",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcsdropdown-70",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "getSubContractorServices",
+                "TargetSection" : "Things_SubContract.T"
+              }, {
+                "Id" : "36ef1d55-e866-4389-9a7e-2c153d79c48a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "InstallationStatus",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubContractorServices",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-257",
+                "TargetSection" : ""
+              }, {
+                "Id" : "a4b9b77c-0807-47a0-9bbd-24559ef9af99",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "CleaningStatus",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubContractorServices",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-288",
+                "TargetSection" : ""
+              }, {
+                "Id" : "ce85c8d6-23fa-4ee2-9f2c-b6691a89ca5b",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "FinishingStatus",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubContractorServices",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-265",
+                "TargetSection" : ""
+              }, {
+                "Id" : "a105232b-960a-4673-af58-19beffb7d98a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "MaintenanceStatus",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubContractorServices",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-286",
+                "TargetSection" : ""
+              }, {
+                "Id" : "93c530e2-9c1a-4563-9d0d-b5b6b39e3b0c",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "PaintingStatus",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubContractorServices",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-259",
+                "TargetSection" : ""
+              }, {
+                "Id" : "341ef015-3403-4065-9f13-eb12e4c831bc",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SafetyAuditStatus",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubContractorServices",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-262",
+                "TargetSection" : ""
+              }, {
+                "Id" : "3b5e7103-901d-44c8-83fe-7bb0a244f1c5",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "WindingStatus",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubContractorServices",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-271",
+                "TargetSection" : ""
+              }, {
+                "Id" : "f9344c9f-ff7e-44ec-a011-9c6e59188163",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SelectedText",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "SelectedSubContractor",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcsdropdown-70",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "getSubContractorCompliance",
+                "TargetSection" : "Things_SubContract.T"
+              }, {
+                "Id" : "8b89ff57-ead1-474c-ae20-b1fb9b34970a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "CountryLaborLawStatus",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubContractorCompliance",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-329",
+                "TargetSection" : ""
+              }, {
+                "Id" : "77cac504-fb0a-4877-895e-ee8ab44b453f",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "InsuranceCertificateStatus",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubContractorCompliance",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-322",
+                "TargetSection" : ""
+              }, {
+                "Id" : "fc599a34-5e93-4657-8b28-93d2a5e28e0d",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ISO9001Status",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubContractorCompliance",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-314",
+                "TargetSection" : ""
+              }, {
+                "Id" : "657a4568-81a5-4a13-adb2-46f655438926",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "OverallStatus",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubContractorCompliance",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-341",
+                "TargetSection" : ""
+              }, {
+                "Id" : "e3a4332a-297b-4745-bb36-af21e6eefbb5",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SafetyTrainingStatus",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubContractorCompliance",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-318",
+                "TargetSection" : ""
+              }, {
+                "Id" : "791e957c-2013-49d2-b5e0-d34dbf2aa580",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "TaxClearanceStatus",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubContractorCompliance",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-337",
+                "TargetSection" : ""
+              }, {
+                "Id" : "c636d091-9eeb-4265-8026-32a45c8c8026",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "WorkingHoursLimitStatus",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubContractorCompliance",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-333",
+                "TargetSection" : ""
+              }, {
+                "Id" : "8279543b-b69a-4f01-90b6-4b22615ee1b8",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SelectedSubContractor",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "SelectedText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcsdropdown-70",
+                "TargetSection" : ""
+              }, {
+                "Id" : "5f1b968f-cfa7-4598-8aeb-d676bd9da723",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SubContractor",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getSubcontractor",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-109",
+                "TargetSection" : ""
+              }, {
+                "Id" : "0292ce57-3bc5-4403-a55e-0b57a1b9c15a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ActiveTill",
+                  "SourcePropertyBaseType" : "DATETIME",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getSubcontractor",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-135",
+                "TargetSection" : ""
+              }, {
+                "Id" : "2a43a4e4-9404-41f3-90f3-03ef8602d8e6",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ContactName",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getSubcontractor",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-113",
+                "TargetSection" : ""
+              }, {
+                "Id" : "cf162f40-e8da-4984-b9ba-a48e95513d87",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Country",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getSubcontractor",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-110",
+                "TargetSection" : ""
+              }, {
+                "Id" : "990f80e4-f372-4736-8b66-636cb62f11d4",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "CreatedBy",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getSubcontractor",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-127",
+                "TargetSection" : ""
+              }, {
+                "Id" : "b104211b-5eeb-44ab-b364-eb581aa1cc2e",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "PrimaryService",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getSubcontractor",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-111",
+                "TargetSection" : ""
+              }, {
+                "Id" : "c1dfd5af-debd-47f0-851e-24328d6043e0",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Status",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getSubcontractor",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-143",
+                "TargetSection" : ""
+              }, {
+                "Id" : "a6e6b94f-98e8-4053-99f9-b323e6637659",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ContactEmail",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getSubcontractor",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-139",
+                "TargetSection" : ""
+              }, {
+                "Id" : "f225d035-be39-47e9-99c8-9a31a52f940b",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Province",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "getSubcontractor",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-131",
+                "TargetSection" : ""
               } ],
               "DesignTimePermissions" : { },
               "Events" : [ {
@@ -384,6 +910,36 @@
                 "EventTriggerId" : "mashup-root",
                 "EventTriggerSection" : "",
                 "Id" : "777f308b-5c5a-430f-a0e1-93d818d02cbd"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_SubContract.T",
+                "EventHandlerService" : "getSelectedSubContractorsAreaCoveredDetails",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "19865126-b83f-4bd6-ba39-2bd9436d8ebf"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_SubContract.T",
+                "EventHandlerService" : "getSubContractorServices",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "c3a8c179-083b-4894-b2b2-6cd99e89d6c6"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_SubContract.T",
+                "EventHandlerService" : "getSubContractorCompliance",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "0b21d440-39d6-4dbc-8475-e972e3946c0a"
               } ],
               "Reminders" : [ ],
               "RunTimePermissions" : { },
@@ -2402,19 +2958,75 @@
                         },
                         "widget" : "flex-container"
                       },
+                      "flexcontainer-61" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "border-color" : "rgba(192,192,192,1)",
+                              "border-radius" : "6px",
+                              "border-style" : "solid",
+                              "border-width" : "1px",
+                              "padding-left" : "10px",
+                              "padding-top" : "10px"
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
                       "flexcontainer-63" : {
                         "parts" : {
                           "$" : {
                             "$" : {
                               "background" : "#ffffff",
-                              "border-color" : "inherit",
-                              "border-radius" : "initial",
-                              "border-style" : "none",
-                              "border-width" : "0px",
+                              "border-color" : "rgba(192,192,192,1)",
+                              "border-radius" : "6px",
+                              "border-style" : "solid",
+                              "border-width" : "1px",
                               "padding-bottom" : "",
                               "padding-left" : "",
                               "padding-right" : "",
                               "padding-top" : ""
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-64" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "border-color" : "rgba(192,192,192,1)",
+                              "border-radius" : "6px",
+                              "border-style" : "solid",
+                              "border-width" : "1px",
+                              "padding-left" : "5px",
+                              "padding-top" : "5px"
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-65" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "border-color" : "rgba(192,192,192,1)",
+                              "border-radius" : "6px",
+                              "border-style" : "solid",
+                              "border-width" : "1px"
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-66" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "border-color" : "rgba(192,192,192,1)",
+                              "border-radius" : "4px",
+                              "border-style" : "solid",
+                              "border-width" : "1px"
                             }
                           }
                         },
@@ -3234,9 +3846,11 @@
                               "border-color" : "rgba(191,219,237,1)",
                               "border-radius" : "4px",
                               "border-width" : "1px",
-                              "color" : "rgba(35,43,45,1)",
-                              "padding-left" : "3px",
-                              "padding-right" : "3px",
+                              "color" : "#0070b0",
+                              "font-weight" : "400",
+                              "padding-bottom" : "5px",
+                              "padding-left" : "10px",
+                              "padding-right" : "10px",
                               "padding-top" : "3px"
                             }
                           }
@@ -3269,9 +3883,11 @@
                               "border-color" : "rgba(191,219,237,1)",
                               "border-radius" : "4px",
                               "border-width" : "1px",
-                              "color" : "rgba(35,43,45,1)",
-                              "padding-left" : "3px",
-                              "padding-right" : "3px",
+                              "color" : "#0070b0",
+                              "font-weight" : "400",
+                              "padding-bottom" : "5px",
+                              "padding-left" : "10px",
+                              "padding-right" : "5px",
                               "padding-top" : "3px"
                             }
                           }
@@ -4498,6 +5114,118 @@
                         },
                         "widget" : "ptcs-label"
                       },
+                      "ptcslabel-342" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "color" : "rgba(0,0,0,1)",
+                              "font-size" : "22px",
+                              "font-weight" : "400"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-label"
+                      },
+                      "ptcslabel-343" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "color" : "rgba(0,0,0,1)",
+                              "font-size" : "14px",
+                              "font-weight" : "600"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-label"
+                      },
+                      "ptcslabel-344" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "color" : "rgba(0,0,0,1)",
+                              "font-size" : "14px",
+                              "font-weight" : "600"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-label"
+                      },
+                      "ptcslabel-345" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "color" : "rgba(0,0,0,1)",
+                              "font-size" : "20px",
+                              "font-weight" : "500"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-label"
+                      },
+                      "ptcslabel-346" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "color" : "rgba(0,0,0,1)",
+                              "font-size" : "16px",
+                              "font-weight" : "500"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-label"
+                      },
+                      "ptcslabel-347" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "color" : "rgba(0,0,0,1)",
+                              "font-size" : "20px",
+                              "font-weight" : "500"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-label"
+                      },
+                      "ptcslabel-348" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "color" : "rgba(0,0,0,1)"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-label"
+                      },
+                      "ptcslabel-349" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "font-weight" : "500"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-label"
+                      },
+                      "ptcslabel-350" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "font-weight" : "500"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-label"
+                      },
+                      "ptcslabel-351" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "font-weight" : "500"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-label"
+                      },
                       "ptcslabel-38" : {
                         "parts" : {
                           "$" : {
@@ -4724,7 +5452,16 @@
                   "Z-index" : 10,
                   "__TypeDisplayName" : "Mashup",
                   "_baseVersion" : "10.1.0-b47",
-                  "id_index" : 341,
+                  "_currentParameterDefs" : [ {
+                    "Aspects" : {
+                      "bindingDirection" : "BOTH",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "STRING",
+                    "Description" : "",
+                    "ParameterName" : "SelectedSubContractor"
+                  } ],
+                  "id_index" : 351,
                   "secureExpressionsOnly" : true,
                   "supportsAutoResize" : true
                 },
@@ -5579,13 +6316,13 @@
                             "Area" : "UI",
                             "AutoSelectFirstRow" : true,
                             "ClearSelectedItemsLabel" : "[[clearSelectedItems]]",
-                            "ClearSelectionItem" : false,
+                            "ClearSelectionItem" : true,
                             "ClearSelectionLabel" : "[[None]]",
                             "CriteriaMessage" : "",
                             "CriteriaMessageDetails" : "",
                             "DisableLegacyCustomClassStyles" : false,
                             "Disabled" : false,
-                            "DisplayField" : "Subcontractor",
+                            "DisplayField" : "SubContractor",
                             "DisplayFieldBaseType" : "STRING",
                             "DisplayName" : "ptcs-dropdown-70",
                             "FilterHintText" : "[[filter]]",
@@ -5613,7 +6350,7 @@
                             "ShowValidationCriteria" : false,
                             "ShowValidationFailure" : false,
                             "ShowValidationSuccess" : false,
-                            "StateField" : "Subcontractor",
+                            "StateField" : "SubContractor",
                             "SuccessMessage" : "",
                             "SuccessMessageDetails" : "",
                             "TabSequence" : 0,
@@ -5624,7 +6361,7 @@
                             "ValidationFailureIcon" : "cds:icon_error",
                             "ValidationState" : "undefined",
                             "ValidationSuccessIcon" : "cds:icon_success",
-                            "ValueField" : "Subcontractor",
+                            "ValueField" : "SubContractor",
                             "ValueRequired" : false,
                             "Visible" : true,
                             "Width" : 223,
@@ -5720,11 +6457,9 @@
                             "value" : "TabValue4",
                             "visible" : true
                           }, {
-                            "disabled" : false,
                             "iconType" : null,
                             "name" : "Availability",
-                            "value" : "TabValue5",
-                            "visible" : true
+                            "value" : "TabValue5"
                           }, {
                             "disabled" : false,
                             "iconType" : null,
@@ -5762,7 +6497,7 @@
                           "NumberOfTabs" : 10,
                           "OverflowButtonLabel" : "[[Widgets.Tabs.Overflow.Label]]",
                           "ResponsiveLayout" : true,
-                          "SelectedTab" : 2,
+                          "SelectedTab" : 9,
                           "ShowDataLoading" : true,
                           "SwitchTabOnFocus" : false,
                           "Tab10Disabled" : false,
@@ -5812,7 +6547,7 @@
                           "Tab5Disabled" : false,
                           "Tab5Name" : "Availability",
                           "Tab5Value" : "TabValue5",
-                          "Tab5Visible" : true,
+                          "Tab5Visible" : false,
                           "Tab6Disabled" : false,
                           "Tab6Name" : "Compliance",
                           "Tab6Value" : "TabValue6",
@@ -8024,7 +8759,7 @@
                                 "LabelType" : "label",
                                 "LastContainer" : false,
                                 "Left" : 99.4375,
-                                "Margin" : "5 0 0 5",
+                                "Margin" : "5 0 0 10",
                                 "MultiLine" : true,
                                 "PreserveWhiteSpace" : false,
                                 "ResponsiveLayout" : false,
@@ -8101,7 +8836,7 @@
                                 "LabelType" : "label",
                                 "LastContainer" : false,
                                 "Left" : 60.4375,
-                                "Margin" : "5",
+                                "Margin" : "5 5 5 10",
                                 "MultiLine" : true,
                                 "PreserveWhiteSpace" : false,
                                 "ResponsiveLayout" : false,
@@ -9767,6 +10502,7 @@
                               "ExpandCollapseTabLocation" : "inside",
                               "ExpandTabIcon" : "",
                               "Expanded" : true,
+                              "HorizontalScrolling" : "no-scroll",
                               "Id" : "flexcontainer-242",
                               "LastContainer" : false,
                               "LazyLoading" : false,
@@ -9774,6 +10510,7 @@
                               "Overlay" : false,
                               "OverrideChildrenAbsolute" : false,
                               "ResponsiveLayout" : true,
+                              "Scrolling" : "no-scroll",
                               "ShowDataLoading" : true,
                               "ShowExpandCollapseTab" : false,
                               "ShowVerticalScrollbar" : false,
@@ -9790,11 +10527,11 @@
                               "flex-basis" : "auto",
                               "flex-direction" : "row",
                               "flex-grow" : 1,
-                              "flex-max-height" : "77px",
+                              "flex-max-height" : "79px",
                               "flex-max-width" : "",
-                              "flex-min-height" : "77px",
+                              "flex-min-height" : "79px",
                               "flex-min-width" : "",
-                              "flex-shrink" : 1,
+                              "flex-shrink" : 0,
                               "flex-size" : "fixed",
                               "flex-wrap" : "nowrap",
                               "iconClass" : "widgets-flexcontainer-fixed",
@@ -9937,7 +10674,7 @@
                                   "flex-direction" : "column",
                                   "flex-grow" : 1,
                                   "flex-max-height" : "",
-                                  "flex-max-width" : "345px",
+                                  "flex-max-width" : "",
                                   "flex-min-height" : "",
                                   "flex-min-width" : "280px",
                                   "flex-shrink" : 0,
@@ -10043,9 +10780,9 @@
                                   "flex-direction" : "row",
                                   "flex-grow" : 1,
                                   "flex-max-height" : "",
-                                  "flex-max-width" : "10px",
+                                  "flex-max-width" : "6px",
                                   "flex-min-height" : "",
-                                  "flex-min-width" : "10px",
+                                  "flex-min-width" : "6px",
                                   "flex-shrink" : 1,
                                   "flex-size" : "fixed",
                                   "flex-wrap" : "nowrap",
@@ -10093,9 +10830,9 @@
                                   "flex-direction" : "column",
                                   "flex-grow" : 1,
                                   "flex-max-height" : "",
-                                  "flex-max-width" : "345px",
+                                  "flex-max-width" : "",
                                   "flex-min-height" : "",
-                                  "flex-min-width" : "280px",
+                                  "flex-min-width" : "240px",
                                   "flex-shrink" : 0,
                                   "flex-size" : "range",
                                   "flex-wrap" : "nowrap",
@@ -10199,9 +10936,9 @@
                                   "flex-direction" : "row",
                                   "flex-grow" : 1,
                                   "flex-max-height" : "",
-                                  "flex-max-width" : "10px",
+                                  "flex-max-width" : "6px",
                                   "flex-min-height" : "",
-                                  "flex-min-width" : "10px",
+                                  "flex-min-width" : "6px",
                                   "flex-shrink" : 1,
                                   "flex-size" : "fixed",
                                   "flex-wrap" : "nowrap",
@@ -10249,9 +10986,9 @@
                                   "flex-direction" : "column",
                                   "flex-grow" : 1,
                                   "flex-max-height" : "",
-                                  "flex-max-width" : "345px",
+                                  "flex-max-width" : "",
                                   "flex-min-height" : "",
-                                  "flex-min-width" : "280px",
+                                  "flex-min-width" : "240px",
                                   "flex-shrink" : 0,
                                   "flex-size" : "range",
                                   "flex-wrap" : "nowrap",
@@ -10355,9 +11092,9 @@
                                   "flex-direction" : "row",
                                   "flex-grow" : 1,
                                   "flex-max-height" : "",
-                                  "flex-max-width" : "10px",
+                                  "flex-max-width" : "6px",
                                   "flex-min-height" : "",
-                                  "flex-min-width" : "10px",
+                                  "flex-min-width" : "6px",
                                   "flex-shrink" : 1,
                                   "flex-size" : "fixed",
                                   "flex-wrap" : "nowrap",
@@ -10405,9 +11142,9 @@
                                   "flex-direction" : "column",
                                   "flex-grow" : 1,
                                   "flex-max-height" : "",
-                                  "flex-max-width" : "345px",
+                                  "flex-max-width" : "",
                                   "flex-min-height" : "",
-                                  "flex-min-width" : "280px",
+                                  "flex-min-width" : "240px",
                                   "flex-shrink" : 0,
                                   "flex-size" : "range",
                                   "flex-wrap" : "nowrap",
@@ -10488,7 +11225,7 @@
                                   "ExpandTabIcon" : "",
                                   "Expanded" : true,
                                   "Id" : "flexcontainer-252",
-                                  "LastContainer" : false,
+                                  "LastContainer" : true,
                                   "LazyLoading" : false,
                                   "Margin" : "",
                                   "Overlay" : false,
@@ -10511,13 +11248,13 @@
                                   "flex-direction" : "row",
                                   "flex-grow" : 1,
                                   "flex-max-height" : "",
-                                  "flex-max-width" : "10px",
+                                  "flex-max-width" : "",
                                   "flex-min-height" : "",
-                                  "flex-min-width" : "10px",
+                                  "flex-min-width" : "",
                                   "flex-shrink" : 1,
-                                  "flex-size" : "fixed",
+                                  "flex-size" : "default",
                                   "flex-wrap" : "nowrap",
-                                  "iconClass" : "widgets-flexcontainer-fixed",
+                                  "iconClass" : "widgets-flexcontainer",
                                   "isLocked" : false,
                                   "justify-content" : "flex-start",
                                   "positioning" : "responsive",
@@ -10859,9 +11596,9 @@
                                   "flex-direction" : "row",
                                   "flex-grow" : 1,
                                   "flex-max-height" : "",
-                                  "flex-max-width" : "10px",
+                                  "flex-max-width" : "6px",
                                   "flex-min-height" : "",
-                                  "flex-min-width" : "10px",
+                                  "flex-min-width" : "6px",
                                   "flex-shrink" : 1,
                                   "flex-size" : "fixed",
                                   "flex-wrap" : "nowrap",
@@ -11015,9 +11752,9 @@
                                   "flex-direction" : "row",
                                   "flex-grow" : 1,
                                   "flex-max-height" : "",
-                                  "flex-max-width" : "10px",
+                                  "flex-max-width" : "6px",
                                   "flex-min-height" : "",
-                                  "flex-min-width" : "10px",
+                                  "flex-min-width" : "6px",
                                   "flex-shrink" : 1,
                                   "flex-size" : "fixed",
                                   "flex-wrap" : "nowrap",
@@ -11280,6 +12017,7 @@
                             "Id" : "flexcontainer-61",
                             "LastContainer" : false,
                             "LazyLoading" : false,
+                            "Left" : 0,
                             "Margin" : "",
                             "Overlay" : false,
                             "OverrideChildrenAbsolute" : false,
@@ -11291,6 +12029,7 @@
                             "SourceURL" : "",
                             "Style" : "DefaultContainerStyle",
                             "StyleProperties" : { },
+                            "Top" : 0,
                             "Type" : "flexcontainer",
                             "UseTheme" : true,
                             "Visible" : true,
@@ -11299,7 +12038,7 @@
                             "align-content" : "flex-start",
                             "align-items" : "flex-start",
                             "flex-basis" : "auto",
-                            "flex-direction" : "row",
+                            "flex-direction" : "column",
                             "flex-grow" : 1,
                             "flex-max-height" : "",
                             "flex-max-width" : "",
@@ -11313,7 +12052,181 @@
                             "positioning" : "responsive",
                             "userCannotRemove" : true
                           },
-                          "Widgets" : [ ]
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "Area" : "UI",
+                              "DisableLegacyCustomClassStyles" : false,
+                              "DisclosureControl" : "show-more",
+                              "DisplayName" : "ptcs-label-343",
+                              "HorizontalAlignment" : "left",
+                              "Id" : "ptcslabel-343",
+                              "LabelText" : "Capacity (Units)",
+                              "LabelType" : "label",
+                              "LastContainer" : false,
+                              "Left" : 163,
+                              "Margin" : "5",
+                              "MultiLine" : true,
+                              "PreserveWhiteSpace" : false,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Top" : 38.399993896484375,
+                              "Type" : "ptcslabel",
+                              "UseTheme" : true,
+                              "VerticalAlignment" : "flex-start",
+                              "Visible" : true,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "_baseVersion" : "10.1.0",
+                              "overflowShowLessTxt" : "[[showLess]]",
+                              "overflowShowMoreTxt" : "[[showMore]]"
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Area" : "UI",
+                              "DisableLegacyCustomClassStyles" : false,
+                              "DisclosureControl" : "show-more",
+                              "DisplayName" : "ptcs-label-342",
+                              "HorizontalAlignment" : "left",
+                              "Id" : "ptcslabel-342",
+                              "LabelText" : "120",
+                              "LabelType" : "label",
+                              "LastContainer" : false,
+                              "Left" : 163,
+                              "Margin" : "5",
+                              "MultiLine" : true,
+                              "PreserveWhiteSpace" : false,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Top" : 38.399993896484375,
+                              "Type" : "ptcslabel",
+                              "UseTheme" : true,
+                              "VerticalAlignment" : "flex-start",
+                              "Visible" : true,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "_baseVersion" : "10.1.0",
+                              "overflowShowLessTxt" : "[[showLess]]",
+                              "overflowShowMoreTxt" : "[[showMore]]"
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Area" : "UI",
+                              "DisableLegacyCustomClassStyles" : false,
+                              "DisclosureControl" : "show-more",
+                              "DisplayName" : "ptcs-label-344",
+                              "HorizontalAlignment" : "left",
+                              "Id" : "ptcslabel-344",
+                              "LabelText" : "Current Workload",
+                              "LabelType" : "label",
+                              "LastContainer" : false,
+                              "Left" : 163,
+                              "Margin" : "5",
+                              "MultiLine" : true,
+                              "PreserveWhiteSpace" : false,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Top" : 38.399993896484375,
+                              "Type" : "ptcslabel",
+                              "UseTheme" : true,
+                              "VerticalAlignment" : "flex-start",
+                              "Visible" : true,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "_baseVersion" : "10.1.0",
+                              "overflowShowLessTxt" : "[[showLess]]",
+                              "overflowShowMoreTxt" : "[[showMore]]"
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Area" : "UI",
+                              "DisableLegacyCustomClassStyles" : false,
+                              "DisclosureControl" : "show-more",
+                              "DisplayName" : "ptcs-label-345",
+                              "HorizontalAlignment" : "left",
+                              "Id" : "ptcslabel-345",
+                              "LabelText" : "68% utilized",
+                              "LabelType" : "label",
+                              "LastContainer" : false,
+                              "Left" : 163,
+                              "Margin" : "5",
+                              "MultiLine" : true,
+                              "PreserveWhiteSpace" : false,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Top" : 38.399993896484375,
+                              "Type" : "ptcslabel",
+                              "UseTheme" : true,
+                              "VerticalAlignment" : "flex-start",
+                              "Visible" : true,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "_baseVersion" : "10.1.0",
+                              "overflowShowLessTxt" : "[[showLess]]",
+                              "overflowShowMoreTxt" : "[[showMore]]"
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Area" : "UI",
+                              "DisableLegacyCustomClassStyles" : false,
+                              "DisclosureControl" : "show-more",
+                              "DisplayName" : "ptcs-label-348",
+                              "HorizontalAlignment" : "left",
+                              "Id" : "ptcslabel-348",
+                              "LabelText" : "Rating",
+                              "LabelType" : "label",
+                              "LastContainer" : false,
+                              "Left" : 163,
+                              "Margin" : "5",
+                              "MultiLine" : true,
+                              "PreserveWhiteSpace" : false,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Top" : 38.399993896484375,
+                              "Type" : "ptcslabel",
+                              "UseTheme" : true,
+                              "VerticalAlignment" : "flex-start",
+                              "Visible" : true,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "_baseVersion" : "10.1.0",
+                              "overflowShowLessTxt" : "[[showLess]]",
+                              "overflowShowMoreTxt" : "[[showMore]]"
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Area" : "UI",
+                              "DisableLegacyCustomClassStyles" : false,
+                              "DisclosureControl" : "show-more",
+                              "DisplayName" : "ptcs-label-347",
+                              "HorizontalAlignment" : "left",
+                              "Id" : "ptcslabel-347",
+                              "LabelText" : "4.6",
+                              "LabelType" : "label",
+                              "LastContainer" : false,
+                              "Left" : 163,
+                              "Margin" : "5",
+                              "MultiLine" : true,
+                              "PreserveWhiteSpace" : false,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Top" : 38.399993896484375,
+                              "Type" : "ptcslabel",
+                              "UseTheme" : true,
+                              "VerticalAlignment" : "flex-start",
+                              "Visible" : true,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "_baseVersion" : "10.1.0",
+                              "overflowShowLessTxt" : "[[showLess]]",
+                              "overflowShowMoreTxt" : "[[showMore]]"
+                            },
+                            "Widgets" : [ ]
+                          } ]
                         }, {
                           "Properties" : {
                             "Area" : "UI",
@@ -12792,7 +13705,36 @@
                             "positioning" : "responsive",
                             "userCannotRemove" : true
                           },
-                          "Widgets" : [ ]
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "Area" : "UI",
+                              "DisableLegacyCustomClassStyles" : false,
+                              "DisclosureControl" : "show-more",
+                              "DisplayName" : "ptcs-label-349",
+                              "HorizontalAlignment" : "left",
+                              "Id" : "ptcslabel-349",
+                              "LabelText" : "Open Pricing Matrix module to manage rates for this supplier.",
+                              "LabelType" : "label",
+                              "LastContainer" : false,
+                              "Left" : 309.203125,
+                              "Margin" : "5",
+                              "MultiLine" : true,
+                              "PreserveWhiteSpace" : false,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Top" : 49,
+                              "Type" : "ptcslabel",
+                              "UseTheme" : true,
+                              "VerticalAlignment" : "flex-start",
+                              "Visible" : true,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "_baseVersion" : "10.1.0",
+                              "overflowShowLessTxt" : "[[showLess]]",
+                              "overflowShowMoreTxt" : "[[showMore]]"
+                            },
+                            "Widgets" : [ ]
+                          } ]
                         }, {
                           "Properties" : {
                             "Area" : "UI",
@@ -12807,6 +13749,7 @@
                             "Id" : "flexcontainer-65",
                             "LastContainer" : false,
                             "LazyLoading" : false,
+                            "Left" : 0,
                             "Margin" : "",
                             "Overlay" : false,
                             "OverrideChildrenAbsolute" : false,
@@ -12817,6 +13760,7 @@
                             "SourceURL" : "",
                             "Style" : "DefaultContainerStyle",
                             "StyleProperties" : { },
+                            "Top" : 0,
                             "Type" : "flexcontainer",
                             "UseTheme" : true,
                             "Visible" : true,
@@ -12839,7 +13783,36 @@
                             "positioning" : "responsive",
                             "userCannotRemove" : true
                           },
-                          "Widgets" : [ ]
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "Area" : "UI",
+                              "DisableLegacyCustomClassStyles" : false,
+                              "DisclosureControl" : "show-more",
+                              "DisplayName" : "ptcs-label-350",
+                              "HorizontalAlignment" : "left",
+                              "Id" : "ptcslabel-350",
+                              "LabelText" : "Open Discount Matrix module.",
+                              "LabelType" : "label",
+                              "LastContainer" : false,
+                              "Left" : 309.203125,
+                              "Margin" : "5",
+                              "MultiLine" : true,
+                              "PreserveWhiteSpace" : false,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Top" : 49,
+                              "Type" : "ptcslabel",
+                              "UseTheme" : true,
+                              "VerticalAlignment" : "flex-start",
+                              "Visible" : true,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "_baseVersion" : "10.1.0",
+                              "overflowShowLessTxt" : "[[showLess]]",
+                              "overflowShowMoreTxt" : "[[showMore]]"
+                            },
+                            "Widgets" : [ ]
+                          } ]
                         }, {
                           "Properties" : {
                             "Area" : "UI",
@@ -12854,6 +13827,7 @@
                             "Id" : "flexcontainer-66",
                             "LastContainer" : false,
                             "LazyLoading" : false,
+                            "Left" : 0,
                             "Margin" : "",
                             "Overlay" : false,
                             "OverrideChildrenAbsolute" : false,
@@ -12864,6 +13838,7 @@
                             "SourceURL" : "",
                             "Style" : "DefaultContainerStyle",
                             "StyleProperties" : { },
+                            "Top" : 0,
                             "Type" : "flexcontainer",
                             "UseTheme" : true,
                             "Visible" : true,
@@ -12886,7 +13861,36 @@
                             "positioning" : "responsive",
                             "userCannotRemove" : true
                           },
-                          "Widgets" : [ ]
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "Area" : "UI",
+                              "DisableLegacyCustomClassStyles" : false,
+                              "DisclosureControl" : "show-more",
+                              "DisplayName" : "ptcs-label-351",
+                              "HorizontalAlignment" : "left",
+                              "Id" : "ptcslabel-351",
+                              "LabelText" : "Open Night Shift Surcharge module.",
+                              "LabelType" : "label",
+                              "LastContainer" : false,
+                              "Left" : 309.203125,
+                              "Margin" : "5",
+                              "MultiLine" : true,
+                              "PreserveWhiteSpace" : false,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Top" : 49,
+                              "Type" : "ptcslabel",
+                              "UseTheme" : true,
+                              "VerticalAlignment" : "flex-start",
+                              "Visible" : true,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "_baseVersion" : "10.1.0",
+                              "overflowShowLessTxt" : "[[showLess]]",
+                              "overflowShowMoreTxt" : "[[showMore]]"
+                            },
+                            "Widgets" : [ ]
+                          } ]
                         }, {
                           "Properties" : {
                             "Area" : "UI",

@@ -176,30 +176,16 @@
                     "Target" : "GetGlobalSessionValues"
                   } ]
                 },
-                "Things_SubContract.T" : {
-                  "DataName" : "Things_SubContract.T",
-                  "EntityName" : "SubContract.T",
+                "Things_ExecutiveDashboard.T" : {
+                  "DataName" : "Things_ExecutiveDashboard.T",
+                  "EntityName" : "ExecutiveDashboard.T",
                   "EntityType" : "Things",
-                  "Id" : "ee0b9b7d-9a04-4ecf-9b4a-f1aba7d615d8",
+                  "Id" : "81486114-538f-4d26-bc83-23b30210a240",
                   "RefreshInterval" : 0,
                   "Services" : [ {
                     "APIMethod" : "post",
                     "Characteristic" : "Services",
-                    "Id" : "978b2cd1-2318-444b-b385-019b698881bf",
-                    "Name" : "getCountryDataDropdown",
-                    "Parameters" : { },
-                    "RefreshInterval" : 0,
-                    "Target" : "getCountryDataDropdown"
-                  }, {
-                    "APIMethod" : "post",
-                    "Caching" : {
-                      "cache" : false,
-                      "cacheKeyParams" : [ ],
-                      "cacheStrategy" : "INSTANCE",
-                      "maxResultSets" : "10"
-                    },
-                    "Characteristic" : "Services",
-                    "Id" : "a66a9738-0c90-4654-b354-769fbe01f5bf",
+                    "Id" : "3fb5a844-e705-411e-9fc3-d141f6e8fbe3",
                     "Name" : "getComplianceStatusDistribution",
                     "Parameters" : { },
                     "RefreshInterval" : 0,
@@ -207,7 +193,23 @@
                   }, {
                     "APIMethod" : "post",
                     "Characteristic" : "Services",
-                    "Id" : "a8638aee-9916-4158-971e-e43ae8dd68f3",
+                    "Id" : "6c397286-e461-4bff-9e62-c7aa44474bab",
+                    "Name" : "getCountryDataDropdown",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "getCountryDataDropdown"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "4c575fa2-45bf-4734-892d-60749c845c5b",
+                    "Name" : "getExecutiveDashboardKPIs",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "getExecutiveDashboardKPIs"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "b8d49ef9-f93c-480f-91cd-3fe8d4821d14",
                     "Name" : "getJobStatusFunnel",
                     "Parameters" : { },
                     "RefreshInterval" : 0,
@@ -215,7 +217,31 @@
                   }, {
                     "APIMethod" : "post",
                     "Characteristic" : "Services",
-                    "Id" : "d4859175-838b-4ea1-aa68-f4793fcc4c90",
+                    "Id" : "147355da-351b-4810-8861-789b3f466583",
+                    "Name" : "getSubcontractorsByService",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "getSubcontractorsByService"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "9bc0f87f-62a8-4a76-9691-d0e86fd28f63",
+                    "Name" : "getTCOTrendByMonth",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "getTCOTrendByMonth"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "9e9cf797-a981-416e-b446-ab3e01f72268",
+                    "Name" : "getWorkloadUtilizationBySupplier",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "getWorkloadUtilizationBySupplier"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "b753da06-bd9c-4f2f-90d4-77089ef21438",
                     "Name" : "getRoleDS",
                     "Parameters" : { },
                     "RefreshInterval" : 0,
@@ -223,61 +249,11 @@
                   }, {
                     "APIMethod" : "post",
                     "Characteristic" : "Services",
-                    "Id" : "47ccef9f-40e9-44ad-86a9-01c6d998143a",
+                    "Id" : "07d9bffa-c077-4f21-8305-e1374da77e5b",
                     "Name" : "getSubcontractorsByCountry",
                     "Parameters" : { },
                     "RefreshInterval" : 0,
                     "Target" : "getSubcontractorsByCountry"
-                  }, {
-                    "APIMethod" : "post",
-                    "Characteristic" : "Services",
-                    "Id" : "78976542-0e04-4b07-a7e7-64387da4798e",
-                    "Name" : "getSubcontractorsByService",
-                    "Parameters" : { },
-                    "RefreshInterval" : 0,
-                    "Target" : "getSubcontractorsByService"
-                  }, {
-                    "APIMethod" : "post",
-                    "Caching" : {
-                      "cache" : false,
-                      "cacheKeyParams" : [ ],
-                      "cacheStrategy" : "INSTANCE",
-                      "maxResultSets" : "10"
-                    },
-                    "Characteristic" : "Services",
-                    "Id" : "dfa961a8-5d5d-4c70-ac8c-48952bba7be2",
-                    "Name" : "getTCOTrendByMonth",
-                    "Parameters" : { },
-                    "RefreshInterval" : 0,
-                    "Target" : "getTCOTrendByMonth"
-                  }, {
-                    "APIMethod" : "post",
-                    "Caching" : {
-                      "cache" : false,
-                      "cacheKeyParams" : [ ],
-                      "cacheStrategy" : "INSTANCE",
-                      "maxResultSets" : "10"
-                    },
-                    "Characteristic" : "Services",
-                    "Id" : "349df323-dc96-4ef5-91d7-67c8a7052d45",
-                    "Name" : "getWorkloadUtilizationBySupplier",
-                    "Parameters" : { },
-                    "RefreshInterval" : 0,
-                    "Target" : "getWorkloadUtilizationBySupplier"
-                  }, {
-                    "APIMethod" : "post",
-                    "Caching" : {
-                      "cache" : false,
-                      "cacheKeyParams" : [ ],
-                      "cacheStrategy" : "INSTANCE",
-                      "maxResultSets" : "10"
-                    },
-                    "Characteristic" : "Services",
-                    "Id" : "d3d3e976-7f8c-40fa-8c94-15db9974d011",
-                    "Name" : "getExecutiveDashboardKPIs",
-                    "Parameters" : { },
-                    "RefreshInterval" : 0,
-                    "Target" : "getExecutiveDashboardKPIs"
                   } ]
                 },
                 "UserExtensions" : {
@@ -297,127 +273,7 @@
                 }
               },
               "DataBindings" : [ {
-                "Id" : "345cd057-60d1-4c80-8ccb-dd775e20a28d",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "",
-                  "SourcePropertyBaseType" : "INFOTABLE",
-                  "SourcePropertyType" : "InfoTable",
-                  "TargetProperty" : "Data",
-                  "TargetPropertyBaseType" : "INFOTABLE",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "getCountryDataDropdown",
-                "SourceSection" : "Things_SubContract.T",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcsdropdown-13",
-                "TargetSection" : ""
-              }, {
-                "Id" : "6e1677ba-df6b-409c-9025-471821f85f5c",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "",
-                  "SourcePropertyBaseType" : "INFOTABLE",
-                  "SourcePropertyType" : "InfoTable",
-                  "TargetProperty" : "Data",
-                  "TargetPropertyBaseType" : "INFOTABLE",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "getRoleDS",
-                "SourceSection" : "Things_SubContract.T",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcsdropdown-14",
-                "TargetSection" : ""
-              }, {
-                "Id" : "19d13956-8a1b-41c5-b9aa-68c5bffac733",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "",
-                  "SourcePropertyBaseType" : "INFOTABLE",
-                  "SourcePropertyType" : "InfoTable",
-                  "TargetProperty" : "Data",
-                  "TargetPropertyBaseType" : "INFOTABLE",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "getSubcontractorsByService",
-                "SourceSection" : "Things_SubContract.T",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcschartbar-86",
-                "TargetSection" : ""
-              }, {
-                "Id" : "f4162a91-3e85-4e91-b800-0fa4a0b980d8",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "",
-                  "SourcePropertyBaseType" : "INFOTABLE",
-                  "SourcePropertyType" : "InfoTable",
-                  "TargetProperty" : "Data",
-                  "TargetPropertyBaseType" : "INFOTABLE",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "getSubcontractorsByCountry",
-                "SourceSection" : "Things_SubContract.T",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcschartpie-93",
-                "TargetSection" : ""
-              }, {
-                "Id" : "5e274254-52d8-462f-a874-cd277ab9b4b3",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "",
-                  "SourcePropertyBaseType" : "INFOTABLE",
-                  "SourcePropertyType" : "InfoTable",
-                  "TargetProperty" : "Data",
-                  "TargetPropertyBaseType" : "INFOTABLE",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "getJobStatusFunnel",
-                "SourceSection" : "Things_SubContract.T",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcschartbar-99",
-                "TargetSection" : ""
-              }, {
-                "Id" : "3edbadc6-987d-4dcd-a151-1c5fe294d3f0",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "",
-                  "SourcePropertyBaseType" : "INFOTABLE",
-                  "SourcePropertyType" : "InfoTable",
-                  "TargetProperty" : "Data",
-                  "TargetPropertyBaseType" : "INFOTABLE",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "getTCOTrendByMonth",
-                "SourceName" : "getTCOTrendByMonth",
-                "SourceSection" : "Things_SubContract.T",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcschartline-101",
-                "TargetSection" : ""
-              }, {
-                "Id" : "1eadb249-cf19-4109-a479-0cb7f410f6db",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "",
-                  "SourcePropertyBaseType" : "INFOTABLE",
-                  "SourcePropertyType" : "InfoTable",
-                  "TargetProperty" : "Data",
-                  "TargetPropertyBaseType" : "INFOTABLE",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "getWorkloadUtilizationBySupplier",
-                "SourceSection" : "Things_SubContract.T",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcschartbar-107",
-                "TargetSection" : ""
-              }, {
-                "Id" : "138d4890-db9e-46b3-b86f-b44360dd7e96",
+                "Id" : "2aa5a9bb-4c78-4b29-88e7-b8ee6ca873a9",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "",
                   "SourcePropertyBaseType" : "INFOTABLE",
@@ -429,148 +285,46 @@
                 "SourceArea" : "Data",
                 "SourceDetails" : "AllData",
                 "SourceId" : "getComplianceStatusDistribution",
-                "SourceSection" : "Things_SubContract.T",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
                 "TargetArea" : "UI",
                 "TargetId" : "ptcschartpie-109",
                 "TargetSection" : ""
               }, {
-                "Id" : "c453c233-c08a-447f-9d73-c5fb48f4b615",
+                "Id" : "26654007-940b-4141-a505-f93ce9876b13",
                 "PropertyMaps" : [ {
-                  "SourceProperty" : "TotalSubcontractors",
-                  "SourcePropertyBaseType" : "STRING",
-                  "SourcePropertyType" : "Field",
-                  "TargetProperty" : "LabelText",
-                  "TargetPropertyBaseType" : "STRING",
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
                   "TargetPropertyType" : "property"
                 } ],
                 "SourceArea" : "Data",
                 "SourceDetails" : "AllData",
-                "SourceId" : "getExecutiveDashboardKPIs",
-                "SourceSection" : "Things_SubContract.T",
+                "SourceId" : "getCountryDataDropdown",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
                 "TargetArea" : "UI",
-                "TargetId" : "ptcslabel-65",
+                "TargetId" : "ptcsdropdown-13",
                 "TargetSection" : ""
               }, {
-                "Id" : "92b99f17-7d2e-416e-8e82-dfbc31189ceb",
+                "Id" : "0440a502-51a3-4e9e-bb1d-a6bfd4078024",
                 "PropertyMaps" : [ {
-                  "SourceProperty" : "CountriesCovered",
-                  "SourcePropertyBaseType" : "STRING",
-                  "SourcePropertyType" : "Field",
-                  "TargetProperty" : "LabelText",
-                  "TargetPropertyBaseType" : "STRING",
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
                   "TargetPropertyType" : "property"
                 } ],
                 "SourceArea" : "Data",
                 "SourceDetails" : "AllData",
-                "SourceId" : "getExecutiveDashboardKPIs",
-                "SourceSection" : "Things_SubContract.T",
+                "SourceId" : "getRoleDS",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
                 "TargetArea" : "UI",
-                "TargetId" : "ptcslabel-111",
+                "TargetId" : "ptcsdropdown-14",
                 "TargetSection" : ""
               }, {
-                "Id" : "24c1745e-ee60-473a-9148-ecdfa4563ce1",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "ServicesCovered",
-                  "SourcePropertyBaseType" : "STRING",
-                  "SourcePropertyType" : "Field",
-                  "TargetProperty" : "LabelText",
-                  "TargetPropertyBaseType" : "STRING",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "getExecutiveDashboardKPIs",
-                "SourceSection" : "Things_SubContract.T",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcslabel-112",
-                "TargetSection" : ""
-              }, {
-                "Id" : "7c0a6b33-0a66-45a6-b406-7a062481dafe",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "PublishedJobs",
-                  "SourcePropertyBaseType" : "INTEGER",
-                  "SourcePropertyType" : "Field",
-                  "TargetProperty" : "LabelText",
-                  "TargetPropertyBaseType" : "STRING",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "getExecutiveDashboardKPIs",
-                "SourceSection" : "Things_SubContract.T",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcslabel-113",
-                "TargetSection" : ""
-              }, {
-                "Id" : "3ba00dd5-0f8d-4859-9d25-813837339937",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "AwardedJobs",
-                  "SourcePropertyBaseType" : "INTEGER",
-                  "SourcePropertyType" : "Field",
-                  "TargetProperty" : "LabelText",
-                  "TargetPropertyBaseType" : "STRING",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "getExecutiveDashboardKPIs",
-                "SourceSection" : "Things_SubContract.T",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcslabel-115",
-                "TargetSection" : ""
-              }, {
-                "Id" : "24a5d7e7-12a3-4585-b3d6-3cb4275e7203",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "AverageTCO",
-                  "SourcePropertyBaseType" : "STRING",
-                  "SourcePropertyType" : "Field",
-                  "TargetProperty" : "LabelText",
-                  "TargetPropertyBaseType" : "STRING",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "getExecutiveDashboardKPIs",
-                "SourceSection" : "Things_SubContract.T",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcslabel-116",
-                "TargetSection" : ""
-              }, {
-                "Id" : "e004bb47-0bcb-4c22-bdc0-1e61f9acc4d8",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "ComplianceRisk",
-                  "SourcePropertyBaseType" : "INTEGER",
-                  "SourcePropertyType" : "Field",
-                  "TargetProperty" : "LabelText",
-                  "TargetPropertyBaseType" : "STRING",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "getExecutiveDashboardKPIs",
-                "SourceSection" : "Things_SubContract.T",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcslabel-117",
-                "TargetSection" : ""
-              }, {
-                "Id" : "7cb4c41c-7076-45a4-947e-000f01f3e7a8",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "ExpiringContracts",
-                  "SourcePropertyBaseType" : "INTEGER",
-                  "SourcePropertyType" : "Field",
-                  "TargetProperty" : "LabelText",
-                  "TargetPropertyBaseType" : "STRING",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "getExecutiveDashboardKPIs",
-                "SourceSection" : "Things_SubContract.T",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcslabel-118",
-                "TargetSection" : ""
-              }, {
-                "Id" : "93affaaf-a708-425c-b8a2-2f46f8d50a16",
+                "Id" : "2331d937-6d8a-4dcc-a5cb-d5d8ebe67b85",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "SelectedText",
                   "SourcePropertyBaseType" : "STRING",
@@ -585,26 +339,9 @@
                 "SourceSection" : "",
                 "TargetArea" : "Data",
                 "TargetId" : "getExecutiveDashboardKPIs",
-                "TargetSection" : "Things_SubContract.T"
+                "TargetSection" : "Things_ExecutiveDashboard.T"
               }, {
-                "Id" : "8117c870-5083-4c3a-9f29-dfb25dbc49af",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "OpenBids",
-                  "SourcePropertyBaseType" : "STRING",
-                  "SourcePropertyType" : "Field",
-                  "TargetProperty" : "LabelText",
-                  "TargetPropertyBaseType" : "STRING",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "getExecutiveDashboardKPIs",
-                "SourceSection" : "Things_SubContract.T",
-                "TargetArea" : "UI",
-                "TargetId" : "ptcslabel-114",
-                "TargetSection" : ""
-              }, {
-                "Id" : "3b57573e-d1f9-4aa0-b07d-23877d2285c0",
+                "Id" : "20c244f8-b9d5-4960-9527-8a787ca3e0f1",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "ActiveSubcontractors",
                   "SourcePropertyBaseType" : "INTEGER",
@@ -616,112 +353,351 @@
                 "SourceArea" : "Data",
                 "SourceDetails" : "AllData",
                 "SourceId" : "getExecutiveDashboardKPIs",
-                "SourceSection" : "Things_SubContract.T",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
                 "TargetArea" : "UI",
                 "TargetId" : "ptcslabel-110",
+                "TargetSection" : ""
+              }, {
+                "Id" : "fbfc3221-2ab0-4989-81a6-c0af473cd7f6",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "AverageTCO",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getExecutiveDashboardKPIs",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-116",
+                "TargetSection" : ""
+              }, {
+                "Id" : "170db581-d87e-47fd-9576-bcf29b53c4eb",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "AwardedJobs",
+                  "SourcePropertyBaseType" : "INTEGER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getExecutiveDashboardKPIs",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-115",
+                "TargetSection" : ""
+              }, {
+                "Id" : "811f086c-6f42-4ed5-9cf2-b7d8ce09ba2a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ComplianceRisk",
+                  "SourcePropertyBaseType" : "INTEGER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getExecutiveDashboardKPIs",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-117",
+                "TargetSection" : ""
+              }, {
+                "Id" : "2e37164a-e740-4251-a85e-4dc4f3383689",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "CountriesCovered",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getExecutiveDashboardKPIs",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-111",
+                "TargetSection" : ""
+              }, {
+                "Id" : "1731eb0e-fa33-4f4d-8676-accb979a86bf",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ExpiringContracts",
+                  "SourcePropertyBaseType" : "INTEGER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getExecutiveDashboardKPIs",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-118",
+                "TargetSection" : ""
+              }, {
+                "Id" : "0eeef9ca-5619-4004-8c81-33cb88353d74",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "OpenBids",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getExecutiveDashboardKPIs",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-114",
+                "TargetSection" : ""
+              }, {
+                "Id" : "ea71ad09-29fc-4995-be01-cfeddb1aa051",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "PublishedJobs",
+                  "SourcePropertyBaseType" : "INTEGER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getExecutiveDashboardKPIs",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-113",
+                "TargetSection" : ""
+              }, {
+                "Id" : "c117f6ee-e600-4294-9139-4f131d370a44",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ServicesCovered",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getExecutiveDashboardKPIs",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-112",
+                "TargetSection" : ""
+              }, {
+                "Id" : "6333f41d-66f9-4f44-a775-cf4329856f49",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "TotalSubcontractors",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "LabelText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getExecutiveDashboardKPIs",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcslabel-65",
+                "TargetSection" : ""
+              }, {
+                "Id" : "768bdfbd-4c04-404d-a6f5-56a20622dd19",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getJobStatusFunnel",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcschartbar-99",
+                "TargetSection" : ""
+              }, {
+                "Id" : "f1ab36b0-d92a-43fe-904f-c7bfd539cc59",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubcontractorsByCountry",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcschartpie-93",
+                "TargetSection" : ""
+              }, {
+                "Id" : "3c51f9e7-15a3-42c8-87fa-2c108aefb7bc",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getSubcontractorsByService",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcschartbar-86",
+                "TargetSection" : ""
+              }, {
+                "Id" : "cbeef0a6-81a2-4c92-95e1-0126ca13d321",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getWorkloadUtilizationBySupplier",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcschartbar-107",
+                "TargetSection" : ""
+              }, {
+                "Id" : "e3e56a52-3ef8-400b-aeeb-3e609c5abc77",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getTCOTrendByMonth",
+                "SourceName" : "getTCOTrendByMonth",
+                "SourceSection" : "Things_ExecutiveDashboard.T",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcschartline-101",
                 "TargetSection" : ""
               } ],
               "DesignTimePermissions" : { },
               "Events" : [ {
                 "EventHandlerArea" : "Data",
-                "EventHandlerId" : "Things_SubContract.T",
-                "EventHandlerService" : "getCountryDataDropdown",
-                "EventHandlerServiceMethod" : "",
-                "EventTriggerArea" : "Mashup",
-                "EventTriggerEvent" : "Loaded",
-                "EventTriggerId" : "mashup-root",
-                "EventTriggerSection" : "",
-                "Id" : "7b0273f9-96e0-4421-a118-33b38b4e077e"
-              }, {
-                "EventHandlerArea" : "Data",
-                "EventHandlerId" : "Things_SubContract.T",
+                "EventHandlerId" : "Things_ExecutiveDashboard.T",
                 "EventHandlerService" : "getComplianceStatusDistribution",
                 "EventHandlerServiceMethod" : "",
                 "EventTriggerArea" : "Mashup",
                 "EventTriggerEvent" : "Loaded",
                 "EventTriggerId" : "mashup-root",
                 "EventTriggerSection" : "",
-                "Id" : "a8fb2e77-8b83-4a60-8069-adb49cb5bf82"
+                "Id" : "230cca61-d36b-4966-9f0e-35755ae30a78"
               }, {
                 "EventHandlerArea" : "Data",
-                "EventHandlerId" : "Things_SubContract.T",
-                "EventHandlerService" : "getJobStatusFunnel",
+                "EventHandlerId" : "Things_ExecutiveDashboard.T",
+                "EventHandlerService" : "getCountryDataDropdown",
                 "EventHandlerServiceMethod" : "",
                 "EventTriggerArea" : "Mashup",
                 "EventTriggerEvent" : "Loaded",
                 "EventTriggerId" : "mashup-root",
                 "EventTriggerSection" : "",
-                "Id" : "829f13e0-6597-4c93-b519-17a65a3d8c26"
+                "Id" : "c6d54bff-6187-4476-b392-71a8487752e5"
               }, {
                 "EventHandlerArea" : "Data",
-                "EventHandlerId" : "Things_SubContract.T",
-                "EventHandlerService" : "getRoleDS",
-                "EventHandlerServiceMethod" : "",
-                "EventTriggerArea" : "Mashup",
-                "EventTriggerEvent" : "Loaded",
-                "EventTriggerId" : "mashup-root",
-                "EventTriggerSection" : "",
-                "Id" : "15a2d58d-de9a-4fa3-ba9d-e27e39d1f00a"
-              }, {
-                "EventHandlerArea" : "Data",
-                "EventHandlerId" : "Things_SubContract.T",
-                "EventHandlerService" : "getSubcontractorsByCountry",
-                "EventHandlerServiceMethod" : "",
-                "EventTriggerArea" : "Mashup",
-                "EventTriggerEvent" : "Loaded",
-                "EventTriggerId" : "mashup-root",
-                "EventTriggerSection" : "",
-                "Id" : "f473a944-2a6d-491d-8915-f7d9956b94c5"
-              }, {
-                "EventHandlerArea" : "Data",
-                "EventHandlerId" : "Things_SubContract.T",
-                "EventHandlerService" : "getSubcontractorsByService",
-                "EventHandlerServiceMethod" : "",
-                "EventTriggerArea" : "Mashup",
-                "EventTriggerEvent" : "Loaded",
-                "EventTriggerId" : "mashup-root",
-                "EventTriggerSection" : "",
-                "Id" : "9fb61b0d-c908-4a8b-b73d-e132d39cf72f"
-              }, {
-                "EventHandlerArea" : "Data",
-                "EventHandlerId" : "Things_SubContract.T",
-                "EventHandlerService" : "getTCOTrendByMonth",
-                "EventHandlerServiceMethod" : "",
-                "EventTriggerArea" : "Mashup",
-                "EventTriggerEvent" : "Loaded",
-                "EventTriggerId" : "mashup-root",
-                "EventTriggerSection" : "",
-                "Id" : "8ccd5be1-a11e-4d09-9812-7a9b3f0756bc"
-              }, {
-                "EventHandlerArea" : "Data",
-                "EventHandlerId" : "Things_SubContract.T",
-                "EventHandlerService" : "getWorkloadUtilizationBySupplier",
-                "EventHandlerServiceMethod" : "",
-                "EventTriggerArea" : "Mashup",
-                "EventTriggerEvent" : "Loaded",
-                "EventTriggerId" : "mashup-root",
-                "EventTriggerSection" : "",
-                "Id" : "6049ce32-615f-4d80-953a-2c0dc446412b"
-              }, {
-                "EventHandlerArea" : "Data",
-                "EventHandlerId" : "Things_SubContract.T",
-                "EventHandlerService" : "getExecutiveDashboardKPIs",
-                "EventHandlerServiceMethod" : "",
-                "EventTriggerArea" : "Mashup",
-                "EventTriggerEvent" : "Loaded",
-                "EventTriggerId" : "mashup-root",
-                "EventTriggerSection" : "",
-                "Id" : "615da2db-0e49-4f79-acce-cb914e0f7445"
-              }, {
-                "EventHandlerArea" : "Data",
-                "EventHandlerId" : "Things_SubContract.T",
+                "EventHandlerId" : "Things_ExecutiveDashboard.T",
                 "EventHandlerService" : "getExecutiveDashboardKPIs",
                 "EventHandlerServiceMethod" : "",
                 "EventTriggerArea" : "UI",
                 "EventTriggerEvent" : "SelectedItemsChanged",
                 "EventTriggerId" : "ptcsdropdown-13",
                 "EventTriggerSection" : "",
-                "Id" : "62bba648-e59e-4509-be8e-156412dd7a26"
+                "Id" : "713a8140-708e-403b-873a-6a5e4ed28062"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ExecutiveDashboard.T",
+                "EventHandlerService" : "getRoleDS",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "90e8b2c4-41ad-490e-9550-720448980a5a"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ExecutiveDashboard.T",
+                "EventHandlerService" : "getExecutiveDashboardKPIs",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "e203bd41-24e5-48fa-9c54-193fbce0273a"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ExecutiveDashboard.T",
+                "EventHandlerService" : "getJobStatusFunnel",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "9b43cea7-42cf-46bf-a3c1-9406ea919975"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ExecutiveDashboard.T",
+                "EventHandlerService" : "getSubcontractorsByCountry",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "9059ccb5-05b7-4f2d-bf85-5bcdb18e86c5"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ExecutiveDashboard.T",
+                "EventHandlerService" : "getSubcontractorsByService",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "2ac7921b-3ee3-4c14-8e1d-f46989bf6220"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ExecutiveDashboard.T",
+                "EventHandlerService" : "getTCOTrendByMonth",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "33e2e9d0-9c9a-4991-9eaa-4cb4839f975f"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ExecutiveDashboard.T",
+                "EventHandlerService" : "getWorkloadUtilizationBySupplier",
+                "EventHandlerServiceMethod" : "",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "1f039adc-65f4-4eb6-9ea1-23c4db5376d5"
               } ],
               "Reminders" : [ ],
               "RunTimePermissions" : { },
@@ -1415,7 +1391,7 @@
                         "parts" : {
                           "$" : {
                             "$" : {
-                              "background" : "#ffffff",
+                              "background" : "rgba(248,250,252,1)",
                               "border-color" : "inherit",
                               "border-radius" : "initial",
                               "border-style" : "none",
@@ -3169,9 +3145,9 @@
                           "flex-direction" : "column",
                           "flex-grow" : 1,
                           "flex-max-height" : "",
-                          "flex-max-width" : "293px",
+                          "flex-max-width" : "251px",
                           "flex-min-height" : "",
-                          "flex-min-width" : "293px",
+                          "flex-min-width" : "251px",
                           "flex-shrink" : 0,
                           "flex-size" : "fixed",
                           "flex-wrap" : "nowrap",
@@ -3344,7 +3320,7 @@
                             "ValidationSuccessIcon" : "cds:icon_success",
                             "ValueRequired" : false,
                             "Visible" : true,
-                            "Width" : 298,
+                            "Width" : 283,
                             "Z-index" : 10,
                             "__TypeDisplayName" : "Text Field",
                             "_baseVersion" : "10.1.0"
@@ -3694,7 +3670,7 @@
                             "Expanded" : true,
                             "HorizontalScrolling" : "no-scroll",
                             "Id" : "flexcontainer-21",
-                            "LastContainer" : true,
+                            "LastContainer" : false,
                             "LazyLoading" : false,
                             "Margin" : "",
                             "Overlay" : false,
@@ -3720,11 +3696,11 @@
                             "flex-max-height" : "",
                             "flex-max-width" : "",
                             "flex-min-height" : "",
-                            "flex-min-width" : "",
+                            "flex-min-width" : "190px",
                             "flex-shrink" : 0,
-                            "flex-size" : "default",
+                            "flex-size" : "range",
                             "flex-wrap" : "nowrap",
-                            "iconClass" : "widgets-flexcontainer",
+                            "iconClass" : "widgets-flexcontainer-fixed",
                             "isLocked" : false,
                             "justify-content" : "center",
                             "positioning" : "responsive",
@@ -3826,9 +3802,9 @@
                             "flex-direction" : "row",
                             "flex-grow" : 1,
                             "flex-max-height" : "",
-                            "flex-max-width" : "10px",
+                            "flex-max-width" : "7px",
                             "flex-min-height" : "",
-                            "flex-min-width" : "10px",
+                            "flex-min-width" : "7px",
                             "flex-shrink" : 1,
                             "flex-size" : "fixed",
                             "flex-wrap" : "nowrap",
@@ -3986,9 +3962,9 @@
                             "flex-direction" : "row",
                             "flex-grow" : 1,
                             "flex-max-height" : "",
-                            "flex-max-width" : "10px",
+                            "flex-max-width" : "7px",
                             "flex-min-height" : "",
-                            "flex-min-width" : "10px",
+                            "flex-min-width" : "7px",
                             "flex-shrink" : 0,
                             "flex-size" : "fixed",
                             "flex-wrap" : "nowrap",
@@ -4147,9 +4123,9 @@
                             "flex-direction" : "row",
                             "flex-grow" : 1,
                             "flex-max-height" : "",
-                            "flex-max-width" : "10px",
+                            "flex-max-width" : "7px",
                             "flex-min-height" : "",
-                            "flex-min-width" : "10px",
+                            "flex-min-width" : "7px",
                             "flex-shrink" : 0,
                             "flex-size" : "fixed",
                             "flex-wrap" : "nowrap",
@@ -4304,9 +4280,9 @@
                             "flex-direction" : "row",
                             "flex-grow" : 1,
                             "flex-max-height" : "",
-                            "flex-max-width" : "10px",
+                            "flex-max-width" : "7px",
                             "flex-min-height" : "",
-                            "flex-min-width" : "10px",
+                            "flex-min-width" : "7px",
                             "flex-shrink" : 1,
                             "flex-size" : "fixed",
                             "flex-wrap" : "nowrap",
@@ -4463,9 +4439,9 @@
                             "flex-direction" : "row",
                             "flex-grow" : 1,
                             "flex-max-height" : "",
-                            "flex-max-width" : "10px",
+                            "flex-max-width" : "7px",
                             "flex-min-height" : "",
-                            "flex-min-width" : "10px",
+                            "flex-min-width" : "7px",
                             "flex-shrink" : 1,
                             "flex-size" : "fixed",
                             "flex-wrap" : "nowrap",
@@ -4724,9 +4700,9 @@
                           "flex-direction" : "row",
                           "flex-grow" : 1,
                           "flex-max-height" : "",
-                          "flex-max-width" : "10px",
+                          "flex-max-width" : "7px",
                           "flex-min-height" : "",
-                          "flex-min-width" : "10px",
+                          "flex-min-width" : "7px",
                           "flex-shrink" : 0,
                           "flex-size" : "fixed",
                           "flex-wrap" : "nowrap",
@@ -4885,9 +4861,9 @@
                           "flex-direction" : "row",
                           "flex-grow" : 1,
                           "flex-max-height" : "",
-                          "flex-max-width" : "10px",
+                          "flex-max-width" : "7px",
                           "flex-min-height" : "",
-                          "flex-min-width" : "10px",
+                          "flex-min-width" : "7px",
                           "flex-shrink" : 0,
                           "flex-size" : "fixed",
                           "flex-wrap" : "nowrap",
@@ -5044,9 +5020,9 @@
                           "flex-direction" : "row",
                           "flex-grow" : 1,
                           "flex-max-height" : "",
-                          "flex-max-width" : "10px",
+                          "flex-max-width" : "7px",
                           "flex-min-height" : "",
-                          "flex-min-width" : "10px",
+                          "flex-min-width" : "7px",
                           "flex-shrink" : 1,
                           "flex-size" : "fixed",
                           "flex-wrap" : "nowrap",
@@ -5205,9 +5181,9 @@
                           "flex-direction" : "row",
                           "flex-grow" : 1,
                           "flex-max-height" : "",
-                          "flex-max-width" : "10px",
+                          "flex-max-width" : "7px",
                           "flex-min-height" : "",
-                          "flex-min-width" : "10px",
+                          "flex-min-width" : "7px",
                           "flex-shrink" : 0,
                           "flex-size" : "fixed",
                           "flex-wrap" : "nowrap",
@@ -5366,9 +5342,9 @@
                           "flex-direction" : "row",
                           "flex-grow" : 1,
                           "flex-max-height" : "",
-                          "flex-max-width" : "10px",
+                          "flex-max-width" : "7px",
                           "flex-min-height" : "",
-                          "flex-min-width" : "10px",
+                          "flex-min-width" : "7px",
                           "flex-shrink" : 0,
                           "flex-size" : "fixed",
                           "flex-wrap" : "nowrap",

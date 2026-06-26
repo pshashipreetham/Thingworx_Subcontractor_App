@@ -9,7 +9,7 @@
          description=""
          documentationContent=""
          homeMashup=""
-         name="SubContractorCatalog.DS"
+         name="SubContractorManagement.DS"
          projectName="SubContract"
          tags="">
             <avatar></avatar>
@@ -37,6 +37,24 @@
                  aspect.isPrimaryKey="false"
                  baseType="STRING"
                  description=""
+                 name="Audit"
+                 ordinal="19"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="STRING"
+                 description=""
+                 name="Availability"
+                 ordinal="15"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="STRING"
+                 description=""
+                 name="CapacityUnits"
+                 ordinal="20"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="STRING"
+                 description=""
                  name="Compliance"
                  ordinal="12"></FieldDefinition>
                 <FieldDefinition
@@ -44,13 +62,13 @@
                  baseType="STRING"
                  description=""
                  name="ContactEmail"
-                 ordinal="8"></FieldDefinition>
+                 ordinal="9"></FieldDefinition>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
                  baseType="STRING"
                  description=""
                  name="ContactName"
-                 ordinal="9"></FieldDefinition>
+                 ordinal="8"></FieldDefinition>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
                  baseType="STRING"
@@ -61,20 +79,38 @@
                  aspect.isPrimaryKey="false"
                  baseType="STRING"
                  description=""
+                 name="Coverage"
+                 ordinal="13"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="STRING"
+                 description=""
                  name="CreatedBy"
                  ordinal="2"></FieldDefinition>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
-                 baseType="GUID"
+                 baseType="STRING"
                  description=""
-                 name="Id"
-                 ordinal="15"></FieldDefinition>
+                 name="Discount"
+                 ordinal="17"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="STRING"
+                 description=""
+                 name="NightShift"
+                 ordinal="18"></FieldDefinition>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
                  baseType="STRING"
                  description=""
                  name="Phone"
-                 ordinal="11"></FieldDefinition>
+                 ordinal="10"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="STRING"
+                 description=""
+                 name="Pricing"
+                 ordinal="16"></FieldDefinition>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
                  baseType="STRING"
@@ -92,7 +128,7 @@
                  baseType="STRING"
                  description=""
                  name="Rating"
-                 ordinal="14"></FieldDefinition>
+                 ordinal="22"></FieldDefinition>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
                  baseType="STRING"
@@ -104,19 +140,19 @@
                  baseType="STRING"
                  description=""
                  name="Status"
-                 ordinal="10"></FieldDefinition>
+                 ordinal="11"></FieldDefinition>
                 <FieldDefinition
-                 aspect.isPrimaryKey="true"
+                 aspect.isPrimaryKey="false"
                  baseType="STRING"
                  description=""
                  name="SubContractor"
                  ordinal="1"></FieldDefinition>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
-                 baseType="INTEGER"
+                 baseType="STRING"
                  description=""
                  name="Workload"
-                 ordinal="13"></FieldDefinition>
+                 ordinal="21"></FieldDefinition>
             </FieldDefinitions>
         </DataShape>
     </DataShapes>

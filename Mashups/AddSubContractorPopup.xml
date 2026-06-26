@@ -221,6 +221,20 @@
                  aspect.isMandatory="false"
                  baseType="STRING"
                  description=""
+                 name="result"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="BOTH"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="SelectedId"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="BOTH"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
                  name="Services"
                  ordinal="0"></FieldDefinition>
                 <FieldDefinition
@@ -323,7 +337,7 @@
                 }
               },
               "DataBindings" : [ {
-                "Id" : "1a804116-8a01-43ac-8ea0-76bc0039837c",
+                "Id" : "5a9c980b-d25b-4885-becb-208afdcd29a7",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "ContactEmail",
                   "SourcePropertyBaseType" : "STRING",
@@ -340,7 +354,7 @@
                 "TargetId" : "ptcstextfield-12",
                 "TargetSection" : ""
               }, {
-                "Id" : "c944b90a-1a82-4c6c-9c33-bdae062e7517",
+                "Id" : "2c59e2c8-dc4d-4612-8534-88213a3658ae",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Rating",
                   "SourcePropertyBaseType" : "INTEGER",
@@ -357,7 +371,7 @@
                 "TargetId" : "ptcstextfield-16",
                 "TargetSection" : ""
               }, {
-                "Id" : "8aa46b30-adb0-45e3-a771-d956f6938704",
+                "Id" : "f96ea9fe-59a6-4489-9232-9ed2ef7ef68f",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Workload",
                   "SourcePropertyBaseType" : "STRING",
@@ -374,7 +388,7 @@
                 "TargetId" : "ptcstextfield-15",
                 "TargetSection" : ""
               }, {
-                "Id" : "d18b8e88-b44a-46c8-9312-015d8e6f3397",
+                "Id" : "64772961-b503-406e-813c-a42727286b43",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Compliance",
                   "SourcePropertyBaseType" : "STRING",
@@ -391,7 +405,7 @@
                 "TargetId" : "ptcstextfield-14",
                 "TargetSection" : ""
               }, {
-                "Id" : "26e30253-cad3-4f93-8dbb-3e861f3c3fbe",
+                "Id" : "bfdbd9df-fbd5-487f-8b4f-e0b5c0037214",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Status",
                   "SourcePropertyBaseType" : "STRING",
@@ -408,7 +422,7 @@
                 "TargetId" : "ptcstextfield-13",
                 "TargetSection" : ""
               }, {
-                "Id" : "df7213a3-1c01-4881-84d8-29a52802a38a",
+                "Id" : "e4de8575-dc9b-42c2-bb2f-530152af20d8",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "ContactName",
                   "SourcePropertyBaseType" : "STRING",
@@ -425,7 +439,7 @@
                 "TargetId" : "ptcstextfield-28",
                 "TargetSection" : ""
               }, {
-                "Id" : "8beedf5f-bde5-4fa2-a46b-0ec14618f01e",
+                "Id" : "186d1a39-8964-472d-94ec-5a0b57859cf5",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Services",
                   "SourcePropertyBaseType" : "STRING",
@@ -442,7 +456,7 @@
                 "TargetId" : "ptcstextfield-9",
                 "TargetSection" : ""
               }, {
-                "Id" : "86e6527b-1918-41df-81f2-3db359d33acd",
+                "Id" : "84d710b9-5a68-472e-ab61-dc654cbb203e",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "PrimaryService",
                   "SourcePropertyBaseType" : "STRING",
@@ -459,7 +473,7 @@
                 "TargetId" : "ptcstextfield-10",
                 "TargetSection" : ""
               }, {
-                "Id" : "98950547-4682-4d01-84ba-f84e685d9392",
+                "Id" : "ffa112a5-5090-4fcc-a1f9-97572388cf54",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Province",
                   "SourcePropertyBaseType" : "STRING",
@@ -476,7 +490,7 @@
                 "TargetId" : "ptcstextfield-8",
                 "TargetSection" : ""
               }, {
-                "Id" : "53bf61fb-b7e3-4873-a04d-699d3048b50b",
+                "Id" : "5b3c9cf1-f47a-4291-bf08-c171e0bd3808",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "CreatedBy",
                   "SourcePropertyBaseType" : "STRING",
@@ -493,7 +507,7 @@
                 "TargetId" : "ptcstextfield-4",
                 "TargetSection" : ""
               }, {
-                "Id" : "4b32c187-4abe-45e5-a248-96f37fb0099f",
+                "Id" : "2d70514c-ce83-431c-a2db-c7563eae1cb8",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Subcontractor",
                   "SourcePropertyBaseType" : "STRING",
@@ -510,7 +524,7 @@
                 "TargetId" : "ptcstextfield-3",
                 "TargetSection" : ""
               }, {
-                "Id" : "5db7c045-8007-4afd-b372-e67fe7cab528",
+                "Id" : "50b7dd4d-f6b0-471c-bc8b-a4da3d94dbf8",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Country",
                   "SourcePropertyBaseType" : "STRING",
@@ -527,7 +541,7 @@
                 "TargetId" : "ptcstextfield-5",
                 "TargetSection" : ""
               }, {
-                "Id" : "c3749360-ffa5-49f9-99a2-fdf71d638346",
+                "Id" : "48268a96-8d05-4201-ba43-f9f9b91d1c67",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Text",
                   "SourcePropertyBaseType" : "STRING",
@@ -544,7 +558,7 @@
                 "TargetId" : "AddSubContractor",
                 "TargetSection" : "Things_SubContract.T"
               }, {
-                "Id" : "770a8d3d-2659-42ee-b542-27f597789a56",
+                "Id" : "6a0f7064-8244-4d5a-a0cc-0c2c02377625",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Text",
                   "SourcePropertyBaseType" : "STRING",
@@ -561,7 +575,7 @@
                 "TargetId" : "AddSubContractor",
                 "TargetSection" : "Things_SubContract.T"
               }, {
-                "Id" : "265de786-5452-4104-a39c-eb130754efd9",
+                "Id" : "771991cd-6eff-462b-b223-5a41c84b9097",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Text",
                   "SourcePropertyBaseType" : "STRING",
@@ -578,7 +592,7 @@
                 "TargetId" : "AddSubContractor",
                 "TargetSection" : "Things_SubContract.T"
               }, {
-                "Id" : "66a7b064-e177-4216-99fa-97b24d81c6c5",
+                "Id" : "4636d7d0-7065-4156-8db7-e532f82df6aa",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Text",
                   "SourcePropertyBaseType" : "STRING",
@@ -595,7 +609,7 @@
                 "TargetId" : "AddSubContractor",
                 "TargetSection" : "Things_SubContract.T"
               }, {
-                "Id" : "015104bf-c8bb-4ae6-a74c-f47da09affc2",
+                "Id" : "bae536e0-46fc-4341-92a6-c4afc067b35b",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Text",
                   "SourcePropertyBaseType" : "STRING",
@@ -612,7 +626,7 @@
                 "TargetId" : "AddSubContractor",
                 "TargetSection" : "Things_SubContract.T"
               }, {
-                "Id" : "fd238397-834b-4dae-8d20-e4e235f100f6",
+                "Id" : "d2b6da7a-886c-493e-b8b2-994c2b0de275",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Text",
                   "SourcePropertyBaseType" : "STRING",
@@ -629,7 +643,7 @@
                 "TargetId" : "AddSubContractor",
                 "TargetSection" : "Things_SubContract.T"
               }, {
-                "Id" : "ad37b32a-e9a8-4762-a657-bd17f9362659",
+                "Id" : "8909e9e0-f972-4105-b0e9-54fa9e34efb5",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Text",
                   "SourcePropertyBaseType" : "STRING",
@@ -646,7 +660,7 @@
                 "TargetId" : "AddSubContractor",
                 "TargetSection" : "Things_SubContract.T"
               }, {
-                "Id" : "cb90a0f4-3d71-4ea5-9e40-4b07b83ab73e",
+                "Id" : "13f80dc6-d703-4542-9e20-86f591d0d10b",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Text",
                   "SourcePropertyBaseType" : "STRING",
@@ -680,7 +694,7 @@
                 "TargetId" : "AddSubContractor",
                 "TargetSection" : "Things_SubContract.T"
               }, {
-                "Id" : "25e04313-44b9-47bc-acd3-a67774e0a587",
+                "Id" : "57ce5309-98fd-4840-bb6b-9e66941777cb",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Text",
                   "SourcePropertyBaseType" : "STRING",
@@ -697,7 +711,7 @@
                 "TargetId" : "AddSubContractor",
                 "TargetSection" : "Things_SubContract.T"
               }, {
-                "Id" : "06f41a18-2617-47a9-9304-044c5a0a5078",
+                "Id" : "7debc778-444d-4b1d-9010-727b52434a11",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Text",
                   "SourcePropertyBaseType" : "STRING",
@@ -714,7 +728,7 @@
                 "TargetId" : "AddSubContractor",
                 "TargetSection" : "Things_SubContract.T"
               }, {
-                "Id" : "a613c1e5-46ce-4976-9d6a-05b7d6d2cd53",
+                "Id" : "a4f90e2b-0cf9-417e-a94d-1a8d02050b1b",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Text",
                   "SourcePropertyBaseType" : "STRING",
@@ -731,7 +745,7 @@
                 "TargetId" : "AddSubContractor",
                 "TargetSection" : "Things_SubContract.T"
               }, {
-                "Id" : "dc2b45c8-263a-4e9d-996f-b1dca80b4c21",
+                "Id" : "5794ba49-3316-4591-8d7b-ac4d0387f044",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Text",
                   "SourcePropertyBaseType" : "STRING",
@@ -764,19 +778,43 @@
                 "TargetArea" : "UI",
                 "TargetId" : "ptcsdatepicker-29",
                 "TargetSection" : ""
+              }, {
+                "Id" : "6315e8c3-12ab-4ea1-96fd-2a18d42d5980",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SelectedId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Id",
+                  "TargetPropertyBaseType" : "GUID",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddSubContractor",
+                "TargetSection" : "Things_SubContract.T"
+              }, {
+                "Id" : "2176f8c2-8686-4e31-a1d4-ceb26ab2a39a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "result",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "AddSubContractor",
+                "SourceSection" : "Things_SubContract.T",
+                "TargetArea" : "Mashup",
+                "TargetId" : "mashup-root",
+                "TargetSection" : ""
               } ],
               "DesignTimePermissions" : { },
               "Events" : [ {
-                "EventHandlerArea" : "Data",
-                "EventHandlerId" : "Things_SubContract.T",
-                "EventHandlerService" : "AddSubContractor",
-                "EventHandlerServiceMethod" : "",
-                "EventTriggerArea" : "Mashup",
-                "EventTriggerEvent" : "Loaded",
-                "EventTriggerId" : "mashup-root",
-                "EventTriggerSection" : "",
-                "Id" : "d68ba384-33a5-48a4-8b00-d0cb3b883130"
-              }, {
                 "EventHandlerArea" : "Data",
                 "EventHandlerId" : "Things_SubContract.T",
                 "EventHandlerService" : "AddSubContractor",
@@ -785,17 +823,17 @@
                 "EventTriggerEvent" : "Clicked",
                 "EventTriggerId" : "ptcsbutton-25",
                 "EventTriggerSection" : "",
-                "Id" : "9b136edf-9402-4a42-885e-ee82ae647466"
+                "Id" : "287fc771-8af7-44a6-8a46-2accf1533516"
               }, {
-                "EventHandlerArea" : "Data",
-                "EventHandlerId" : "Things_SubContract.T1",
-                "EventHandlerService" : "getSubcontractor",
+                "EventHandlerArea" : "Mashup",
+                "EventHandlerId" : "mashup-root",
+                "EventHandlerService" : "CloseIfPopup",
                 "EventHandlerServiceMethod" : "",
-                "EventTriggerArea" : "Mashup",
-                "EventTriggerEvent" : "Loaded",
-                "EventTriggerId" : "mashup-root",
-                "EventTriggerSection" : "",
-                "Id" : "9075f3f2-1b10-453e-9396-f0b2d58c6dbc"
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "AddSubContractor",
+                "EventTriggerSection" : "Things_SubContract.T",
+                "Id" : "a66028bc-a9e7-4f4a-9638-4b4e595bb3d4"
               } ],
               "Reminders" : [ ],
               "RunTimePermissions" : { },
@@ -1168,6 +1206,22 @@
                   "__TypeDisplayName" : "Mashup",
                   "_baseVersion" : "10.1.0-b47",
                   "_currentParameterDefs" : [ {
+                    "Aspects" : {
+                      "bindingDirection" : "BOTH",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "STRING",
+                    "Description" : "",
+                    "ParameterName" : "result"
+                  }, {
+                    "Aspects" : {
+                      "bindingDirection" : "BOTH",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "STRING",
+                    "Description" : "",
+                    "ParameterName" : "SelectedId"
+                  }, {
                     "Aspects" : {
                       "bindingDirection" : "BOTH",
                       "isMandatory" : false

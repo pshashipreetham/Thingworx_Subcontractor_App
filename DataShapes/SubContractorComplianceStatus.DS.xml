@@ -9,7 +9,7 @@
          description=""
          documentationContent=""
          homeMashup=""
-         name="PricingMatrix.DS"
+         name="SubContractorComplianceStatus.DS"
          projectName="SubContract"
          tags="">
             <avatar></avatar>
@@ -29,34 +29,46 @@
             <FieldDefinitions>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
+                 baseType="STRING"
                  description=""
-                 name="Capacity1000"
-                 ordinal="3"></FieldDefinition>
+                 name="CountryLaborLawStatus"
+                 ordinal="5"></FieldDefinition>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
+                 baseType="STRING"
                  description=""
-                 name="Capacity1600"
+                 name="InsuranceCertificateStatus"
                  ordinal="4"></FieldDefinition>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
+                 baseType="STRING"
                  description=""
-                 name="Capacity200"
+                 name="ISO9001Status"
                  ordinal="2"></FieldDefinition>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
-                 description=""
-                 name="Capacity2000_3000"
-                 ordinal="5"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="true"
                  baseType="STRING"
                  description=""
-                 name="StopsBand"
+                 name="OverallStatus"
                  ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="STRING"
+                 description=""
+                 name="SafetyTrainingStatus"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="STRING"
+                 description=""
+                 name="TaxClearanceStatus"
+                 ordinal="7"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="STRING"
+                 description=""
+                 name="WorkingHoursLimitStatus"
+                 ordinal="6"></FieldDefinition>
             </FieldDefinitions>
         </DataShape>
     </DataShapes>

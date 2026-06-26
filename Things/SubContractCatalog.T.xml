@@ -12,7 +12,7 @@
          homeMashup=""
          identifier=""
          inheritedValueStream=""
-         name="SubContract.T"
+         name="SubContractCatalog.T"
          projectName="SubContract"
          published="false"
          tags=""
@@ -135,11 +135,6 @@
                              name="CreatedBy"
                              ordinal="2"></FieldDefinition>
                             <FieldDefinition
-                             baseType="GUID"
-                             description=""
-                             name="Id"
-                             ordinal="14"></FieldDefinition>
-                            <FieldDefinition
                              baseType="STRING"
                              description=""
                              name="PrimaryService"
@@ -229,13 +224,8 @@
                             <FieldDefinition
                              baseType="STRING"
                              description=""
-                             name="SearchText1"
+                             name="SearchText"
                              ordinal="3"></FieldDefinition>
-                            <FieldDefinition
-                             baseType="STRING"
-                             description=""
-                             name="SearchText2"
-                             ordinal="4"></FieldDefinition>
                             <FieldDefinition
                              aspect.defaultValue="All Countries"
                              baseType="STRING"
@@ -248,67 +238,6 @@
                              description=""
                              name="SelectedService"
                              ordinal="2"></FieldDefinition>
-                        </ParameterDefinitions>
-                    </ServiceDefinition>
-                    <ServiceDefinition
-                     aspect.isAsync="false"
-                     category=""
-                     description=""
-                     isAllowOverride="false"
-                     isLocalOnly="false"
-                     isOpen="false"
-                     isPrivate="false"
-                     name="GetCatalogDataFilter">
-                        <ResultType
-                         aspect.dataShape="SubContractorCatalog.DS"
-                         baseType="INFOTABLE"
-                         description=""
-                         name="result"
-                         ordinal="0"></ResultType>
-                        <ParameterDefinitions>
-                            <FieldDefinition
-                             baseType="STRING"
-                             description=""
-                             name="SearchText1"
-                             ordinal="1"></FieldDefinition>
-                            <FieldDefinition
-                             baseType="STRING"
-                             description=""
-                             name="SearchText2"
-                             ordinal="2"></FieldDefinition>
-                            <FieldDefinition
-                             baseType="STRING"
-                             description=""
-                             name="SelectedCountry"
-                             ordinal="3"></FieldDefinition>
-                            <FieldDefinition
-                             baseType="STRING"
-                             description=""
-                             name="SelectedService"
-                             ordinal="4"></FieldDefinition>
-                        </ParameterDefinitions>
-                    </ServiceDefinition>
-                    <ServiceDefinition
-                     aspect.isAsync="false"
-                     category=""
-                     description=""
-                     isAllowOverride="false"
-                     isLocalOnly="false"
-                     isOpen="false"
-                     isPrivate="false"
-                     name="getCatalogId">
-                        <ResultType
-                         aspect.dataShape="SubContractorCatalog.DS"
-                         baseType="INFOTABLE"
-                         description=""
-                         name="result"
-                         ordinal="0"></ResultType>
-                        <ParameterDefinitions>
-                            <FieldDefinition
-                             baseType="STRING"
-                             description=""
-                             name="SelectedId"
-                             ordinal="1"></FieldDefinition>
                         </ParameterDefinitions>
                     </ServiceDefinition>
                     <ServiceDefinition
@@ -356,23 +285,6 @@
                      name="getCountryDataDropdown">
                         <ResultType
                          aspect.dataShape="CountryDataTable.DS"
-                         baseType="INFOTABLE"
-                         description=""
-                         name="result"
-                         ordinal="0"></ResultType>
-                        <ParameterDefinitions></ParameterDefinitions>
-                    </ServiceDefinition>
-                    <ServiceDefinition
-                     aspect.isAsync="false"
-                     category=""
-                     description=""
-                     isAllowOverride="false"
-                     isLocalOnly="false"
-                     isOpen="false"
-                     isPrivate="false"
-                     name="GetCountryFilterOptions">
-                        <ResultType
-                         aspect.dataShape="GetCountryFilterOptions.DS"
                          baseType="INFOTABLE"
                          description=""
                          name="result"
@@ -648,7 +560,7 @@
                             <FieldDefinition
                              baseType="STRING"
                              description=""
-                             name="SelectedId"
+                             name="SelectedSubContractor"
                              ordinal="1"></FieldDefinition>
                         </ParameterDefinitions>
                     </ServiceDefinition>
@@ -674,23 +586,6 @@
                              name="SelectedSubContractor"
                              ordinal="1"></FieldDefinition>
                         </ParameterDefinitions>
-                    </ServiceDefinition>
-                    <ServiceDefinition
-                     aspect.isAsync="false"
-                     category=""
-                     description=""
-                     isAllowOverride="false"
-                     isLocalOnly="false"
-                     isOpen="false"
-                     isPrivate="false"
-                     name="GetServiceFilterOptions">
-                        <ResultType
-                         aspect.dataShape="DropdownOptions.DS"
-                         baseType="INFOTABLE"
-                         description=""
-                         name="result"
-                         ordinal="0"></ResultType>
-                        <ParameterDefinitions></ParameterDefinitions>
                     </ServiceDefinition>
                     <ServiceDefinition
                      aspect.isAsync="false"
@@ -736,7 +631,7 @@
                      isPrivate="false"
                      name="getSubcontractor">
                         <ResultType
-                         aspect.dataShape="SubContractorCatalog.DS"
+                         aspect.dataShape="SubcontractorDropdown.DS"
                          baseType="INFOTABLE"
                          description=""
                          name="result"
@@ -1059,103 +954,44 @@
                                         <![CDATA[
                                         let result = "";
                                         
-                                        var query = {
-                                            filters: {
-                                                type: "EQ",
-                                                fieldName: "SubContractor",
-                                                value: SubContractor
+                                        try {
+                                            let tags = new Array();
+                                        
+                                            let values = Things["SubContractorCatalog.DT"].CreateValues();
+                                        
+                                            values.SubContractor = SubContractor;
+                                            values.CreatedBy = CreatedBy;
+                                            values.Country = Country;
+                                            values.Province = Province;
+                                            values.PrimaryService = PrimaryService;
+                                            values.Services = Services;
+                                            values.ActiveTill = ActiveTill ? new Date(ActiveTill) : null;
+                                            values.ContactName = ContactName;
+                                            values.ContactEmail = ContactEmail;
+                                            values.Status = Status;
+                                            values.Compliance = Compliance;
+                                        
+                                            if (Workload !== undefined && Workload !== null && Workload !== "") {
+                                                values.Workload = parseInt(Workload, 10);
                                             }
-                                        };
                                         
-                                        var existing = Things["SubContractorCatalog.DT"].QueryDataTableEntries({
-                                            query: query
-                                        });
-                                        
-                                        var isDuplicate = false;
-                                        
-                                        // Add
-                                        if (!Id || Id === "") {
-                                            if (existing.rows.length > 0) {
-                                                isDuplicate = true;
+                                            if (Rating !== undefined && Rating !== null && Rating !== "") {
+                                                values.Rating = Rating;
                                             }
-                                        }
-                                        // Edit
-                                        else {
-                                            if (existing.rows.length > 0) {
-                                                var existingRow = existing.rows[0];
                                         
-                                                if (existingRow.Id !== Id) {
-                                                    isDuplicate = true;
-                                                }
-                                            }
-                                        }
+                                            let params = {
+                                                tags: tags,
+                                                source: me.name,
+                                                values: values
+                                            };
                                         
-                                        if (isDuplicate) {
+                                            Things["SubContractorCatalog.DT"].AddOrUpdateDataTableEntry(params);
                                         
-                                            result = "SubContractor already exists.";
+                                            result = "Success";
                                         
-                                        } else {
-                                        
-                                            try {
-                                        
-                                                let tags = [];
-                                        
-                                                let values = Things["SubContractorCatalog.DT"].CreateValues();
-                                        
-                                                // Add
-                                                if (!Id || Id === "") {
-                                                    values.Id = generateGUID();
-                                                }
-                                                // Update
-                                                else {
-                                                    values.Id = Id;
-                                                }
-                                        
-                                                values.SubContractor = SubContractor;
-                                                values.CreatedBy = CreatedBy;
-                                                values.Country = Country;
-                                                values.Province = Province;
-                                                values.PrimaryService = PrimaryService;
-                                                values.Services = Services;
-                                                values.ActiveTill = ActiveTill;
-                                                values.ContactName = ContactName;
-                                                values.ContactEmail = ContactEmail;
-                                                values.Status = Status;
-                                                values.Compliance = Compliance;
-                                        
-                                                if (Workload !== undefined && Workload !== null && Workload !== "") {
-                                                    values.Workload = parseInt(Workload, 10);
-                                                }
-                                        
-                                                if (Rating !== undefined && Rating !== null && Rating !== "") {
-                                                    values.Rating = Rating;
-                                                }
-                                        
-                                                let params = {
-                                                    tags: tags,
-                                                    source: me.name,
-                                                    values: values
-                                                };
-                                        
-                                                Things["SubContractorCatalog.DT"].AddOrUpdateDataTableEntry(params);
-                                        
-                                                if (!Id || Id === "") {
-                                                    result = "SubContractor added successfully.";
-                                                } else {
-                                                    result = "SubContractor updated successfully.";
-                                                }
-                                        
-                                            } catch (e) {
-                                        
-                                                result = "Failed: " + e.message;
-                                        
-                                                logger.error(
-                                                    "Service: AddSubContractor, Exception: " +
-                                                    e.message +
-                                                    ", Line Number: " +
-                                                    e.lineNumber
-                                                );
-                                            }
+                                        } catch (e) {
+                                            result = "Failed: " + e.message;
+                                            logger.error("Service: AddSubContractor, Exception: " + e.message + ", Line Number: " + e.lineNumber);
                                         }
                                         ]]>
                                         </code>
@@ -1313,221 +1149,128 @@
                                         <code>
                                         <![CDATA[
                                         let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
-                                            infoTableName: "InfoTable",
-                                            dataShapeName: "SubContractorCatalog.DS"
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "SubContractorCatalog.DS"
                                         });
                                         
                                         try {
                                         
-                                            let allData = Things["SubContractorCatalog.DT"].GetDataTableEntries({
-                                                maxItems: 500
-                                            });
+                                        	let selectedCountryValue = SelectedCountry || "All Countries";
+                                        	let selectedServiceValue = SelectedService || "All Services";
+                                        	let searchTextValue = SearchText || "";
                                         
-                                            let search1 = (SearchText1 || "").toLowerCase().trim();
-                                            let search2 = (SearchText2 || "").toLowerCase().trim();
+                                        	let allData = Things["SubContractorCatalog.DT"].GetDataTableEntries({
+                                        		maxItems: 500
+                                        	});
+                                        	allData.AddRow({
+                                        		SubContractor: "XYZ Installation",
+                                        		CreatedBy: "SCM Admin1",
+                                        		Country: "France",
+                                        		Province: "Île-de-France",
+                                        		PrimaryService: "Installation",
+                                        		Services: "Installation, Maintenance",
+                                        		ActiveTill: new Date("2027-12-31"),
+                                        		ContactName: "Jean Dupont",
+                                        		ContactEmail: "jean@xyz-install.fr",
+                                        		Status: "Active",
+                                        		Compliance: "Compliant",
+                                        		Workload: 68,
+                                        		Rating: "4.6"
+                                        	});
                                         
-                                            for (let i = 0; i < allData.rows.length; i++) {
+                                        	allData.AddRow({
+                                        		SubContractor: "ABC Cleaner",
+                                        		CreatedBy: "SCM Admin2",
+                                        		Country: "Germany",
+                                        		Province: "Bavaria",
+                                        		PrimaryService: "Finishing",
+                                        		Services: "Finishing, Cleaning, Painting",
+                                        		ActiveTill: new Date("2026-09-30"),
+                                        		ContactName: "Anna Muller",
+                                        		ContactEmail: "anna@abc-clean.de",
+                                        		Status: "Active",
+                                        		Compliance: "At Risk",
+                                        		Workload: 82,
+                                        		Rating: "4.2"
+                                        	});
                                         
-                                                let row = allData.rows[i];
+                                        	allData.AddRow({
+                                        		SubContractor: "PQR Winding",
+                                        		CreatedBy: "SCM Admin1",
+                                        		Country: "Spain",
+                                        		Province: "Madrid",
+                                        		PrimaryService: "Winding",
+                                        		Services: "Winding, Maintenance, Safety Audit",
+                                        		ActiveTill: new Date("2028-03-15"),
+                                        		ContactName: "Carlos Garcia",
+                                        		ContactEmail: "carlos@pqr-wind.es",
+                                        		Status: "Active",
+                                        		Compliance: "Compliant",
+                                        		Workload: 45,
+                                        		Rating: "4.8"
+                                        	});
                                         
-                                                // Country Filter
-                                                let countryMatch =
-                                                    !SelectedCountry ||
-                                                    SelectedCountry === "" ||
-                                                    SelectedCountry === "All Countries" ||
-                                                    row.Country === SelectedCountry;
+                                        	allData.AddRow({
+                                        		SubContractor: "Alpine Elevators GmbH",
+                                        		CreatedBy: "SCM Admin2",
+                                        		Country: "Austria",
+                                        		Province: "Vienna",
+                                        		PrimaryService: "Installation",
+                                        		Services: "Installation, Maintenance, Safety Audit",
+                                        		ActiveTill: new Date("2027-06-30"),
+                                        		ContactName: "Markus Bauer",
+                                        		ContactEmail: "markus@alpine-elev.at",
+                                        		Status: "Active",
+                                        		Compliance: "Compliant",
+                                        		Workload: 55,
+                                        		Rating: "4.7"
+                                        	});
                                         
-                                                // Service Filter
-                                                let serviceMatch =
-                                                    !SelectedService ||
-                                                    SelectedService === "" ||
-                                                    SelectedService === "All Services" ||
-                                                    (row.Services && row.Services.indexOf(SelectedService) !== -1);
+                                        	allData.AddRow({
+                                        		SubContractor: "Iberica Safety SL",
+                                        		CreatedBy: "SCM Admin1",
+                                        		Country: "Spain",
+                                        		Province: "Catalonia",
+                                        		PrimaryService: "Safety Audit",
+                                        		Services: "Safety Audit, Maintenance",
+                                        		ActiveTill: new Date("2026-12-31"),
+                                        		ContactName: "Maria Lopez",
+                                        		ContactEmail: "maria@iberica-safety.es",
+                                        		Status: "Pending",
+                                        		Compliance: "Non-Compliant",
+                                        		Workload: 20,
+                                        		Rating: "3.9"
+                                        	});
                                         
-                                                // Search Box 1
-                                                let search1Match =
-                                                    search1 === "" ||
-                                                    (row.SubContractor && row.SubContractor.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.CreatedBy && row.CreatedBy.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.Country && row.Country.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.Province && row.Province.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.PrimaryService && row.PrimaryService.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.Services && row.Services.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.ContactName && row.ContactName.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.ContactEmail && row.ContactEmail.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.Status && row.Status.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.Compliance && row.Compliance.toLowerCase().indexOf(search1) !== -1);
+                                        	for (let i = 0; i < allData.rows.length; i++) {
                                         
-                                                // Search Box 2
-                                                let search2Match =
-                                                    search2 === "" ||
-                                                    (row.SubContractor && row.SubContractor.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.CreatedBy && row.CreatedBy.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.Country && row.Country.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.Province && row.Province.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.PrimaryService && row.PrimaryService.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.Services && row.Services.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.ContactName && row.ContactName.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.ContactEmail && row.ContactEmail.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.Status && row.Status.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.Compliance && row.Compliance.toLowerCase().indexOf(search2) !== -1);
+                                        		let row = allData.rows[i];
                                         
-                                                if (countryMatch && serviceMatch && search1Match && search2Match) {
-                                                    result.AddRow(row);
-                                                }
-                                            }
+                                        		let countryMatch =
+                                        			selectedCountryValue === "" ||
+                                        			selectedCountryValue === "All Countries" ||
+                                        			row.Country === selectedCountryValue;
+                                        
+                                        		let serviceMatch =
+                                        			selectedServiceValue === "" ||
+                                        			selectedServiceValue === "All Services" ||
+                                        			row.Services.indexOf(selectedServiceValue) !== -1;
+                                        
+                                        		let searchMatch =
+                                        			searchTextValue === "" ||
+                                        			row.SubContractor.toLowerCase().indexOf(searchTextValue.toLowerCase()) !== -1 ||
+                                        			row.Services.toLowerCase().indexOf(searchTextValue.toLowerCase()) !== -1 ||
+                                        			row.Country.toLowerCase().indexOf(searchTextValue.toLowerCase()) !== -1 ||
+                                        			row.Province.toLowerCase().indexOf(searchTextValue.toLowerCase()) !== -1;
+                                        
+                                        		if (countryMatch && serviceMatch && searchMatch) {
+                                        			result.AddRow(row);
+                                        		}
+                                        	}
+                                        
                                         
                                         } catch (e) {
-                                            logger.error("Service: GetCatalogDataFilter, Exception: " + e.message + ", Line Number: " + e.lineNumber);
-                                        }
-                                        ]]>
-                                        </code>
-                                    </Row>
-                                </Rows>
-                            </ConfigurationTable>
-                        </ConfigurationTables>
-                    </ServiceImplementation>
-                    <ServiceImplementation
-                     description=""
-                     handlerName="Script"
-                     name="GetCatalogDataFilter">
-                        <ConfigurationTables>
-                            <ConfigurationTable
-                             dataShapeName=""
-                             description=""
-                             isMultiRow="false"
-                             name="Script"
-                             ordinal="0">
-                                <DataShape>
-                                    <FieldDefinitions>
-                                        <FieldDefinition
-                                         baseType="STRING"
-                                         description="code"
-                                         name="code"
-                                         ordinal="0"></FieldDefinition>
-                                    </FieldDefinitions>
-                                </DataShape>
-                                <Rows>
-                                    <Row>
-                                        <code>
-                                        <![CDATA[
-                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
-                                            infoTableName: "InfoTable",
-                                            dataShapeName: "SubContractorCatalog.DS"
-                                        });
-                                        
-                                        try {
-                                        
-                                            let allData = Things["SubContractorCatalog.DT"].GetDataTableEntries({
-                                                maxItems: 500
-                                            });
-                                        
-                                            let search1 = (SearchText1 || "").toLowerCase().trim();
-                                            let search2 = (SearchText2 || "").toLowerCase().trim();
-                                        
-                                            for (let i = 0; i < allData.rows.length; i++) {
-                                        
-                                                let row = allData.rows[i];
-                                        
-                                                // Country Filter
-                                                let countryMatch =
-                                                    !SelectedCountry ||
-                                                    SelectedCountry === "" ||
-                                                    SelectedCountry === "All Countries" ||
-                                                    row.Country === SelectedCountry;
-                                        
-                                                // Service Filter
-                                                let serviceMatch =
-                                                    !SelectedService ||
-                                                    SelectedService === "" ||
-                                                    SelectedService === "All Services" ||
-                                                    (row.Services && row.Services.indexOf(SelectedService) !== -1);
-                                        
-                                                // Search Box 1
-                                                let search1Match =
-                                                    search1 === "" ||
-                                                    (row.SubContractor && row.SubContractor.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.CreatedBy && row.CreatedBy.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.Country && row.Country.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.Province && row.Province.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.PrimaryService && row.PrimaryService.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.Services && row.Services.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.ContactName && row.ContactName.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.ContactEmail && row.ContactEmail.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.Status && row.Status.toLowerCase().indexOf(search1) !== -1) ||
-                                                    (row.Compliance && row.Compliance.toLowerCase().indexOf(search1) !== -1);
-                                        
-                                                // Search Box 2
-                                                let search2Match =
-                                                    search2 === "" ||
-                                                    (row.SubContractor && row.SubContractor.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.CreatedBy && row.CreatedBy.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.Country && row.Country.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.Province && row.Province.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.PrimaryService && row.PrimaryService.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.Services && row.Services.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.ContactName && row.ContactName.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.ContactEmail && row.ContactEmail.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.Status && row.Status.toLowerCase().indexOf(search2) !== -1) ||
-                                                    (row.Compliance && row.Compliance.toLowerCase().indexOf(search2) !== -1);
-                                        
-                                                if (countryMatch && serviceMatch && search1Match && search2Match) {
-                                                    result.AddRow(row);
-                                                }
-                                            }
-                                        
-                                        } catch (e) {
-                                            logger.error("Service: GetCatalogDataFilter, Exception: " + e.message + ", Line Number: " + e.lineNumber);
-                                        }
-                                        
-                                        result;
-                                        ]]>
-                                        </code>
-                                    </Row>
-                                </Rows>
-                            </ConfigurationTable>
-                        </ConfigurationTables>
-                    </ServiceImplementation>
-                    <ServiceImplementation
-                     description=""
-                     handlerName="Script"
-                     name="getCatalogId">
-                        <ConfigurationTables>
-                            <ConfigurationTable
-                             dataShapeName=""
-                             description=""
-                             isMultiRow="false"
-                             name="Script"
-                             ordinal="0">
-                                <DataShape>
-                                    <FieldDefinitions>
-                                        <FieldDefinition
-                                         baseType="STRING"
-                                         description="code"
-                                         name="code"
-                                         ordinal="0"></FieldDefinition>
-                                    </FieldDefinitions>
-                                </DataShape>
-                                <Rows>
-                                    <Row>
-                                        <code>
-                                        <![CDATA[
-                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(SubContractorCatalog.DS)
-                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
-                                            infoTableName: "InfoTable",
-                                            dataShapeName: "SubContractorCatalog.DS"
-                                        });
-                                        
-                                        if (SelectedId == null || SelectedId == undefined ||  SelectedId == '') {
-                                        	// result: INFOTABLE dataShape: ""
-                                        	result = Things["SubContractorCatalog.DT"].GetDataTableEntries({
-                                        		maxItems: 50/* NUMBER {"defaultValue":500} */
-                                        	});
-                                        } else {
-                                        	// result: INFOTABLE dataShape: ""
-                                        	result = Things["SubContractorCatalog.DT"].GetDataTableEntryByKey({
-                                        		key: SelectedId /* STRING */
-                                        	});
+                                        	logger.error("Service: getCatalogData, Exception: " + e.message + ", Line Number: " + e.lineNumber);
                                         }
                                         ]]>
                                         </code>
@@ -1681,68 +1424,6 @@
                                         catch (e) 
                                         {
                                         	logger.error( "Service: GetCountryDataDropdown, Exception: " + e.message + ", Line Number: " + e.lineNumber);
-                                        }
-                                        ]]>
-                                        </code>
-                                    </Row>
-                                </Rows>
-                            </ConfigurationTable>
-                        </ConfigurationTables>
-                    </ServiceImplementation>
-                    <ServiceImplementation
-                     description=""
-                     handlerName="Script"
-                     name="GetCountryFilterOptions">
-                        <ConfigurationTables>
-                            <ConfigurationTable
-                             dataShapeName=""
-                             description=""
-                             isMultiRow="false"
-                             name="Script"
-                             ordinal="0">
-                                <DataShape>
-                                    <FieldDefinitions>
-                                        <FieldDefinition
-                                         baseType="STRING"
-                                         description="code"
-                                         name="code"
-                                         ordinal="0"></FieldDefinition>
-                                    </FieldDefinitions>
-                                </DataShape>
-                                <Rows>
-                                    <Row>
-                                        <code>
-                                        <![CDATA[
-                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
-                                            infoTableName: "InfoTable",
-                                            dataShapeName: "GetCountryFilterOptions.DS"
-                                        });
-                                        
-                                        try {
-                                            result.AddRow({
-                                                Country: "All Countries"
-                                            });
-                                        
-                                            let allData = Things["SubContractorCatalog.DT"].GetDataTableEntries({
-                                                maxItems: 500
-                                            });
-                                        
-                                            let added = {};
-                                        
-                                            for (let i = 0; i < allData.rows.length; i++) {
-                                                let country = allData.rows[i].Country;
-                                        
-                                                if (country && country !== "" && !added[country]) {
-                                                    added[country] = true;
-                                        
-                                                    result.AddRow({
-                                                        Country: country
-                                                    });
-                                                }
-                                            }
-                                        
-                                        } catch (e) {
-                                            logger.error("Service: GetCountryFilterOptions, Exception: " + e.message);
                                         }
                                         ]]>
                                         </code>
@@ -2385,76 +2066,75 @@
                                         		MenuOrder: 1,
                                         		MashupName: "ExecutiveDashboard.MU"
                                         	});
-                                        
+                                          result.AddRow({
+                                        		MenuName: "ThingWorx Geo Map",
+                                        		MenuOrder: 2,
+                                        		MashupName: "LiveGeoDashboard.MU"
+                                        	});
                                         	result.AddRow({
                                         		MenuName: "Subcontractor Catalog",
-                                        		MenuOrder: 2,
+                                        		MenuOrder: 3,
                                         		MashupName: "SubContractCatalog.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Subcontractor Management",
-                                        		MenuOrder: 3,
+                                        		MenuOrder: 4,
                                         		MashupName: "SubContractManagement.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Pricing Matrix",
-                                        		MenuOrder: 4,
+                                        		MenuOrder: 5,
                                         		MashupName: "PricingMatrix.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Discount Matrix",
-                                        		MenuOrder: 5,
+                                        		MenuOrder: 6,
                                         		MashupName: "DiscountMatrix.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Night Shift Surcharge",
-                                        		MenuOrder: 6,
+                                        		MenuOrder: 7,
                                         		MashupName: "NightShiftSurcharge.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Job Creation",
-                                        		MenuOrder: 7,
+                                        		MenuOrder: 8,
                                         		MashupName: "JobCreation.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Job Board",
-                                        		MenuOrder: 8,
+                                        		MenuOrder: 9,
                                         		MashupName: "JobBoard.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Bids & Awarding",
-                                        		MenuOrder: 9,
+                                        		MenuOrder: 10,
                                         		MashupName: "BidsAwarding.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "TCO Calculator",
-                                        		MenuOrder: 10,
+                                        		MenuOrder: 11,
                                         		MashupName: "TCOCalculator.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Supplier Portal",
-                                        		MenuOrder: 11,
+                                        		MenuOrder: 12,
                                         		MashupName: "SupplierPortal.MU"
                                         	});
                                         
                                         	result.AddRow({
                                         		MenuName: "Governance & Audit",
-                                        		MenuOrder: 12,
-                                        		MashupName: "GovernanceAudit.MU"
-                                        	});
-                                            result.AddRow({
-                                        		MenuName: "ThingWorx Geo Map",
                                         		MenuOrder: 13,
-                                        		MashupName: "LiveGeoDashboard.MU"
+                                        		MashupName: "GovernanceAudit.MU"
                                         	});
                                         } 
                                         catch (e) 
@@ -2792,20 +2472,150 @@
                                     <Row>
                                         <code>
                                         <![CDATA[
-                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(SubContractorCatalog.DS)
                                         let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
                                             infoTableName: "InfoTable",
-                                            dataShapeName: "SubContractorCatalog.DS"
+                                            dataShapeName: "SubContractorManagement.DS"
                                         });
                                         
                                         try {
-                                        	// result: INFOTABLE dataShape: ""
-                                        	result = Things["SubContractorCatalog.DT"].GetDataTableEntryByKey({
-                                        		key: SelectedId /* STRING */
-                                        	});
+                                        
+                                            let allData = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "SubContractorManagement.DS"
+                                            });
+                                        
+                                            allData.AddRow({
+                                                SubContractor: "XYZ Installation",
+                                                CreatedBy: "SCM Admin1",
+                                                Country: "France",
+                                                Province: "Île-de-France",
+                                                PrimaryService: "Installation",
+                                                Services: "Installation, Maintenance",
+                                                ActiveTill: new Date("2027-12-31"),
+                                                ContactName: "Jean Dupont",
+                                                ContactEmail: "jean@xyz-install.fr",
+                                                Phone: "+33 1 23 45 67 89",
+                                                Status: "Active",
+                                                Compliance: "Compliant",
+                                                Coverage: "France: Île-de-France, Provence-Alpes-Côte d'Azur",
+                                                CapacityUnits: "75",
+                                                Workload: "68%",
+                                                Availability: "Mon-Fri, 08:00-18:00",
+                                                Pricing: "Standard installation pricing enabled",
+                                                Discount: "5% preferred supplier discount",
+                                                NightShift: "Available with surcharge",
+                                                Audit: "Last audit passed",
+                                                Rating: "4.6"
+                                            });
+                                        
+                                            allData.AddRow({
+                                                SubContractor: "ABC Cleaner",
+                                                CreatedBy: "SCM Admin2",
+                                                Country: "Germany",
+                                                Province: "Bavaria",
+                                                PrimaryService: "Finishing",
+                                                Services: "Finishing, Cleaning, Painting",
+                                                ActiveTill: new Date("2026-09-30"),
+                                                ContactName: "Anna Müller",
+                                                ContactEmail: "anna@abc-clean.de",
+                                                Phone: "+49 89 1234 5678",
+                                                Status: "Active",
+                                                Compliance: "At Risk",
+                                                Coverage: "Germany: Bavaria, Berlin",
+                                                CapacityUnits: "90",
+                                                Workload: "82%",
+                                                Availability: "Mon-Sat, 07:00-17:00",
+                                                Pricing: "Finishing and cleaning pricing enabled",
+                                                Discount: "3% volume discount",
+                                                NightShift: "Limited availability",
+                                                Audit: "Audit requires review",
+                                                Rating: "4.2"
+                                        
+                                            });
+                                        
+                                            allData.AddRow({
+                                                SubContractor: "PQR Winding",
+                                                CreatedBy: "SCM Admin1",
+                                                Country: "Spain",
+                                                Province: "Madrid",
+                                                PrimaryService: "Winding",
+                                                Services: "Winding, Maintenance, Safety Audit",
+                                                ActiveTill: new Date("2028-03-15"),
+                                                ContactName: "Carlos García",
+                                                ContactEmail: "carlos@pqr-wind.es",
+                                                Phone: "+34 91 234 5678",
+                                                Status: "Active",
+                                                Compliance: "Compliant",
+                                                Coverage: "Spain: Madrid, Catalonia",
+                                                CapacityUnits: "75",
+                                                Workload: "45%",
+                                                Availability: "Mon-Fri, 09:00-18:00",
+                                                Pricing: "Winding pricing enabled",
+                                                Discount: "No discount configured",
+                                                NightShift: "Available",
+                                                Audit: "Last audit passed",
+                                                Rating: "4.8"
+                                            });
+                                        
+                                            allData.AddRow({
+                                                SubContractor: "Alpine Elevators GmbH",
+                                                CreatedBy: "SCM Admin2",
+                                                Country: "Austria",
+                                                Province: "Vienna",
+                                                PrimaryService: "Installation",
+                                                Services: "Installation, Maintenance, Safety Audit",
+                                                ActiveTill: new Date("2027-06-30"),
+                                                ContactName: "Markus Bauer",
+                                                ContactEmail: "markus@alpine-elev.at",
+                                                Phone: "+43 1 234 5678",
+                                                Status: "Active",
+                                                Compliance: "Compliant",
+                                                Coverage: "Austria: Vienna, Tyrol, Salzburg",
+                                                CapacityUnits: "80",
+                                                Workload: "55%",
+                                                Availability: "Mon-Fri, 08:30-17:30",
+                                                Pricing: "Installation and maintenance pricing enabled",
+                                                Discount: "4% annual contract discount",
+                                                NightShift: "Available with prior notice",
+                                                Audit: "Last audit passed",
+                                                Rating: "4.7"
+                                            });
+                                        
+                                            allData.AddRow({
+                                                SubContractor: "Iberica Safety SL",
+                                                CreatedBy: "SCM Admin1",
+                                                Country: "Spain",
+                                                Province: "Catalonia",
+                                                PrimaryService: "Safety Audit",
+                                                Services: "Safety Audit, Maintenance",
+                                                ActiveTill: new Date("2026-12-31"),
+                                                ContactName: "María López",
+                                                ContactEmail: "maria@iberica-safety.es",
+                                                Phone: "+34 93 456 7890",
+                                                Status: "Pending",
+                                                Compliance: "Non-Compliant",
+                                                Coverage: "Spain: Catalonia, Valencia",
+                                                CapacityUnits: "75",
+                                                Workload: "20%",
+                                                Availability: "Mon-Fri, 10:00-16:00",
+                                                Pricing: "Safety audit pricing pending approval",
+                                                Discount: "No discount configured",
+                                                NightShift: "Not available",
+                                                Audit: "Audit failed - corrective action required",
+                                              Rating: "3.9"
+                                            });
+                                        
+                                            for (let i = 0; i < allData.rows.length; i++) {
+                                                if (allData.rows[i].SubContractor === SelectedSubContractor) {
+                                                    result.AddRow(allData.rows[i]);
+                                                }
+                                            }
+                                        
                                         } catch (e) {
-                                        	logger.error("Service: GetSelectedSubContractorDetails, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                            logger.error("Service: GetSelectedSubContractorDetails, Exception: " + e.message + ", Line Number: " + e.lineNumber);
                                         }
+                                        
+                                        result;
                                         ]]>
                                         </code>
                                     </Row>
@@ -2892,86 +2702,6 @@
                                         } catch (e) {
                                             logger.error("Service: GetSubContractorCoverage, Exception: " + e.message + ", Line Number: " + e.lineNumber);
                                         }
-                                        ]]>
-                                        </code>
-                                    </Row>
-                                </Rows>
-                            </ConfigurationTable>
-                        </ConfigurationTables>
-                    </ServiceImplementation>
-                    <ServiceImplementation
-                     description=""
-                     handlerName="Script"
-                     name="GetServiceFilterOptions">
-                        <ConfigurationTables>
-                            <ConfigurationTable
-                             dataShapeName=""
-                             description=""
-                             isMultiRow="false"
-                             name="Script"
-                             ordinal="0">
-                                <DataShape>
-                                    <FieldDefinitions>
-                                        <FieldDefinition
-                                         baseType="STRING"
-                                         description="code"
-                                         name="code"
-                                         ordinal="0"></FieldDefinition>
-                                    </FieldDefinitions>
-                                </DataShape>
-                                <Rows>
-                                    <Row>
-                                        <code>
-                                        <![CDATA[
-                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
-                                            infoTableName: "InfoTable",
-                                            dataShapeName: "DropdownOptions.DS"
-                                        });
-                                        
-                                        try {
-                                            result.AddRow({
-                                                Value: "All Services"
-                                            });
-                                        
-                                            let allData = Things["SubContractorCatalog.DT"].GetDataTableEntries({
-                                                maxItems: 500
-                                            });
-                                        
-                                            let added = {};
-                                        
-                                            for (let i = 0; i < allData.rows.length; i++) {
-                                                let row = allData.rows[i];
-                                        
-                                                if (row.PrimaryService && row.PrimaryService !== "" && !added[row.PrimaryService]) {
-                                                    added[row.PrimaryService] = true;
-                                        
-                                                    result.AddRow({
-                                                        Value: row.PrimaryService
-                                                    });
-                                                }
-                                        
-                                                if (row.Services) {
-                                                    let list = row.Services.split(",");
-                                        
-                                                    for (let j = 0; j < list.length; j++) {
-                                                        let service = list[j].trim();
-                                        
-                                                        if (service !== "" && !added[service]) {
-                                                            added[service] = true;
-                                        
-                                                            result.AddRow({
-                                                                Value: service
-                                                            });
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        
-                                        } catch (e) {
-                                            logger.error("Service: GetServiceFilterOptions, Exception: " + e.message);
-                                        }
-                                        
-                                        result;
                                         ]]>
                                         </code>
                                     </Row>
@@ -3131,16 +2861,31 @@
                                     <Row>
                                         <code>
                                         <![CDATA[
-                                        // result: INFOTABLE dataShape: ""
-                                        let result = Things["SubContractorCatalog.DT"].GetDataTableEntries({
-                                        	maxItems: undefined /* NUMBER {"defaultValue":500} */
-                                        });
-                                        result.RemoveField("key");
-                                        result.RemoveField("location");
-                                        result.RemoveField("source");
-                                        result.RemoveField("sourceType");
-                                        result.RemoveField("tags");
-                                        result.RemoveField("timestamp");
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "SubcontractorDropdown.DS"
+                                        	});
+                                        try {
+                                        	result.AddRow({
+                                        		Subcontractor: "XYZ Installation"
+                                        	});
+                                        	result.AddRow({
+                                        		Subcontractor: "ABC Cleaner"
+                                        	});
+                                        	result.AddRow({
+                                        		Subcontractor: "PQR Winding"
+                                        	});
+                                        	result.AddRow({
+                                        		Subcontractor: "Alpine Elevators GmbH"
+                                        	});
+                                        	result.AddRow({
+                                        		Subcontractor: "Iberica Safety SL"
+                                        	});
+                                        }
+                                        catch (e) 
+                                        {
+                                        	logger.error( "Service: SubcontractorDropdown, Exception: " + e.message + ", Line Number: " + e.lineNumber);
+                                        }
                                         ]]>
                                         </code>
                                     </Row>

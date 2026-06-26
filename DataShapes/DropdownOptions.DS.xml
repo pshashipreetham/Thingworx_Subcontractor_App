@@ -9,7 +9,7 @@
          description=""
          documentationContent=""
          homeMashup=""
-         name="PricingMatrix.DS"
+         name="DropdownOptions.DS"
          projectName="SubContract"
          tags="">
             <avatar></avatar>
@@ -29,33 +29,9 @@
             <FieldDefinitions>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
-                 description=""
-                 name="Capacity1000"
-                 ordinal="3"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
-                 description=""
-                 name="Capacity1600"
-                 ordinal="4"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
-                 description=""
-                 name="Capacity200"
-                 ordinal="2"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
-                 description=""
-                 name="Capacity2000_3000"
-                 ordinal="5"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="true"
                  baseType="STRING"
                  description=""
-                 name="StopsBand"
+                 name="Value"
                  ordinal="1"></FieldDefinition>
             </FieldDefinitions>
         </DataShape>

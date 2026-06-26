@@ -12,7 +12,7 @@
          homeMashup="DataTableEditor"
          identifier=""
          inheritedValueStream=""
-         name="SubContractorCatalog.DT"
+         name="PricingMatrix.DT"
          projectName="SubContract"
          published="false"
          tags=""
@@ -78,13 +78,13 @@
                             <accumulatedDataShape>
                                 <json>
                                 <![CDATA[
-                                {"fieldDefinitions":{"Status":{"name":"Status","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":10},"CreatedBy":{"name":"CreatedBy","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":5},"Compliance":{"name":"Compliance","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":1},"Rating":{"name":"Rating","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":8},"SubContractor":{"name":"SubContractor","aspects":{"isPrimaryKey":true},"description":"","baseType":"STRING","ordinal":11},"Province":{"name":"Province","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":7},"PrimaryService":{"name":"PrimaryService","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":6},"Workload":{"name":"Workload","aspects":{"isPrimaryKey":false},"description":"","baseType":"INTEGER","ordinal":12},"Services":{"name":"Services","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":9},"Phone":{"name":"Phone","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":14},"ContactEmail":{"name":"ContactEmail","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":2},"Country":{"name":"Country","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":4},"Id":{"name":"Id","aspects":{"isDeleted":false,"isPrimaryKey":true},"description":"","baseType":"GUID","ordinal":13},"ActiveTill":{"name":"ActiveTill","aspects":{"isPrimaryKey":false},"description":"","baseType":"DATETIME","ordinal":0},"ContactName":{"name":"ContactName","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":3}}}
+                                {"fieldDefinitions":{"Capacity1000":{"name":"Capacity1000","aspects":{"isPrimaryKey":false},"description":"","baseType":"NUMBER","ordinal":0},"Capacity1600":{"name":"Capacity1600","aspects":{"isPrimaryKey":false},"description":"","baseType":"NUMBER","ordinal":1},"StopsBand":{"name":"StopsBand","aspects":{"isPrimaryKey":true},"description":"","baseType":"STRING","ordinal":4},"Capacity200":{"name":"Capacity200","aspects":{"isPrimaryKey":false},"description":"","baseType":"NUMBER","ordinal":2},"Capacity2000_3000":{"name":"Capacity2000_3000","aspects":{"isPrimaryKey":false},"description":"","baseType":"NUMBER","ordinal":3}}}
                                 ]]>
                                 </json>
                             </accumulatedDataShape>
                             <dataShape>
                             <![CDATA[
-                            SubContractorCatalog.DS
+                            PricingMatrix.DS
                             ]]>
                             </dataShape>
                         </Row>
